@@ -21,24 +21,22 @@
 
 
 <h3><a id="the-carta-team" class="anchor" href="#the-carta-team" aria-hidden="true">
-  <span aria-hidden="true" class="octicon octicon-link"></span></a>The CARTA Team</h3>
+  <span aria-hidden="true" class="octicon octicon-link"></span></a>The CARTA team</h3>
 
-<p>CARTA is now being developed by 
+<p>CARTA is developed by 
     <a href="https://www.asiaa.sinica.edu.tw">Academia Sinica Institute of Astronomy and Astrophysics (ASIAA)</a>,
     <a href="http://idia.ac.za">Inter-University Institute for Data Intensive Astronomy (IDIA)</a>,
     <a href="https://science.nrao.edu">National Radio Astronomy Observatory (NRAO)</a>, and 
     <a href="https://www.ualberta.ca/physics">Department of Physics, University of Alberta</a>. </p>
 
+    <IMG SRC="images/carta_wg_logo_grid.png" WIDTH=300>
 
       </header>
       <section>
         <h1>
 <a id="carta" class="anchor" href="#carta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CARTA</h1>
 
-<p>CARTA is the Cube Analysis and Rendering Tool for Astronomy, a new visualization tool designed for the
-  <a href="http://www.almaobservatory.org">ALMA</a>, the <a href="http://www.vla.nrao.edu/">JVLA</a>, 
-  and the radio telescopes of the future such as the <a href="https://skatelescope.org/">SKA</a>.</p>
-
+<p>CARTA is the Cube Analysis and Rendering Tool for Astronomy, a new image visualization and analysis tool designed for the <a href="http://www.almaobservatory.org">ALMA</a>, the <a href="http://www.vla.nrao.edu/">JVLA</a>, and the radio telescopes of the future such as the <a href="https://skatelescope.org/">SKA</a>. As the image quality improves drastically with modern telecscopes in recent years, classic image viewers face performance issues which degrade user experience significantly. The mission of CARTA is to resolve this and provide usability and scalability for the next few decades by using modern web technology and parallelization.</p>
 
 
 <h3>
@@ -47,51 +45,65 @@
 
 
 
-<p>CARTA (version 1.0-rel):</p>
 
+<p>CARTA suppurts two distributions, the CARTA-desktop and the CARTA-server. For users using a laptop or a desktop connected with a monitor, please download the CARTA-desktop version. For users using a remote server via the ssh protocol, please download the CARTA-server version.</p>
+<p>CARTA (version 1.0-rel)</p>
 <ul>
   <li> Desktop version 
     <ul>
-      <li> macOS 10.14, 10.13, 10.12 </li>
-      <li> CentOS / RHEL 7 and 6 </li>
-      <li> Ubuntu 18.04 LTS, 16.04 LTS </li>
+      <li> macOS 10.12, 10.13, 10.14 </li>
+      <li> Redhat 6/7, CentOS 6/7 </li>
+      <li> Ubuntu 16.04 LTS, 18.04 LTS </li>
     </ul>
   </li>
   <li> Server version
     <ul>
-      <li> CentOS / RHEL 7 and 6 </li>
-      <li> Ubuntu 18.04 LTS, 16.04 LTS </li>
+      <li> Redhat 6/7, CentOS 6/7 </li>
+      <li> Ubuntu 16.04 LTS, 18.04 LTS </li>
     </ul>
   </li>  
 
-  <li> <a href="https://cartavis.github.io/manual">User manual</a>
-  </li>
 </ul>
 
-<p><em>Mac Installation Instructions (desktop version)</em>: Open the dmg file and move the CARTA.app to /Applications folder. 
-  CARTA can be installed in any other path other than /Applications. To run CARTA, please double-click the CARTA.app icon. </p>
 
-<p><em>Linux Installation Instructions (desktop version)</em>: ???
-  </p>
+<h3>
+  <a id="getHelp" class="anchor" href="#getHelp" aria-hidden="true">
+  <span aria-hidden="true" class="octicon octicon-link"></span></a>User manual and Getting help</h3>
 
-
-<p><em>Encountering problems?</em> <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">Contact us</a>.</p>
+<p>The user manual is available at <a href="https://cartavis.github.io/manual/">here</a>.<br>
+Should there be any probelms, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
 
 <h3>
 <a id="contribute-to-carta" class="anchor" href="#contribute-to-carta" aria-hidden="true">
   <span aria-hidden="true" class="octicon octicon-link"></span></a>Contribute to CARTA</h3>
 
-<p> We are developing the open-source project CARTA on 
-  <a href="https://github.com/CARTAvis">GitHub</a>. 
+<p> CARTA is an open-source project. The CARTA team welcomes enthusiastic developers to join the team. The source code is available on <a href="https://github.com/CARTAvis">GitHub</a>. 
 </p>
 
 
 <h3>
 <a id="acknowledgment" class="anchor" href="#acknowledgement" aria-hidden="true">
 <span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgement</h3>
-???
 
-        
+<p>ASIAA CASA Development Center (ACDC) acknowledges the grant from the Ministry of Science and Technology of Taiwan for the ALMA-NA collaboration.</p>
+
+<p>The Inter-University Institute for Data Intensive Astronomy is a partnership of three South African universities: the University of Cape Town, the University of the Western Cape and the University of Pretoria.</p>
+
+<p>The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.</p>
+
+<p>CARTA is mainly built in C++, TypeScript, and JavaScript, and with the following third-party libraries:
+  <ul>
+  <li> AST: <a href="http://starlink.eao.hawaii.edu/starlink/AST">http://starlink.eao.hawaii.edu/starlink/AST</a> </li>
+  <li> Blueprint: <a href="https://blueprintjs.com">https://blueprintjs.com</a> </li>
+  <li> casacore: <a href="https://casacore.github.io">https://casacore.github.io</a> </li>
+  <li> Chart.js: <a href="https://www.chartjs.org">https://www.chartjs.org</a> </li>
+  <li> Electron: <a href="https://electronjs.org">https://electronjs.org</a> </li>
+  <li> GoldenLayout: <a href="https://golden-layout.com">https://golden-layout.com</a> </li>
+  <li> MobX: <a href="https://mobx.js.org">https://mobx.js.org</a> </li>
+  <li> React: <a href="https://reactjs.org">https://reactjs.org</a> </li>
+  <li> TBB: <a href="https://www.threadingbuildingblocks.org">https://www.threadingbuildingblocks.org</a> </li>
+  </ul>      
+</p>
 
 <p>This webpage is hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
 
