@@ -49,7 +49,8 @@
 <a id="downloadInstall" class="anchor" href="#downloadInstall" aria-hidden="true">
 <span aria-hidden="true" class="octicon octicon-link"></span></a>Download and Installation</h3>
 
-<p>The CARTA Desktop 'local' version is intended for use on a laptop or desktop computer directly connected to a monitor.<p>
+<p>CARTA utilizes a discrete or integrated GPU for image rendering. 
+Therefore, the CARTA Desktop 'local' version is intended for use on a laptop or desktop computer directly connected to a monitor.<p>
 
 <li> Local version 1.0-rel download links:
     <ul>
@@ -61,7 +62,10 @@
     </ul>
 </li>
 
-<p> We also provide a 'remote' version for users who wish to run CARTA via the ssh protocol from a remote RedHat6/CentOS6 or RedHat7/CentOS7 headless server or cluster.<p>
+<p> We also provide a 'remote' version for users who wish to run CARTA from a remote RedHat6/CentOS6 or RedHat7/CentOS7 server via the ssh protocol. 
+The majority of servers do not have onboard GPUs. The remote version runs CARTA 'backend' on the server, and the CARTA 'frontend' is accessed through 
+your web browser of choice that is running on your local machine. This allows your local machine's GPU to perform the image rendering, while the 
+remote server handles the storage and CPU/RAM instensive tasks.<p>
 
 <li> Remote version 1.0-rel download link:
     <ul>
@@ -73,7 +77,7 @@
 <p><em>Mac Installation Instructions</em>: Open the dmg file and drag the CARTA-v1.0.app to the /Applications folder.
 <br>To run CARTA-v1.0, click on it in the Launchpad, or double click on it in the Finder.
 Alternatively, the user may run CARTA from the terminal by adding an alias to their <code>~/.bashrc</code> file.
-e.g. Adding the line <code>alias carta=/Applications/CARTA-v1.0.app/Contents/MacOS/CARTA-v1.0</code> and <code>source ~/.bashrc</code>.
+e.g. <code>alias carta=/Applications/CARTA-v1.0.app/Contents/MacOS/CARTA-v1.0</code> and <code>source ~/.bashrc</code>.
 Now CARTA can be started by typing <code>carta</code> in the terminal.
 </p>
 
@@ -85,7 +89,7 @@ On your remote server, extract the archive <code>tar -xvf CARTA-v1.0-RedHat6-hea
 and run the carta script within <code>./CARTA-v1.0-RedHat6-headless/carta</code>. This will provide a unique URL. 
 Copy and paste this URL in to your local web browser to access CARTA. 
 When finished, close your browser window, and press 'q' in the terminal window to close CARTA. 
-The default search path for images is <code>$HOME</code>, but you may override this by appending a path to a directory of your choice 
+<br>The default search path for images is <code>$HOME</code>, but you may override this by appending a path to a directory of your choice 
 e.g.<code>./CARTA-v1.0-RedHat6-headless/carta /path/to/my/images </code>.
 
 
