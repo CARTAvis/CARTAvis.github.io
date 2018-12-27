@@ -62,7 +62,7 @@ Therefore, the CARTA Desktop 'local' version is intended for use on a laptop or 
     </ul>
 </li>
 
-<p> We also provide a 'remote' version for users who wish to run CARTA from a remote RedHat6/CentOS6 or RedHat7/CentOS7 server via the ssh protocol. 
+<p> We also provide a 'remote' version for users who wish to run CARTA from a remote RedHat6/CentOS6 or RedHat7/CentOS7 server via the ssh protocol or VNC. 
 As the majority of servers do not have onboard GPUs, the remote version runs the CARTA 'backend' on the server, while the CARTA 'frontend' is accessed through 
 your web browser of choice running on your local machine. This allows your local machine's GPU to perform the image rendering, while the 
 remote server handles the storage and CPU/RAM instensive tasks.<p>
@@ -81,7 +81,7 @@ e.g. <code>alias carta=/Applications/CARTA-v1.0.app/Contents/MacOS/CARTA-v1.0</c
 Now CARTA can be started by typing <code>carta</code> in the terminal.
 </p>
 
-<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0-ubuntu.AppImage</code> <br> 
+<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0-ubuntu.AppImage</code> On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>. <br> 
 </p>
 
 <p><em>Linux Installation Instructions (remote version)</em>: 
