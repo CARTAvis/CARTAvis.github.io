@@ -81,13 +81,18 @@ e.g. <code>alias carta=/Applications/CARTA-v1.0.app/Contents/MacOS/CARTA-v1.0</c
 Now CARTA can be started by typing <code>carta</code> in the terminal.
 </p>
 
-<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0-ubuntu.AppImage</code> On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>. 
+<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0-ubuntu.AppImage</code> 
+<br>
+On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>
+<br>
 Also on RedHat7 machines after starting the AppImage, you may see a warning about 'Fontconfig'. 
-It does not affect using CARTA, but the warning can be removed by doing <code>sudo yum install fontconfig</code>.
+It does not affect using CARTA, but the warning can be removed with <code>sudo yum install fontconfig</code>
+</p>
 
-<br> 
+<p> 
 Note: For the Mac and AppImage versions of CARTA, the default File browser search path is curently fixed as $HOME. 
-If you wish to use a different path outside of $HOME, you may make a symbolic link in your home directory to the image directory. For example, <code>ln -s /lustre/my/images $HOME/Images</code>
+If you wish to use a different path outside of $HOME, you may make a symbolic link in your home directory to the image directory. 
+For example, <code>ln -s /lustre/my/images $HOME/CARTA_images</code>
 <br>
 
 </p>
