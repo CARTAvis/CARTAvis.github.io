@@ -52,36 +52,36 @@
 <p>CARTA utilizes discrete or integrated GPU for image rendering. 
 Therefore, the CARTA Desktop 'local' version is intended for use on a laptop or desktop computer directly connected to a monitor.<p>
 
-<li> Local version 1.0-rel download links:
+<li> Local version 1.0.1 download links:
     <ul>
-      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0/CARTA-v1.0.dmg">macOS 10.12 10.13 10.14 / OSX 10.11</a></li>
+      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0.1/CARTA-v1.0.1dmg">macOS 10.13 10.14</a></li>
       
-      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0/CARTA-v1.0-RedHat7.AppImage">RedHat 7 / CentOS7</a></li>
+      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0.1/CARTA-v1.0.1-RedHat7.AppImage">RedHat 7</a></li>
       
-      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0/CARTA-v1.0-ubuntu.AppImage">Ubuntu 16.04 LTS 18.04 LTS</a></li>
+      <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0.1/CARTA-v1.0.1-ubuntu.AppImage">Ubuntu 16.04 LTS 18.04 LTS</a></li>
     </ul>
 </li>
 
-<p> We also provide a 'remote' version for users who wish to run CARTA from a remote RedHat6/CentOS6 or RedHat7/CentOS7 server via the ssh protocol or VNC. 
+<p> We also provide a 'remote' version for users who wish to run CARTA from a remote RedHat6 or RedHat7 server via the ssh protocol or VNC. 
 As the majority of servers do not have onboard GPUs, the remote version runs the CARTA 'backend' on the server, while the CARTA 'frontend' is accessed through 
 your web browser of choice running on your local machine. This allows your local machine's GPU to perform the image rendering, while the 
 remote server handles the storage and CPU/RAM instensive tasks.<p>
 
-<li> Remote version 1.0-rel download link:
+<li> Remote version 1.0.1 download link:
     <ul>
- <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0/CARTA-v1.0-RedHat6-RedHat7-remote.tar.gz">RedHat 6/7 CentOS6/7 remote version</a></li>
+ <li><a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.0.1/CARTA-v1.0.1-RedHat6-RedHat7-remote.tar.gz">RedHat 6/7 remote version</a></li>
    </ul>
 </li>  
 
 
-<p><em>Mac Installation Instructions</em>: Open the dmg file and drag the CARTA-v1.0.app to the /Applications folder.
-<br>To run CARTA-v1.0, click on it in the Launchpad, or double click on it in the Finder.
+<p><em>Mac Installation Instructions</em>: Open the dmg file and drag the CARTA-v1.0.1.app to the /Applications folder.
+<br>To run CARTA-v1.0.1, click on it in the Launchpad, or double click on it in the Finder.
 Alternatively, the user may run CARTA from the terminal by adding an alias to their <code>~/.bashrc</code> file.
-e.g. <code>alias carta=/Applications/CARTA-v1.0.app/Contents/MacOS/CARTA-v1.0</code> and <code>source ~/.bashrc</code>.
+e.g. <code>alias carta=/Applications/CARTA-v1.0.1.app/Contents/MacOS/CARTA-v1.0.1</code> and <code>source ~/.bashrc</code>.
 Now CARTA can be started by typing <code>carta</code> in the terminal.
 </p>
 
-<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0-ubuntu.AppImage</code> 
+<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0.1-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0.1-ubuntu.AppImage</code> 
 <br>
 On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>
 <br>
@@ -89,31 +89,31 @@ Also on RedHat7 machines after starting the AppImage, you may see a warning abou
 It does not affect using CARTA, but the warning can be removed with <code>sudo yum install fontconfig</code>
 </p>
 
-<p> 
+<!--<p> 
 Note: For the Mac and AppImage versions of CARTA, the default Filebrowser search path is curently fixed as <code>$HOME</code>. 
 If you wish to use a different path outside of $HOME, you may make a symbolic link in your home directory to the image directory. 
 For example, <code>ln -s /lustre/my/images $HOME/CARTA_images</code>
 <br>
 
-</p>
+</p>-->
 
 <p><em>Linux Installation Instructions (remote version)</em>: 
 On your remote server, extract the archive 
-<code>tar -xvf CARTA-v1.0-RedHat6-RedHat7-remote.tar.gz</code> 
+<code>tar -xvf CARTA-v1.0.1-RedHat6-RedHat7-remote.tar.gz</code> 
 and run the carta script within 
-<code>./CARTA-v1.0-RedHat6-RedHat7-remote/carta</code>. This will provide a unique URL. 
+<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta</code>. This will provide a unique URL. 
 Copy and paste this URL in to your local web browser to access CARTA. 
 When finished, close your browser window, and press 'q' in the terminal window to close CARTA. 
 <br>The default search path for images is <code>$HOME</code>, the remote version has way to override this
 by appending a path to a directory of your choice 
-e.g.<code>./CARTA-v1.0-RedHat6-RedHat7-remote/carta /path/to/my/images </code>.
+e.g.<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta /path/to/my/images </code>.
 
 
 <h3>
   <a id="getHelp" class="anchor" href="#getHelp" aria-hidden="true">
   <span aria-hidden="true" class="octicon octicon-link"></span></a>User manual and Getting help</h3>
 
-<p>The user manual is available at <a href="https://cartavis.github.io/manual/">here</a>.<br>
+<p>The user manual is available at <a href="https://carta.readthedocs.io/en/latest/">here</a>.<br>
 
 Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
 
