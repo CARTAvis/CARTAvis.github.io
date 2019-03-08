@@ -77,41 +77,11 @@ remote server handles the storage and CPU/RAM instensive tasks.<p>
 dragging /Applications/CARTA-v1.0 to the Trashcan on Mac, or on Linux by deleting the v1.0 AppImage or the v1.0 remote version directory. 
 Remember to update any aliases or symlinks you may have made for v1.0.
 
-<p><em>Mac Installation Instructions</em>: Open the dmg file and drag the CARTA-v1.0.1.app to the /Applications folder.
-<br>To run CARTA-v1.0.1, click on it in the Launchpad, or double click on it in the Finder.
-Alternatively, the user may run CARTA from the terminal by adding an alias to their <code>~/.bashrc</code> file.
-e.g. <code>alias carta=/Applications/CARTA-v1.0.1.app/Contents/MacOS/CARTA-v1.0.1</code> and <code>source ~/.bashrc</code>.
-Now CARTA can be started by typing <code>carta</code> in the terminal.
-</p>
-
-<p><em>Linux Installation Instructions (local version)</em>: The RedHat7 and Ubuntu versions are provided as AppImages. After downloading, make the AppImage file executable e.g. <code>chmod 755 CARTA-v1.0.1-ubuntu.AppImage</code> and run it <code>./CARTA-v1.0.1-ubuntu.AppImage</code> 
 <br>
-On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>
 <br>
-Also on RedHat7 machines after starting the AppImage, you may see a warning about 'Fontconfig'. 
-It does not affect using CARTA, but the warning can be removed with <code>sudo yum install fontconfig</code>
-</p>
-
-<!--<p> 
-Note: For the Mac and AppImage versions of CARTA, the default Filebrowser search path is curently fixed as <code>$HOME</code>. 
-If you wish to use a different path outside of $HOME, you may make a symbolic link in your home directory to the image directory. 
-For example, <code>ln -s /lustre/my/images $HOME/CARTA_images</code>
+Basic installation instructions for Mac and Linux are <a href="https://cartavis.github.io/installation.html">here</a>.
 <br>
 
-</p>-->
-
-<p><em>Linux Installation Instructions (remote version)</em>: 
-On your remote server, extract the archive 
-<code>tar -xvf CARTA-v1.0.1-RedHat6-RedHat7-remote.tar.gz</code> 
-and run the carta script within 
-<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta</code>. This will provide a unique URL. 
-Copy and paste this URL in to your local web browser to access CARTA. 
-When finished, close your browser window, and press 'q' in the terminal window to close CARTA. 
-<br>The default search path for images is <code>$HOME</code>, the remote version has way to override this
-by appending a path to a directory of your choice 
-e.g.<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta /path/to/my/images </code>.
-
-<br>
 <br>
 Previous releases of CARTA can be found  <a href="https://cartavis.github.io/old_releases.html">here</a>.
 <br>

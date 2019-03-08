@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CARTA</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <IMG SRC="images/carta_logo_v2.png" WIDTH=96>
+        <h1>CARTA</h1>
+        <p>Cube Analysis and Rendering Tool for Astronomy</p>
+
+
+<h3><a id="the-carta-team" class="anchor" href="#the-carta-team" aria-hidden="true">
+  <span aria-hidden="true" class="octicon octicon-link"></span></a>The CARTA team</h3>
+
+<p>CARTA is developed by <br>
+    <a href="https://www.asiaa.sinica.edu.tw">Academia Sinica Institute of Astronomy and Astrophysics (ASIAA)</a><br>
+    <a href="https://idia.ac.za">Inter-University Institute for Data Intensive Astronomy (IDIA)</a><br>
+    <a href="https://science.nrao.edu">National Radio Astronomy Observatory (NRAO)</a><br>
+    <a href="https://www.ualberta.ca/physics">Department of Physics, University of Alberta</a>
+    </ul>
+</p>
+
+    <IMG SRC="images/carta_wg_logo_grid.png" WIDTH=300>
+
+      </header>
+      <section>
+        <h1>
+<a id="carta" class="anchor" href="#carta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CARTA</h1>
+
+<h2>
+<a id="previous" class="anchor" href="#previous" aria-hidden="true">
+<span aria-hidden="true" class="octicon octicon-link"></span></a>v1.0.1 Installation instructions</h2>
+
+<hr>
+
+
+<h3>
+<a id="macos" class="anchor" href="#macos" aria-hidden="true">
+<span aria-hidden="true" class="octicon octicon-link"></span></a>MacOS Installation Instructions</h3>
+
+
+<p>Open the dmg file and drag the CARTA-v1.0.1.app to the /Applications folder.
+<br>To run CARTA-v1.0.1, click its icon in the Launchpad, or double click it in the Finder.
+<br>Alternatively, the user may run CARTA from the terminal by adding an alias to their <code>~/.bashrc</code> file. e.g.
+<code>alias carta=/Applications/CARTA-v1.0.1.app/Contents/MacOS/CARTA-v1.0.1</code> and <code>source ~/.bashrc</code>.
+<br>Now CARTA can be started by typing <code>carta</code> in the terminal.
+</p>
+
+<h3>
+<a id="linuxlocal" class="anchor" href="#linuxlocal" aria-hidden="true">
+<span aria-hidden="true" class="octicon octicon-link"></span></a>Linux Installation Instructions (local version)</h3>
+
+<p>The RedHat7 and Ubuntu versions are provided as AppImages. 
+<br>After downloading, make the AppImage file executable 
+<br><code>chmod 755 CARTA-v1.0.1-ubuntu.AppImage</code> and run it 
+<br><code>./CARTA-v1.0.1-ubuntu.AppImage</code> 
+<br>
+<br>
+On RedHat7 machines, an updated 'nss' package may need to be installed; <code>sudo yum install nss</code>
+<br>
+Also on RedHat7 machines after starting the AppImage, you may see a warning about 'Fontconfig'. 
+It does not affect using CARTA, but the warning can be removed with <code>sudo yum install fontconfig</code>
+</p>
+
+<h3>
+<a id="linuxremote" class="anchor" href="#linuxremote" aria-hidden="true">
+<span aria-hidden="true" class="octicon octicon-link"></span></a>Linux Installation Instructions (remote version)</h3>
+
+On your remote server, extract the archive 
+<code>tar -xvf CARTA-v1.0.1-RedHat6-RedHat7-remote.tar.gz</code> 
+and run the carta script within 
+<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta</code>. 
+<br>This will provide a unique URL. 
+Copy and paste this URL in to your local web browser to access CARTA. 
+When finished, close your browser window, and press 'q' in the terminal window to close CARTA. 
+<br>The default search path for images is <code>$HOME</code>, the remote version has way to override this
+by appending a path to a directory of your choice 
+e.g.<code>./CARTA-v1.0.1-RedHat6-RedHat7-remote/carta /path/to/my/images </code>.
+
+<br>
+<br>
+<hr>
+For more detailed installation instructions, please consult the Installation and Configuration section of the CARTA user manual
+<a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html">here</a>.
+<br>
+<br>
+
+<hr>
+<a href="https://cartavis.github.io/">Back to main page</a>.<br>
+<br>
+<hr>
+
+<h3>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true">
+<span aria-hidden="true" class="octicon octicon-link"></span></a>Copyright and License</h3>
+
+<p>Copyright (C) 2018-2019 ASIAA, IDIA, and NRAO. This program is free software; you can redistribute it and/or modify it under the terms of the  <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as published by the Free Software Foundation.</p>
+
+<p>This webpage is hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+
+  </body>
+</html>
