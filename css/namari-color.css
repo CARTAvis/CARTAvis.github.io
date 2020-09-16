@@ -8,31 +8,38 @@
 6. Buttons
 7. Footer
 
-
 /*------------------------------------------------------------------------------------------*/
 /* 1. Website Default Styling */
 /*------------------------------------------------------------------------------------------*/
 
+      dark-mode-toggle {
+        position: left;
+        top: 2rem;
+        right: 0.5rem;
+        --dark-mode-toggle-light-icon: url(https://googlechromelabs.github.io/dark-mode-toggle/demo/moon.png);
+        --dark-mode-toggle-dark-icon: url(https://googlechromelabs.github.io/dark-mode-toggle/demo/sun.png);
+        --dark-mode-toggle-icon-size: 1rem;
+      }
 
 body {
-    background:#fff;
+    background: var(--primary-color);
 }
 
 
 /* Default Link Color */
 
 a, .la-ball-triangle-path {
-    color:#0e60ad;
+    color:var(--link-color);
 }
 
 a:hover, #header.nav-solid nav a:hover {
-    color:#0e60ad;
+    color: var(--link-color);
 }
 
 /* Default Icon Color */
 
 .icon i {
-    color:#0e60ad;
+    color: var(--link-color);
 }
 
 /* Border Color */
@@ -54,22 +61,22 @@ a:hover, #header.nav-solid nav a:hover {
 /* Transparent Navigation Color on a Banner */
 
 #header nav a, #header i {
-    color:#111;
+    color: var(--font-color);
 }
 
 
 /* Navigation Colors when the Navigation is sticky and solid */ 
 
 #header.nav-solid, #header.nav-solid a, #header.nav-solid i, #nav-mobile ul li a {
-    color:#333;
+    color: var(--font-color);
 }
 
 
 /* Navigation Active State */
 
 #header.nav-solid .active {
-    color: #0e60ad;
-    border-color: #0e60ad;
+    color: var(--heading-color);
+    border-color: var(--font-color); 
 }    
 
 
@@ -82,11 +89,11 @@ a:hover, #header.nav-solid nav a:hover {
 /* Primary Background and Text Colors */
 
 .primary-color, .featured .pricing {
-    background-color:#0e60ad;
+    background-color: var(--primary-color);
 }
 
 .primary-color, .primary-color .section-title, .primary-color .section-subtitle, .featured .pricing, .featured .pricing p {
-    color:#fff;    
+    color: var(--primary-color);    
 }
 
 .section-heading h2:after {
@@ -105,14 +112,14 @@ a:hover, #header.nav-solid nav a:hover {
 /* Primary Icon Colors */
 
 .primary-color .icon i, .primary-color i {
-    color:#fff;
+    color:var(--bg-color);
 }
 
 
 /* Secondary Background and Text Colors */
 
 .secondary-color {
-    background-color:#f5f5f5;
+    background-color: var(--secondary-color);
 }
 
 
@@ -123,11 +130,12 @@ a:hover, #header.nav-solid nav a:hover {
 
 /* Banner Background and Text Colors */
 
+/*
 #banner {
-    background: url("../images/banner-images/banner-image-1.png") no-repeat center top;
-    background-size:cover;
+    background: url("../images/banner-images/banner_light.png") no-repeat center top;
+    background-size: cover;
 }
-
+*/
 
 /*------------------------------------------------------------------------------------------*/
 /* 5. Typography */
@@ -138,7 +146,7 @@ body {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:15px;
     font-weight:normal;
-    color:#111;
+    color: var(--font-color);
 }
 
 /* Logo, if you are using Fonts as Logo and not image
@@ -167,14 +175,14 @@ body {
     font-size:62px;
     line-height:60px;
     font-weight:800;
-    color:#0a448c;
+    color: var(--carta-color);
 }
 
 #banner h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:18px;
     font-weight:300;
-    color:#111;
+    color: var(--heading-color);
 }
 
 
@@ -184,14 +192,14 @@ body {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 34px; 
     font-weight:700;
-    color:#111;
+    color: var(--heading-color);
 }
 
 .section-subtitle {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 16px;
     font-weight:300;
-    color:#111;
+    color: var(--heading-color);
 }
 
 /* Testimonial */
@@ -203,7 +211,7 @@ body {
 }
 
 .testimonial.classic q, .testimonial.classic footer {
-    color:#111;
+    color: var(--heading-color);
 }
 
 
@@ -213,42 +221,42 @@ h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 40px; 
     font-weight:300;
-    color:#111;
+    color: var(--heading-color);
 }
 
 h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 34px; 
     font-weight:300;
-    color:#111;
+    color: var(--heading-color);
 }
 
 h3 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 30px; 
     font-weight:700;
-    color:#111;
+    color: var(--heading-color);
 }
 
 h4 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px; 
     font-weight:400;
-    color:#111;
+    color: var(--heading-color);
 }
 
 h5 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 16px; 
     font-weight:400;
-    color:#111;
+    color: var(--heading-color);
 }
 
 h6 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 14px; 
     font-weight:400;
-    color:#111;
+    color: var(--heading-color);
 }
 
 
@@ -272,7 +280,7 @@ h6 {
 /* Button Color */
 
 .button, input[type="submit"] {
-    border-color:#111;
+    border-color:var(--button-border-color);;
 }
 
 
@@ -299,7 +307,7 @@ h6 {
 /* Button Color */
 
 #banner .button {
-    border-color:#111;
+    border-color:var(--button-border-color);
 }
 
 

@@ -26,10 +26,16 @@
     <!-- Animate CSS-->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 
+    <!-- For dark/light mode-->
+    <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
 
 <!-- Preloader -->
 <div id="preloader">
@@ -63,7 +69,14 @@
                         <!--End of Banner Logo-->
 
                         <!--The Logo that is shown on the sticky Navigation Bar-->
-                        <img src="images/carta_logo_text.png" id="navigation-logo" alt="Landing Page"/>
+                        <!--<img src="images/carta_logo_text.png" id="navigation-logo" alt="Landing Page"/>-->
+
+                               <picture>
+                                <source srcset="images/carta_logo_text_dark.png" media="(prefers-color-scheme: dark)">
+                                <source srcset="images/carta_logo_text.png" width=40px media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/carta_logo_text.png" id="navigation-logo" alt="Landing Page"/>
+                                </picture>
+
                         <!--End of Navigation Logo-->
 
                     </div>
@@ -73,34 +86,60 @@
                         <!--Social Icons in Header-->
                         
                         <ul class="social-icons">
+
                             <li>
                                 <a target="_blank" title="ASIAA" href="https://www.asiaa.sinica.edu.tw">
-                                    <img src="images/company-images/logo_asiaa.png" width=36px id="asiaa-logo" alt="ASIAA"/>
+                                    <img src="images/company-images/logo-asiaa.png" width=32px id="asiaa-logo" alt="ASIAA"/>
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" title="IDIA" href="https://www.idia.ac.za">
-                                    <img src="images/company-images/logo_idia3.png" width=34px id="idia-logo" alt="IDIA"/>
+                                   <img src="images/company-images/logo-idia.png" width=32px id="idia-logo" alt="IDIA"/>
+
+<!--
+                                <picture>
+                                <source srcset="images/team-idia-light.png" width=32px media="(prefers-color-scheme: dark)">
+                                <source srcset="images/team-idia-dark.png" width=32px media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/team-idia-dark.png" width=40px></a>
+                                </picture>
+-->
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" title="NRAO" href="https://science.nrao.edu">
-                                    <img src="images/company-images/logo_nrao.png" width=25px id="nrao-logo" alt="NRAO"/>
+                                    <img src="images/company-images/logo-nrao.png" width=32px id="nrao-logo" alt="NRAO"/>
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" title="Department of Physics, University of Alberta" href="https://www.ualberta.ca/physics">
-                                    <img src="images/company-images/logo_alberta2.jpg" width=34px id="alberta-logo" 
+                                    <img src="images/company-images/logo-alberta.png" width=32px id="alberta-logo" 
                                         alt="Department of Physics, University of Alberta"/>
+                              <!--  <picture>
+                                <source srcset="images/team-alberta-dark.png" width=32px media="(prefers-color-scheme: dark)">
+                                <source srcset="images/team-alberta-light.png" width=32px media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/team-alberta-light.png" width=40px></a>
+                                </picture>
+                              -->
                                 </a>
                             </li>
-                            <li>
-                                <a target="_blank" title="GitHub" href="https://github.com/CARTAvis">
-                                    <img src="images/company-images/logo_github.png" width=34px id="github-logo" alt="GitHub"/>
+<!--                            <li>
+                                <a target="_blank" title="CARTA on GitHub" href="https://github.com/CARTAvis">
+                                <picture>
+                                <source srcset="images/company-images/logo-github-dark-b.png" width=32px media="(prefers-color-scheme: dark)">
+                                <source srcset="images/company-images/logo-github-light-b.png" width=32px media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/company-images/logo-github-light-b.png" width=32px loading="lazy"></a>
+                                </picture>
                                 </a>
+
+                            </li>-->
                             </li>
                         </ul>
-                        
+
+<!--
+<a href="https://github.com/cartavis"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+-->
+
+                    
                         <!--End of Social Icons in Header-->
                     </aside>
 
@@ -123,18 +162,27 @@
                                 <a href="#download">Download</a>
                             </li>
                             <li>
+                                <a href="#team">Team</a>
+                            </li>
+                            <li>
                                 <a href="#about">About</a>
                             </li>
+
                         </ul>
                     </nav>
                     <!--End of Main Navigation-->
+
 
                     <div id="nav-trigger"><span></span></div>
                     <nav id="nav-mobile"></nav>
 
                 </div>
+
             </div>
+
+
         </div><!--End of Header-->
+
 
         <!--Banner Content-->
         <div id="banner-content" class="row clearfix">
@@ -191,11 +239,9 @@
                             user authentication and addtional server-side features. 
                         </p>
                     </div>
-
                 </div>
 
                 <div class="col-2-3">
-
                     <!--Icon Block-->
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">                        
                         <div class="icon-block-description">
@@ -259,7 +305,6 @@
 
             </div>
 
-
         </section>
         <!--End of Introduction-->
 
@@ -290,44 +335,56 @@
         </aside>
         <!--End of Gallery-->
 
-
         <!--Content Section-->
+
         <div id="roadmap" class="scrollto clearfix">
 
             <div class="row no-padding-bottom clearfix">
 
-                <div class="section-heading">
+                   <div class="section-heading">
                     <h3>ROADMAP</h3>
-                    <h2 class="section-title">Upcoming features</h2>
-                </div>
+                    <h2 class="section-title">Roadmap</h2>
+                   </div>
 
                 <!--Content Left Side-->
-                <div class="col-2">
-                    <div class="section-heading">
-                        <h4>Next release</h4>
-                    </div>
-                    <p>These are the features we are developing for the next CARTA release (v1.4). This is likely to take place in Q3, 2020.
+		<div class="col-3">
+		       <div class="section-heading">
+                        <h4>Current release</h4>
+		       </div>
+                    <p>The current release is v1.4, released on 17th of September 2020, with the following features</p>
                         <ul>
-                            <li> Catalogue overlay </li>
-                            <li> WCS region of interest </li>
-                            <li> Animator improvement for spatially and spectrally matched images </li>
-                            <li> Mip map support in HDF5 (IDIA schema) format </li>
-                            <li> Initial support of scripting interface in Python3 </li>
-                            <li> Server-side authentication improvements </li>
+                            <li> Catalogue support </li>
+                            <li> Shared region analytics </li>
+                            <li> Animation playback improvement of raster and contour images </li>
                             <li> Profile smoothing </li>
                             <li> Moment map generator </li>
-                            <li> Line catalogue overlay </li>
+                            <li> Spectral line query </li>
+                            <li> Server authentication and deployment improvements </li>
+                            <li> File browser improvements </li>
+                            <li> Bug fixes and performance improvements </li>
                           </ul>
-                    </p>
-                    
-                    
+                    </p> 
                 </div>
                 <!--End Content Left Side-->
 
-                <!--Content of the Right Side-->
-                <div class="col-2">
+                <!--Content of the Middle-->
+                <div class="col-3">
                     <div class="section-heading">
-                        <h4>Future releases</h4>
+                        <h4>Next release</h4>
+
+                    </div>
+                    <p> The next release is v1.5, which focuses mainly on bug fixes, code maintenance, and R&D for future features. 
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <!--End Content of the Middle-->
+
+
+                <!--Content of the Right Side-->
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h4>Future release</h4>
                         
                     </div>
                     <p>This is a non-exclusive list of features we would like in subsequent 
@@ -345,6 +402,7 @@
                             <li> Profile, histogram, and image fitting tools </li>
                             <li> Scripting interface (Python3) </li>
                             <li> Three-color blender </li>
+                            <li> Mip map support in HDF5 (IDIA schema) format </li>
                           </ul> 
                     
                         <br>
@@ -364,26 +422,29 @@
 
 
         <!--Download Tables-->
-        <section id="download" class="secondary-color text-center scrollto clearfix ">
+        <section id="download" class="secondary-color text-left scrollto clearfix ">
             <div class="row clearfix">
 
+
+            <div class="col-1">
                 <div class="section-heading">
                     <h3>DOWNLOAD</h3>
                     <h2 class="section-title">Desktop version</h2>
+                </div>
 
                     <h4>
                         Suitable for single-user usage with a laptop, a desktop or a remote server in the "remote" mode.
                         <br>
-                        Current release: v1.3.1 (2020/05/05)
+                        Current release: v1.4 (2020/09/17)
                     </h4>
                 </div>
 
                 <!--Download Block-->
                 <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="pricing-block-content">
+                    <div class="pricing-block-content text-center">
                         <h2 class="section-title">macOS</h2>
                         <p class="pricing-sub">10.15 Catalina<br>10.14 Mojave</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.3.1/CARTA-v1.3.1.dmg" 
+                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4.dmg" 
                             class="button">DOWNLOAD</a>
                     </div>
                 </div>
@@ -391,10 +452,10 @@
 
                 <!--Download Block-->
                 <div class="pricing-block featured col-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="pricing-block-content">
+                    <div class="pricing-block-content text-center">
                         <h2 class="section-title">Ubuntu</h2>
                         <p class="pricing-sub">20.04 LTS<br>18.04 LTS</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.3.1/CARTA-v1.3.1-ubuntu.tgz" 
+                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-ubuntu.tgz" 
                             class="button">DOWNLOAD</a>
                     </div>
                 </div>
@@ -402,10 +463,10 @@
 
                 <!--Download Block-->
                 <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="pricing-block-content">
+                    <div class="pricing-block-content text-center">
                         <h2 class="section-title">Red Hat</h2>
                         <p class="pricing-sub">8<br>7</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.3.1/CARTA-v1.3.1-RedHat7.tgz" 
+                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-RedHat7.tgz" 
                             class="button">DOWNLOAD</a>
                     </div>                   
                 </div>
@@ -414,37 +475,117 @@
             
                 <!--Download Block-->
                 <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="pricing-block-content">
+                    <div class="pricing-block-content text-center">
                         <h2 class="section-title">Red Hat</h2>
                         <p class="pricing-sub">6<br>(remote mode only)</p>
-                        <a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.3.1/CARTA-v1.3.1-remote.tgz" 
+                        <a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.4/CARTA-v1.4-remote.tgz" 
                             class="button">DOWNLOAD</a>
                     </div>
-            
             </div>
             <!--End Download Block-->
 
+            <div class="col-1">
             <p>Installation instructions for macOS and Linux are <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
             <p>The user manual is available <a href="https://carta.readthedocs.io/en/latest/" target="_blank">here</a>.</p>
             </div>
-        
+
+            <div class="col-1">
             <div class="section-heading">
                 <h2 class="section-title">Server version</h2>
                 <h4>
                     Suitable for institution-wide deployment to support multiple users with user authentication and additional server-side features. 
                     <br>
-                    Current release: v1.3.1 (2020/05/05)
+                    Current release: v1.4 (2020/09/17)
                 </h4>
             </div>
         
-            <p>Please follow the instructions <a href="https://github.com/CARTAvis/carta-server/blob/master/UBUNTU-INSTALLATION.md" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
+            <p>Please follow the instructions <a href="https://carta.readthedocs.io/en/1.4/installation_and_configuration.html#carta-server" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
             <br>
             <p>Previous releases of CARTA can be found <a href="https://github.com/CARTAvis/carta/releases" target="_blank">here</a>.</p>
             <p>Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>, or <a href="https://github.com/CARTAvis/carta/issues" target="_blank">submit an issue</a>.</p>
 
+        </div>
 
+      </div>
         </section>
         <!--End of Download Tables-->
+
+
+
+        <!--Testimonials-->
+        <aside id="team" class="scrollto" data-enllax-ratio=".2">
+
+            <div class="row clearfix">
+              <div class="col-1">
+                <div class="section-heading">
+                    <h3>TEAM</h3>
+                    <h2 class="section-title">CARTA Development team</h2>
+                </div>
+
+
+                <!--User Testimonial-->
+                <blockquote class="col-4 testimonial classic text-center">
+                    <img src="images/team-asiaa.png"/>
+<p><a href="https://www.asiaa.sinica.edu.tw/" target="_blank">Academia Sinica Institute of Astronomy and Astrophysics (ASIAA)</a></p>
+                 <footer>ASIAA CASA Development Center (ACDC) acknowledges the grant
+                        from the Ministry of Science and Technology of Taiwan for the ALMA-NA collaboration.</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+                <!--User Testimonial-->
+                <blockquote class="col-4 testimonial classic text-center">
+<!--
+<img src="images/company-images/logo_idia3.png" id="idia-logo" alt="IDIA"/>
+-->
+
+                                <picture>
+                                <source srcset="images/team-idia-dark.png" media="(prefers-color-scheme: dark)">
+                                <source srcset="images/team-idia-light.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/team-idia-light.png"></a>
+                                </picture>
+
+<p><a href="https://www.idia.ac.za/" target="_blank">Inter-University Institute for Data Intensive Astronomy (IDIA)</a></p>
+                    <footer>The Inter-University Institute for Data Intensive Astronomy is a partnership of three
+                        South African universities: the University of Cape Town, the University of
+                        the Western Cape and the University of Pretoria.</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+                <!--User Testimonial-->
+                <blockquote class="col-4 testimonial classic text-center">
+                    <img src="images/team-nrao.png"/>
+                    <p><a href="https://science.nrao.edu/" target="_blank">National Radio Astronomy Observatory (NRAO)</a></p>
+                    <footer>The National Radio Astronomy Observatory is a facility of the National
+                        Science Foundation operated under cooperative agreement by Associated Universities, Inc</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+                <!--User Testimonial-->
+                <blockquote class="col-4 testimonial classic text-center">
+<!--
+                    <img src="images/company-images/logo_alberta2.jpg"/>
+-->
+                                <picture>
+                                <source srcset="images/team-alberta-dark.png" media="(prefers-color-scheme: dark)">
+                                <source srcset="images/team-alberta-light.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                                <img src="images/team-alberta-light.png"></a>
+                                </picture>
+
+                    <p><a href="https://www.ualberta.ca/physics" target="_blank">Department of Physics, University of Alberta</a></p>
+                    <footer>The Department of Physics at the University of Alberta has contributed to the CARTA project
+                        thanks to support from the National Radio Astronomy Observatory under an ALMA Development
+                        Project and from the Canada Foundation for Innovation as part of the
+                        Canadian Initiative for Radio Astronomy Data Analysis (CIRADA).</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+            </div>
+           </div>
+        </aside>
+        <!--End of Testimonials-->
+
+
+
 
 
         <!--Content Section-->
@@ -452,50 +593,33 @@
 
             <div class="row no-padding-bottom clearfix">
 
+                <div class="col-2">
                 <div class="section-heading">
                     <h3>ABOUT</h3>
                     <h2 class="section-title">Project information</h2>
                 </div>
 
-                <div class="col-3">
-                    <div class="section-heading">
-                        <h4>Development team</h4>
-                    </div>
-                    <p>CARTA is developed by</p>
-                    <p><a href="https://www.asiaa.sinica.edu.tw/" target="_blank">Academia Sinica Institute of Astronomy and Astrophysics (ASIAA)</a></p>
-                    <p><a href="https://www.idia.ac.za/" target="_blank">Inter-University Institute for Data Intensive Astronomy (IDIA)</a></p>
-                    <p><a href="https://science.nrao.edu/" target="_blank">National Radio Astronomy Observatory (NRAO)</a></p>
-                    <p><a href="https://www.ualberta.ca/physics" target="_blank">Department of Physics, University of Alberta</a></p>
-                    
-                    <img src="images/carta_wg_logo_grid.png" width=90%>
 
-                    <p>Please use the DOI <a href="https://doi.org/10.5281/zenodo.3377984" target="_blank">10.5281/zenodo.3377984</a> as a citation when using CARTA for publications.</p>
+                    <div class="section-heading">
+                        <h4>CARTA publications</h4>
+                    </div>
+                    <p><a href="https://ui.adsabs.harvard.edu/abs/2020A%26C....3200389C/abstract" target=_blank">Development and application of an HDF5 schema for SKA-scale image cube visualization</a>
+
+                    <div class="section-heading">
+                        <h4>Acknowledgement</h4>
+                    </div>
+                    <p>Please use the DOI <a href="https://doi.org/10.5281/zenodo.3377984" target="_blank">10.5281/zenodo.3377984</a> as a citation when using CARTA for publications.</p>
                 </div>
 
-                
-                <div class="col-3">
-                    <div class="section-heading">
-                        <h4>Team acknowledgement</h4>
-                    </div>
-                    <p>ASIAA CASA Development Center (ACDC) acknowledges the grant 
-                        from the Ministry of Science and Technology of Taiwan for the ALMA-NA collaboration.</p>
-                    <p>The Inter-University Institute for Data Intensive Astronomy is a partnership of three 
-                        South African universities: the University of Cape Town, the University of 
-                        the Western Cape and the University of Pretoria.</p>
-                    <p>The National Radio Astronomy Observatory is a facility of the National 
-                        Science Foundation operated under cooperative agreement by Associated Universities, Inc.</p>
-                    <p>The Department of Physics at the University of Alberta has contributed to the CARTA project 
-                        thanks to support from the National Radio Astronomy Observatory under an ALMA Development 
-                        Project and from the Canada Foundation for Innovation as part of the 
-                        Canadian Initiative for Radio Astronomy Data Analysis (CIRADA).</p>        
-                    
-                </div>
-                
 
-                <div class="col-3">
+                <div class="col-2">
                     <div class="section-heading">
                         <h4>Codebase</h4>
+
+
+
                     </div>
+
                     <p>CARTA is mainly built in C++, TypeScript, and JavaScript, and 
                         with the following third-party libraries. Check out the codebase on <a href="https://github.com/CARTAvis" target="_blank">Github</a>.
                         <ul>
@@ -506,11 +630,16 @@
                             <li> Chart.js: <a href="https://www.chartjs.org" target="_blank">https://www.chartjs.org</a> </li>
                             <li> Electron: <a href="https://electronjs.org" target="_blank">https://electronjs.org</a> </li>
                             <li> GoldenLayout: <a href="https://golden-layout.com" target="_blank">https://golden-layout.com</a> </li>
-                            <li> jsoncpp: <a href="https://github.com/open-source-parsers/jsoncpp" target="_blank">https://github.com/open-source-parsers/jsoncpp</a> </li>
-                            <li> MobX: <a href="https://mobx.js.org" target="_blank">https://mobx.js.org</a> </li>
-                            <li> MongoDB: <a href="https://www.mongodb.com" target="_blank">https://www.mongodb.com</a> </li>
+                            <li> gRPC: <a href="https://grpc.io/" target="_blank">https://grpc.io/</a> </li>
+                            <li> GSL: <a href="https://www.gnu.org/software/gsl/" target="_blank">https://www.gnu.org/software/gsl/</a> </li>
+                            <li> MobX: <a href="https://mobx.js.org" target="_blank">https://mobx.js.org"</a> </li>
+                            <li> MongoDB: <a href="https://www.mongodb.com" target="_blank">https://www.mongodb.com"</a> </li>
+                            <li> node.js: <a href="https://nodejs.org" target="_blank">https://nodejs.org</a> </li>
+                            <li> Plotly: <a href="https://plotly.com" target="_blank">https://plotly.com</a> </li>
+                            <li> Protocol buffers: <a href="https://developers.google.com/protocol-buffers" target="_blank">https://developers.google.com/protocol-buffers</a> </li>
                             <li> React: <a href="https://reactjs.org" target="_blank">https://reactjs.org</a> </li>
                             <li> TBB: <a href="https://www.threadingbuildingblocks.org" target="_blank">https://www.threadingbuildingblocks.org</a> </li>
+                            <li> WebAssembly: <a href="https://webassembly.org"target="_blank">https://webassembly.org</a> </li>
                         </ul>
                     </p>
                     
@@ -523,10 +652,6 @@
 
 
 
-
-
-
-
     </main>
     <!--End Main Content Area-->
 
@@ -535,9 +660,11 @@
     <footer id="landing-footer" class="clearfix">
         <div class="row clearfix">
 
-            <p id="copyright" class="col-1">Copyright (C) 2018-2020 ASIAA, IDIA, NRAO, and Department of Physics, University of Alberta. This program is free software; you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as published by the Free Software Foundation.</p>
-            <p id="copyright" class="col-1">This webpage is hosted on GitHub Pages — Theme by <a href="https://www.shapingrain.com">ShapingRain</a> with customization.</p>
-
+            <p id="copyright" class="col-1">
+Copyright (C) 2018-2020 ASIAA, IDIA, NRAO, and Department of Physics, University of Alberta. This program is free software; you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as published by the Free Software Foundation.
+<!--          <dark-mode-toggle appearance="toggle" dark="Switch to light mode" light="Switch to dark mode"></dark-mode-toggle>-->
+            This webpage is hosted on GitHub Pages — Theme by <a href="https://www.shapingrain.com">ShapingRain</a> with customization.
+           </p>
         </div>
     </footer>
     <!--End of Footer-->
@@ -557,7 +684,8 @@
 <script src="js/images-loaded.min.js"></script>
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
-
+<script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+<script src="js/dark-mode.js"></script>
 
 </body>
 </html>

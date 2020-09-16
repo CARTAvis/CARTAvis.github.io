@@ -1,0 +1,30 @@
+ 
+ :root {
+    --primary-color: #fff;
+    --secondary-color: #f5f5f5;;
+    --font-color: #111;
+    --nav-color: #fff;
+    --nav-border-color: #fff;
+    --bg-color: #fff;
+    --heading-color: #111;
+    --download-box: #fff;
+    --link-color: #0e60ad;
+    --carta-color: #0a448c;
+    --preloader-color: #fff;
+    --button-border-color: #111;
+}
+
+#banner {
+    background: url("../images/banner-images/banner_light.png") no-repeat center top;
+    background-size:cover;
+}
+
+logo-image-grid {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("../images/carta_wg_logo_grid_light.png") no-repeat center top;
+  width: 100px;
+  height: 100px;
+}
+
