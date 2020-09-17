@@ -2120,6 +2120,10 @@ blockquote {
     #header aside {
         display: none;
     }
+    
+    #header ul.social-icons {
+        display: none;
+    }
 }
 
 /* Landscape mobile & down
