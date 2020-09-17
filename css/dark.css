@@ -1,0 +1,25 @@
+  
+ :root {
+    --primary-color: #293742;
+    --secondary-color: #30404D;
+    --font-color: #F5F8FA;
+    --nav-color: #26282b;
+    --nav-border-color: #26282b;
+    --bg-color: #161625;
+    --heading-color: #fff;
+    --download-box: #293742;
+    --link-color: #48AFF0;
+    --carta-color: #48AFF0;
+    --preloader-color: #111;
+    --button-border-color: #fff;
+}
+
+#banner {
+    background: url("../images/banner-images/banner_dark.png") no-repeat center top;
+    background-size:cover;
+}
+
+#logo-image-grid {
+  background: url("images/carta_wg_logo_grid_dark.png") no-repeat;
+}
+
