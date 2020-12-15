@@ -373,10 +373,59 @@
                         <h4>Next release</h4>
 
                     </div>
-                    <p> The next release will be v2.0, which will focus mainly on bug fixes, code maintenance, and R&D for future features. 
-                        <br>
-                        <br>
-                    </p>
+                    <p> The next release will be v2.0 with the following new features: </p>
+                        <ul>
+                            <li>Publication quality image output</li>
+                                <ul>
+                                    <li>Support high resolution png</li>
+                                    <li>Support a color bar in the image viewer</li>
+                                </ul>
+                            <li>Preparations for the PV generator</li>
+                                <ul>
+                                    <li>Support rectangular pixel rendering</li>
+                                    <li>Support line region type</li>
+                                    <li>Display xy labels and ticks properly for a position-velocity image</li>
+                                </ul>
+                            <li>File browser improvements</li>
+                                <ul>
+                                    <li>Support CASA image types: concatenated, componentlist, LEL</li>
+                                    <li>Support integer, complex and boolean image types</li>
+                                    <li>Support pv images</li>
+                                    <li>Show correct beam for multi-beam images</li>
+                                    <li>Support for fz (compressed FITS) and fits.gz</li>
+                                    <li>Flexibility with non-standard FITS header</li>
+                                    <li>Open multiple files via file browser</li>
+                                </ul>
+                            <li>HDF5 enhancement</li>
+                                <ul>
+                                    <li>Support mip-mapped datasets including spatial and spectral profile requests</li>
+                                    <li>Accelerate moment map generation with swizzled dataset</li>
+                                </ul>
+                            <li>Catalog enhancements</li>
+                                <ul>
+                                    <li>Enhanced marker-based visualization</li>
+                                    <li>Support catalog overlay on spatially matched images</li>
+                                </ul>
+                            <li>Polarization enhancement</li>
+                                <ul>
+                                    <li>Support loading individual Stokes images for visualization with the Stokes analysis widget</li>
+                                    <li>Show polarization intensity and angle “images” on the fly (from Q, U, and I if fractional) and support Stokes V</li>
+                                    <li>Support flux density and other stats in Stokes analysis tool</li>
+                                </ul>
+                            <li>Spectral line query</li>
+                                <ul>
+                                    <li>Support filtering and sorting in the spectral line query table</li>
+                                </ul>
+                            <li>Spectral profiler</li>
+                                <ul>
+                                    <li>Profile fitting</li>
+                                    <li>Viewing multiple profiles in one widget</li>
+                                </ul>
+                            <li>Basic Python scripting interface</li>        
+                        </ul>
+                        
+                    <br><br>
+                    
                 </div>
                 <!--End Content of the Middle-->
 
@@ -391,21 +440,24 @@
                         releases, but they are not 100% decided upon yet and depend on feedback from users, resourcing etc.:
                         <ul> 
                             <li> Polarization contour and images </li>
-                            <li> Interactive CLEAN with CASA </li>
+                            <li> Interactive CLEAN with CASA (TBD)</li>
                             <li> Multi-panel view </li>
                             <li> Channel map view </li>
-                            <li> View other image formats including complex value images </li>
                             <li> Position-velocity map generator </li>
-                            <li> Collaborative tools </li>
-                            <li> Vector field rendering </li>
-                            <li> Volume rendering </li>
+                            <li> Server collaborative tools </li>
+                            <li> Vector field (polarization) rendering </li>
+                            <li> Volume (pseudo 3D) rendering </li>
                             <li> Profile, histogram, and image fitting tools </li>
                             <li> Scripting interface (Python3) </li>
                             <li> Three-color blender </li>
-                            <li> Mip map support in HDF5 (IDIA schema) format </li>
+                            <li> Angular distance measuring tool </li>
+                            <li> Image source finder </li>
+                            <li> VO service (image and catalog)</li>
+                            <li> Image arithmetic </li>
                           </ul> 
                     
                         <br>
+                    <p>Please VOTE your top-five features <a href="https://forms.gle/TEH4453GypGpXV2VA" target="_blank">here</a>.</p>
                         <br>
                     </p>
                    
