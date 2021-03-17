@@ -236,6 +236,7 @@
         "contourColormapEnabled": {
             "type": "boolean",
             "description": "A boolean flag to enable/disable contour rendering with variable colors for different levels. Default is false.",
+            "default": false,
             "enum": [
                 true,
                 false
@@ -278,6 +279,7 @@
         "astGridVisible": {
             "type": "boolean",
             "description": "A boolean flag to enable/disable coordinate grid lines in the image viewer. Default is false.",
+            "default": false,
             "enum": [
                 false,
                 true
@@ -460,6 +462,7 @@
         "streamContoursWhileZooming": {
             "type": "boolean",
             "description": "should be 'streamImageTilesWhileZooming'???\n\nADJUST WITH CAUTION. A boolean flag to enable/disable image tile stream for intermediate zoom levels when image zooming is in action. Default is false.",
+            "default": false,
             "enum": [
                 false,
                 true
@@ -468,6 +471,7 @@
         "lowBandwidthMode": {
             "type": "boolean",
             "description": "A boolean flag to enable/disable the low bandwidth mode. With the low bandwidth mode, required image resolution is reduced by a factor of two and cursor responding time is reduced from 200 ms to 400 ms. Default is false.",
+            "default": false,
             "enum": [
                 false,
                 true
