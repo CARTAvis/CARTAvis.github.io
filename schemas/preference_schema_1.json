@@ -10,7 +10,7 @@
         "version": {
             "type": "integer",
             "minimum": 1,
-            "description": "Version number of the preference schema. An integer >= 1 need to be provided."
+            "description": "Version number of the preference schema."
         },
         "username": {
             "type": "string",
@@ -18,7 +18,7 @@
         },
         "theme": {
             "type": "string",
-            "description": "Set the color theme of the graphical user interface of CARTA. Options are 'auto' (refering to OS theme if applicable), 'light', and 'dark'.",
+            "description": "Set the color theme of the graphical user interface of CARTA. Default refers to the color theme of the operating system if applicable, otherwise 'light' theme is applied.",
             "default": "auto",
             "enum": [
                 "auto",
@@ -28,7 +28,7 @@
         },
         "autoLaunch": {
             "type": "boolean",
-            "description": "Launch a file browser when CARTA is initialized. Default is true (boolean).",
+            "description": "Launch a file browser when CARTA is initialized.",
             "default": true,
             "enum": [
                 true,
@@ -63,7 +63,7 @@
         },
         "layout": {
             "type": "string",
-            "description": "Set a default layout when CARTA is initialized. Preset layouts are 'Default' (as default), 'Cube View', 'Cube Analysis', and 'Continuum Analysis'. A custom layout can be set as the default layout too.",
+            "description": "Set a default layout when CARTA is initialized. A custom layout can be set as the default layout too.",
             "default": "Default",
             "examples": [
                 "Default",
@@ -110,7 +110,7 @@
         },
         "spectralMatchingType": {
             "type": "string",
-            "description": "Set the coordinate reference for spectral matching. Options are 'VRAD' (radio velocity; as default), 'VOPT' (optical velocity), 'FREQ' (frequency), 'WAVE' (vacuum wavelegth), 'AWAV' (air wavelength), and 'CHANNEL'.",
+            "description": "Set the coordinate reference for spectral matching. Options are 'VRAD' (radio velocity), 'VOPT' (optical velocity), 'FREQ' (frequency), 'WAVE' (vacuum wavelegth), 'AWAV' (air wavelength), and 'CHANNEL'.",
             "default": "VRAD",
             "enum": [
                 "VRAD",
@@ -125,19 +125,19 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 3,
-            "description": "Set the image matching state and type when a new image is loaded in the append mode. An integer (0~3) should be provided. The meaning of the allowed integers follows: {0: 'None' (as default), 1: 'Spatial only', 2: 'Spectral only', 3: 'Spatial and spectral'}.",
+            "description": "Set the image matching state and type when a new image is loaded in the append mode. The meaning of the allowed integers follows: {0: 'None', 1: 'Spatial only', 2: 'Spectral only', 3: 'Spatial and spectral'}.",
             "default": 0
         },
         "scaling": {
             "type": "integer",
             "minimum": 0,
             "maximum": 7,
-            "description": "Set a default scaling function for raster image rendering. An integer (0~7) should be provided. The meaning of the allowed integers follows: {0: 'Linear' (as default), 1: 'Log', 2: 'Square root', 3: 'Squared', 4: 'Gamma', 5: 'Power'}.",
+            "description": "Set a default scaling function for raster image rendering. The meaning of the allowed integers follows: {0: 'Linear', 1: 'Log', 2: 'Square root', 3: 'Squared', 4: 'Gamma', 5: 'Power'}.",
             "default": 0
         },
         "colormap": {
             "type": "string",
-            "description": "Set a default colormap for raster image rendering. Options are: 'afmhot', 'Blues', 'coolwarm', 'cubehelix', 'gist_heat', 'gist_stern', 'gnuplot', 'gnuplot2', 'gray', 'greens', 'greys', 'hot', 'inferno' (as default), 'jet', 'magma', 'nipy_spectral', 'plasma', 'rainbow', 'RdBu', 'RdGy', 'reds', 'seismic', 'spectral', 'tab10', 'viridis'",
+            "description": "Set a default colormap for raster image rendering.",
             "default": "inferno",
             "enum": [
                 "afmhot", "Blues", "coolwarm", "cubehelix", "gist_heat",
@@ -151,7 +151,7 @@
             "type": "number",
             "inclusiveMaximum": 100,
             "exclusiveMinimum": 0,
-            "description": "Set a color clip level for raster image rendering. A number between 0 (exclusive) and 100 (inclusive) should be given. Common values are [100, 99.99, 99.95, 99.9, 99.5, 99, 95, 90].",
+            "description": "Set a color clip level for raster image rendering.",
             "default": 99.9,
             "examples": [
                 100,
@@ -167,19 +167,19 @@
         "scalingAlpha": {
             "type": "number",
             "minimum": 1,
-            "description": "Set a default control parameter for 'Log' or 'Power' scaling function. A value >= 1 should be given. Default is 1000.",
+            "description": "Set a default control parameter for 'Log' or 'Power' scaling function.",
             "default": 1000
         },
         "scalingGamma": {
             "type": "number",
             "exclusiveMinimum": 0,
-            "description": "Set a default control parameter for 'Gamma' scaling function. A value > 0 should be given. Default is 1.",
+            "description": "Set a default control parameter for 'Gamma' scaling function.",
             "default": 1
         },
         "nanColorHex": {
             "type": "string",
             "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-            "description": "Set a default color to render NaN pixels in a raster image. The default color in hex code is '#137CBD'. Common options are {black: '#000000', grey: '#8A9BA8', white: '#FFFFFF'}. To adjust the transparency, please use 'nanAlpha'.",
+            "description": "Set a default color hex code to render NaN pixels in a raster image. To adjust the transparency, please use 'nanAlpha'.",
             "default": "#137CBD",
             "examples": [
                 "#137CBD",
@@ -192,12 +192,12 @@
             "type": "number",
             "minimum": 0,
             "maximum": 1,
-            "description": "Set the transparency (alpha value) of NaN pixels in a raster image. To set the color for NaN pixels, please use 'nanColorHex' with a color hex code. Default is 1. Use 0 to render transparent NaN pixels.",
+            "description": "Set the transparency (alpha value) of NaN pixels in a raster image. To set the color for NaN pixels, please use 'nanColorHex' with a color hex code.",
             "default": 1
         },
         "contourGeneratorType": {
             "type": "string",
-            "description": "Set a default generator of contour levels. Options are: 'start-step-multiplier' (as default), 'min-max-scaling', 'percentages-ref.value', and 'mean-sigma-list'. Use 'contourNumLevels' to define how many levels to be generared.",
+            "description": "Set a default generator of contour levels. Use 'contourNumLevels' to define how many levels to be generared.",
             "default": "start-step-multiplier",
             "enum": [
                 "start-step-multiplier",
@@ -210,19 +210,19 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 2,
-            "description": "Set the image smoothing mode before computing contour vertices. An integer should be provided. Options are: {0: 'None', 1: 'Block', 2: 'Gaussian' (as default)}. Use 'contourSmoothingFactor' to define a kernel size for smoothing.",
+            "description": "Set the image smoothing mode before computing contour vertices. Options are: {0: 'None', 1: 'Block', 2: 'Gaussian' (as default)}. Use 'contourSmoothingFactor' to define a kernel size for smoothing.",
             "default": 2
         },
         "contourSmoothingFactor": {
             "type": "integer",
             "minimum": 0,
-            "description": "Set a kernel size for the chosen contour smoothing mode ('contourSmoothingMode'). An integer >=0 should be given. Default is 4, meaning the kernel size is 4x4 pixel.",
+            "description": "Set a kernel size (n x n pixel) for the chosen contour smoothing mode ('contourSmoothingMode').",
             "default": 4
         },
         "contourNumLevels": {
             "type": "integer",
             "minimum": 1,
-            "description": "Define the number of levels to be generated by the contour level generator ('contourGeneratorType'). An integer >= 1 should be given. Default is 5.",
+            "description": "Define the number of levels to be generated by the contour level generator ('contourGeneratorType').",
             "default": 5
         },
         "contourThickness": {
@@ -230,12 +230,12 @@
             "exclusiveMinimum": 0,
             "inclusiveMaximum": 10,
             "multipleOf": 0.5,
-            "description": "Set a default line width for contour rendering. A value (multiple of 0.5) between 0 (exclusive) and 10 (inclusive) should be given. Default is 1.",
+            "description": "Set a default line width for contour rendering.",
             "default": 1
         },
         "contourColormapEnabled": {
             "type": "boolean",
-            "description": "A boolean flag to enable/disable contour rendering with variable colors for different levels. Default is false.",
+            "description": "A boolean flag to enable/disable contour rendering with variable colors for different levels.",
             "default": false,
             "enum": [
                 true,
@@ -245,7 +245,7 @@
         "contourColor": {
             "type": "string",
             "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-            "description": "Define a default color as a hex code for contour rendering. Default is '#0F9960'. Examples are: {black: '#000000', white: '#FFFFFF', red: '#FF0000', green: '#00FF00', blue: '#0000FF', yellow: '#FFFF00', cyan: '#00FFFF', magenta: '#FF00FF'}.",
+            "description": "Define a default color hex code for contour rendering.",
             "default": "#0F9960",
             "examples": [
                 "#0F9960",
@@ -261,7 +261,7 @@
         },
         "contourColormap": {
             "type": "string",
-            "description": "Set a colormap for contour rendering with variable colors for different levels. Options are: 'afmhot', 'Blues', 'coolwarm', 'cubehelix', 'gist_heat', 'gist_stern', 'gnuplot', 'gnuplot2', 'gray', 'greens', 'greys', 'hot', 'inferno', 'jet', 'magma', 'nipy_spectral', 'plasma', 'rainbow', 'RdBu', 'RdGy', 'reds', 'seismic', 'spectral', 'tab10', 'viridis' (as default)",
+            "description": "Set a colormap for contour rendering with variable colors for different levels.",
             "default": "viridis",
             "enum": [
                 "afmhot", "Blues", "coolwarm", "cubehelix", "gist_heat",
@@ -273,12 +273,12 @@
         },
         "astColor": {
             "type": "integer",
-            "description": "Set a default color theme to render the coordinate layer in the image viewer. TODO: revisit once unified color selector is in place.",
+            "description": "TODO: revisit once unified color selector is in place.\n\n Set a default color theme to render the coordinate layer in the image viewer.",
             "minimum": 0
         },
         "astGridVisible": {
             "type": "boolean",
-            "description": "A boolean flag to enable/disable coordinate grid lines in the image viewer. Default is false.",
+            "description": "A boolean flag to enable/disable coordinate grid lines in the image viewer.",
             "default": false,
             "enum": [
                 false,
@@ -287,7 +287,7 @@
         },
         "astLabelsVisible": {
             "type": "boolean",
-            "description": "A boolean flag to enable/disable x and y labels in the image viewer. Default is true.",
+            "description": "A boolean flag to enable/disable x and y labels in the image viewer.",
             "default": true,
             "enum": [
                 true,
@@ -296,7 +296,7 @@
         },
         "wcsType": {
             "type": "string",
-            "description": "Set the default format to display world coordinates in the image viewer. Options are: 'automatic' (as default), 'degrees', 'sexagesimal'.",
+            "description": "Set the default format to display world coordinates in the image viewer.",
             "default": "automatic",
             "enum": [
                 "automatic",
@@ -306,7 +306,7 @@
         },
         "beamVisible": {
             "type": "boolean",
-            "description": "A boolean flag to enable/disable the display of a beam element in the image viewer. Default is true.",
+            "description": "A boolean flag to enable/disable the display of a beam element in the image viewer.",
             "default": true,
             "enum": [
                 true,
@@ -316,7 +316,7 @@
         "beamColor": {
             "type": "string",
             "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-            "description": "Define a default color as a hex code for beam element rendering in the image viewer. Default is '#8A9BA8'. Examples are: {black: '#000000', white: '#FFFFFF', red: '#FF0000', green: '#00FF00', blue: '#0000FF', yellow: '#FFFF00', cyan: '#00FFFF', magenta: '#FF00FF'}.",
+            "description": "Define a default color hex code for beam element rendering in the image viewer.",
             "default": "#8A9BA8",
             "examples": [
                 "#8A9BA8",
@@ -332,7 +332,7 @@
         },
         "beamType": {
             "type": "string",
-            "description": "Set a style for beam element rendering in the image viewer. Options are: 'open' (as default) and 'solid'.",
+            "description": "Set a style for beam element rendering in the image viewer.",
             "default": "open",
             "enum": [
                 "open",
@@ -344,13 +344,13 @@
             "exclusiveMinimum": 0,
             "inclusiveMaximum": 10,
             "multipleOf": 0.5,
-            "description": "Set a default line width to render the beam element in the image viewer. A value (multiple of 0.5) between 0 (exclusive) and 10 (inclusive) should be given. Default is 1.",
+            "description": "Set a default line width to render the beam element in the image viewer.",
             "default": 1
         },
         "regionColor": {
             "type": "string",
             "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-            "description": "Set a default color as a hex code for region rendering in the image viewer. Default is '#2EE6D6'. Examples are: {black: '#000000', white: '#FFFFFF', red: '#FF0000', green: '#00FF00', blue: '#0000FF', yellow: '#FFFF00', cyan: '#00FFFF', magenta: '#FF00FF'}.",
+            "description": "Set a default color hex code for region rendering in the image viewer.",
             "default": "#2EE6D6",
             "examples": [
                 "#2EE6D6",
@@ -369,26 +369,26 @@
             "exclusiveMinimum": 0,
             "inclusiveMaximum": 10,
             "multipleOf": 0.5,
-            "description": "Set a default line width to render a region in the image viewer. A value (multiple of 0.5) between 0 (exclusive) and 10 (inclusive) should be given. Default is 2.",
+            "description": "Set a default line width to render a region in the image viewer.",
             "default": 2
         },
         "regionDashLength": {
             "type": "integer",
             "minimum": 0,
             "maximum": 50,
-            "description": "Set the default style of region rendering with dashed line in the image viewer. An integer between 0 (inclusive) and 50 (inclusive) should be given. Default is 0 (as solid line).",
+            "description": "Set the default style of region rendering with dashed line in the image viewer.",
             "default": 0
         },
         "regionType": {
             "type": "integer",
             "minimum": 0,
             "maximum": 6,
-            "description": "Set the default region type of the region creation button in the image viewer. An integer should be given. Options are: {0: 'Point', 1: 'Line' (NOT IMPLEMENTED YET), 2: 'Polyline' (NOT IMPLEMENTED YET), 3: 'Rectangle' (as default), 4: 'Ellipse', 5: 'Annulus' (NOT IMPLEMENTED YET), 6: 'Polygon'}.",
+            "description": "Set the default region type of the region creation button in the image viewer. Options are: {0: 'Point', 1: 'Line' (NOT IMPLEMENTED YET), 2: 'Polyline' (NOT IMPLEMENTED YET), 3: 'Rectangle' (as default), 4: 'Ellipse', 5: 'Annulus' (NOT IMPLEMENTED YET), 6: 'Polygon'}.",
             "default": 3
         },
         "regionCreationMode": {
             "type": "string",
-            "description": "Specify the default cursor creation mode for regions with symmetry such as 'Rectangle' or 'Ellipse'. Options are: 'center' (as default) and 'corner'.",
+            "description": "Specify the default cursor creation mode for regions with rotational symmetry such as 'Rectangle' or 'Ellipse'.",
             "default": "center",
             "enum": [
                 "center",
@@ -397,7 +397,7 @@
         },
         "regionSize": {
             "type": "integer",
-            "description": "Set the default size of 'Rectangle' or 'Ellipse' region when created with a single click. The size is defined in number of screen pixel (>=1) as an integer. Default is 30.",
+            "description": "Set the default size of 'Rectangle' or 'Ellipse' region when created with a single click. The size is defined in number of screen pixel.",
             "minimum": 1,
             "default": 30
         },
@@ -405,28 +405,28 @@
             "type": "integer",
             "minimum": 4,
             "maximum": 32,
-            "description": "ADJUST WITH CAUTION. Set the compression quality factor for image tile data compression with zfp. An integer between 4 and 32 (best image quality after compression) should be provided. Default is 11.",
+            "description": "ADJUST WITH CAUTION. Set the compression quality factor for image tile data compression with zfp.",
             "default": 11
         },
         "animationCompressionQuality": {
             "type": "integer",
             "minimum": 4,
             "maximum": 32,
-            "description": "ADJUST WITH CAUTION. Set the compression quality factor for image tile data compression with zfp during animation playback. An integer between 4 and 32 (best image quality after compression) should be provided. Default is 9.",
+            "description": "ADJUST WITH CAUTION. Set the compression quality factor for image tile data compression with zfp during animation playback.",
             "default": 9
         },
         "GPUTileCache": {
             "type": "integer",
             "multipleOf": 128,
             "minimum": 512,
-            "description": "ADJUST WITH CAUTION. Set the cache size in number of image tiles in GPU memory. Default is 512. It needs to be at least 512 and be multiple of 128.",
+            "description": "ADJUST WITH CAUTION. Set the cache size in number of image tiles in GPU memory.",
             "default": 512
         },
         "systemTileCache": {
             "type": "integer",
             "multipleOf": 128,
             "minimum": 1024,
-            "description": "ADJUST WITH CAUTION. Set the cache size in number of image tiles in system memory. Default is 4096. It needs to be at least 1024 and be multiple of 128.",
+            "description": "ADJUST WITH CAUTION. Set the cache size in number of image tiles in system memory.",
             "default": 4096
         },
         "contourDecimation": {
@@ -440,7 +440,7 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 19,
-            "description": "ADJUST WITH CAUTION. Set the compression quality factor for contour data compression with zstd. An integer between 0 and 19 (best quality after compression) should be given. Default is 8.",
+            "description": "ADJUST WITH CAUTION. Set the compression quality factor for contour data compression with zstd.",
             "default": 8
         },
         "contourChunkSize": {
@@ -448,7 +448,7 @@
             "multipleOf": 25000,
             "minimum": 25000,
             "maximum": 1000000,
-            "description": "ADJUST WITH CAUTION. Set the chuck size for contour data streaming. An integer between 25000 and 1000000 should be provided. The value needs to be multiple of 25000. Default is 100000 (100k).",
+            "description": "ADJUST WITH CAUTION. Set the chuck size for contour data streaming.",
             "default": 100000
         },
         "contourControlMapWidth": {
@@ -461,7 +461,7 @@
         },
         "streamContoursWhileZooming": {
             "type": "boolean",
-            "description": "should be 'streamImageTilesWhileZooming'???\n\nADJUST WITH CAUTION. A boolean flag to enable/disable image tile stream for intermediate zoom levels when image zooming is in action. Default is false.",
+            "description": "should be 'streamImageTilesWhileZooming'???\n\nADJUST WITH CAUTION. A boolean flag to enable/disable image tile stream for intermediate zoom levels when image zooming is in action.",
             "default": false,
             "enum": [
                 false,
@@ -470,7 +470,7 @@
         },
         "lowBandwidthMode": {
             "type": "boolean",
-            "description": "A boolean flag to enable/disable the low bandwidth mode. With the low bandwidth mode, required image resolution is reduced by a factor of two and cursor responding time is reduced from 200 ms to 400 ms. Default is false.",
+            "description": "A boolean flag to enable/disable the low bandwidth mode. With the low bandwidth mode, required image resolution is reduced by a factor of two and cursor responding time is reduced from 200 ms to 400 ms.",
             "default": false,
             "enum": [
                 false,
@@ -481,7 +481,7 @@
             "type": "integer",
             "minimum": 5,
             "maximum": 30,
-            "description": "Set a timer (in minutes) to stop animation playback automatically to save computing resources. An integer between 5 and 30 should be given. Default is 5 (minutes).",
+            "description": "Set a timer (in minutes) to stop animation playback automatically to save computing resources.",
             "default": 5
         }
     }
