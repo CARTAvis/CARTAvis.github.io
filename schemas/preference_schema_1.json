@@ -415,7 +415,7 @@
         },
         "animationCompressionQuality": {
             "type": "integer",
-            "minimum": 4,
+            "minimum": 1,
             "maximum": 32,
             "description": "ADJUST WITH CAUTION. Set the compression quality factor for image tile data compression with zfp during animation playback.",
             "default": 9
