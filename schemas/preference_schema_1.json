@@ -466,7 +466,7 @@
         },
         "streamContoursWhileZooming": {
             "type": "boolean",
-            "description": "should be 'streamImageTilesWhileZooming'???\n\nADJUST WITH CAUTION. A boolean flag to enable/disable image tile stream for intermediate zoom levels when image zooming is in action.",
+            "description": "ADJUST WITH CAUTION. A boolean flag to enable/disable image tile stream for intermediate zoom levels when image zooming is in action.",
             "default": false,
             "enum": [
                 false,
