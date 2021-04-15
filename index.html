@@ -159,7 +159,7 @@
                                 <a href="#roadmap">Roadmap</a>
                             </li>
                             <li>
-                                <a href="#download">Download</a>
+                                <a href="#download">Installation</a>
                             </li>
                             <li>
                                 <a href="#team">Team</a>
@@ -202,8 +202,7 @@
                 </div>
 
                 <!--Call to Action-->
-                <a href="#download" class="button">DOWNLOAD</a>
-                <a href="https://forms.gle/TEH4453GypGpXV2VA" target="_blank" class="button" style="color:magenta;">FEATURE SURVEY</a>
+                <a href="#download" class="button">Installation</a>
                 <!--End Call to Action-->
 
             </div>
@@ -481,82 +480,96 @@
 
             <div class="col-1">
                 <div class="section-heading">
-                    <h3>DOWNLOAD</h3>
-                    <h2 class="section-title">Desktop version</h2>
-                </div>
+                    <h3>INSTALLATION</h3>
+                    <h2 class="section-title">Obtaining CARTA</h2>
+                    <style>
+                    .collapsible {
+                        background-color: rgb(57, 105, 148);
+                        color: white;
+                        cursor: pointer;
+                        padding: 18px;
+                        width: 100%;
+                        border: none;
+                        text-align: left;
+                        outline: none;
+                        font-size: 15px;
+                      }
+                    
+                      .collapsible:hover, .active-collapsible {
+                        background-color: rgb(30, 80, 134);
+                      }
+                      
+                      .content {
+                        padding: 0 18px;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        background-color: rgb(115, 163, 202);
+                      }                   
+                    </style>
 
-                    <h4>
-                        Suitable for single-user usage with a laptop, a desktop or a remote server in the "remote" mode.
-                        <br>
-                        Current release: v1.4 (2020/09/17)
-                    </h4>
-                </div>
-
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">macOS</h2>
-                        <p class="pricing-sub">10.15 Catalina<br>10.14 Mojave</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4.dmg" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <!--End Download Block-->
-
-                <!--Download Block-->
-                <div class="pricing-block featured col-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Ubuntu</h2>
-                        <p class="pricing-sub">20.04 LTS<br>18.04 LTS</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-ubuntu.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <!--End Download Block-->
-
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Red Hat</h2>
-                        <p class="pricing-sub">8<br>7</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-RedHat7.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>                   
-                </div>
-                <!--End Download Block-->
-
-            
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Red Hat</h2>
-                        <p class="pricing-sub">6<br>(remote mode only)</p>
-                        <a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.4/CARTA-v1.4-remote.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-            </div>
-            <!--End Download Block-->
-
-            <div class="col-1">
-            <p>Installation instructions for macOS and Linux are <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
-            <p>The user manual is available <a href="https://carta.readthedocs.io/en/latest/" target="_blank">here</a>.</p>
-	    <p>Previous releases of CARTA can be found <a href="https://github.com/CARTAvis/carta/releases" target="_blank">here</a>.</p>
-            <p>Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>, or <a href="https://github.com/CARTAvis/carta/issues" target="_blank">submit an issue</a>.</p>
-            </div>
-
-            <div class="col-1">
-            <div class="section-heading">
-                <h2 class="section-title">Server version</h2>
-                <h4>
-                    Suitable for institution-wide deployment to support multiple users with user authentication and additional server-side features. 
+                    <button class="collapsible">Site deployment guide for Ubuntu Linux</button>
+                    <div class="content">
+                    <p>Please follow the steps:</p>
+                    <ol>
+                        <li>apt get carta_backend</li>
+                        <li>apt get carta_frontend</li>
+                        <li>apt get carta_controller</li>
+                        <li>xxx...</li>
+                    </ol>
                     <br>
-                    Current release: v1.4 (2020/09/17)
-                </h4>
-            </div>
-        
-            <p>Please follow the instructions <a href="https://carta.readthedocs.io/en/1.4/installation_and_configuration.html#carta-server" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
-            <br>
+                    </div>
+                    <button class="collapsible">Site deployment guide for Red Hat Enterprise Linux</button>
+                    <div class="content">
+                    <p>Please follow the steps:</p>
+                    <ol>
+                        <li>apt get carta_backend</li>
+                        <li>apt get carta_frontend</li>
+                        <li>apt get carta_controller</li>
+                        <li>yyy...</li>
+                    </ol>
+                    <br>
+                    </div>
 
+                    <button class="collapsible">Command line installation with package management tools</button>
+                    <div class="content">
+                    <p>For Ubuntu Linux users, try <code>apt get carta</code></p>
+                    <p>For Red Hat Enterprise Linux users, try <code>yum install carta</code></p>
+                    <p>For macOS users, try <code>brew install carta</code></p>
+                    <br>
+                    <p>To run CARTA, try xxx</p>
+                    </div>
+                    <button class="collapsible">Installation of the stand-alone application (running CARTA with a local computer only)</button>
+                    <div class="content">
+                    <p>For Ubuntu Linux users, please download the AppImage here.</p>
+                    <p>For Red Hat Enterprise Linux users, please download the AppImage here.</p>
+                    <p>For macOS users, please download the dmg here.</p>
+                    </div>
+                    <button class="collapsible">Manual Installation</button>
+                    <div class="content">
+                    <p>For Ubuntu Linux users, please download the tarball here, then do xxx.</p>
+                    <p>For Red Hat Enterprise Linux users, please download the tarball here, then do yyy.</p>
+                    <p>For macOS users, please download the tarball here, then do zzz.</p>
+                    </div>
+
+                    <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active-collapsible");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                        } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                    });
+                    }
+                    </script>                    
+
+                </div>    
         </div>
 
       </div>
