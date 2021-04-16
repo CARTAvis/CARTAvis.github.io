@@ -515,44 +515,30 @@
                       }                   
                     </style>
 
-                    <button class="collapsible">Site deployment guide for Ubuntu Linux</button>
+                    <button class="collapsible">Site deployment</button>
                     <div class="content">
-                    <p>Please follow the steps:</p>
-                    <ol>
-                        <li>apt get carta_backend</li>
-                        <li>apt get carta_frontend</li>
-                        <li>apt get carta_controller</li>
-                        <li>xxx...</li>
-                    </ol>
-                    <br>
+                    <p>To deploy CARTA at your institution as a web-based application for multiple users, please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/">CARTA controller documentation</a>.</p>
                     </div>
-                    <button class="collapsible">Site deployment guide for Red Hat Enterprise Linux</button>
+                    <button class="collapsible">Packages</button>
                     <div class="content">
-                    <p>Please follow the steps:</p>
-                    <ol>
-                        <li>apt get carta_backend</li>
-                        <li>apt get carta_frontend</li>
-                        <li>apt get carta_controller</li>
-                        <li>yyy...</li>
-                    </ol>
-                    <br>
-                    </div>
-
-                    <button class="collapsible">Command line installation with package management tools</button>
-                    <div class="content">
-                    <p>For Ubuntu Linux users, try <code>apt get carta</code></p>
+                    <h4>Ubuntu</h4>
+                    <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta">from our PPA</a>.</p>
+                    <p><code>sudo add-apt-repository ppa:cartavis-team/carta
+                        <br/>sudo apt-get update
+                        <br/>sudo apt install carta-beta</code></p>
+                    <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+                    <h4>Red Hat Enterprise Linux</h4>
                     <p>For Red Hat Enterprise Linux users, try <code>yum install carta</code></p>
+                    <h4>macOS</h4>
                     <p>For macOS users, try <code>brew install carta</code></p>
-                    <br>
-                    <p>To run CARTA, try xxx</p>
                     </div>
-                    <button class="collapsible">Installation of the stand-alone application (running CARTA with a local computer only)</button>
+                    <button class="collapsible">Stand-alone application (with built-in browser)</button>
                     <div class="content">
                     <p>For Ubuntu Linux users, please download the AppImage here.</p>
                     <p>For Red Hat Enterprise Linux users, please download the AppImage here.</p>
                     <p>For macOS users, please download the dmg here.</p>
                     </div>
-                    <button class="collapsible">Manual Installation</button>
+                    <button class="collapsible">Manual installation</button>
                     <div class="content">
                     <p>For Ubuntu Linux users, please download the tarball here, then do xxx.</p>
                     <p>For Red Hat Enterprise Linux users, please download the tarball here, then do yyy.</p>
