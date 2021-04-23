@@ -75,6 +75,10 @@
         "idle_timeout": {
             "type": "integer",
             "default": -1
+        },
+        "read_only_mode": {
+            "type": "boolean",
+            "default": false
         }
     },
     "additionalProperties": false,
