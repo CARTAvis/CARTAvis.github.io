@@ -527,22 +527,72 @@
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta-beta</code></p>
                     <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
-                    <h4>Red Hat Enterprise Linux</h4>
-                    <p>For Red Hat Enterprise Linux users, try <code>yum install carta</code></p>
-                    <h4>macOS</h4>
-                    <p>For macOS users, try <code>brew install carta</code></p>
+                    <h4>Red Hat Enterprise Linux - RPM</h4>
+                    <p>For Red Hat Enterprise Linux based users, you first need to add the correct 'cartavis' repository depending on whether you use RHEL7 or 8. It is also necessary to add the EPEL and OpenStack repositories. Please note that root access is required, unless you install in a Docker container.<p>
+
+                    <p><b>Preparation:</b> Here are suggested comands to quickly prepare your RHEL/CentOS system:</br>
+		    <p><u>RHEL7:</u><br>
+                        <code style="color:cyan">curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+			<br/>sudo subscription-manager repos --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-rh-common-rpms --enable rhel-server-rhscl-7-rpms
+			<br/>sudo yum -y install https://rdoproject.org/repos/rdo-release.rpm
+			<br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</code></p>
+
+                    <p><u>CentOS7:</u><br>
+                        <code style="color:cyan">curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+			 <br/>sudo yum -y install epel-release
+			 <br/>sudo yum -y install centos-release-openstack-train</code></p>
+
+                    <p><u>RHEL8:</u><br>
+		       <code style="color:cyan">sudo curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+		       <br/>sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms repos --enable=rhel-8-for-x86_64-appstream-rpms --enable=rhel-8-for-x86_64-supplementary-rpms --enable=codeready-builder-for-rhel-8-x86_64-rpms
+                       <br/>dnf install https://www.rdoproject.org/repos/rdo-release.el8.rpm
+		       <br/>dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm</code></p>
+
+                    <p><u>CentOS8:</u><br>
+                       <code style="color:cyan">sudo curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+		       <br/>sudo dnf -y install 'dnf-command(config-manager)'
+		       <br/>sudo dnf -y install epel-release
+		       <br/>sudo dnf -y config-manager --set enabled powertools
+		       <br/>sudo dnf -y install centos-release-openstack-victoria</code></p>
+
+                    <p><b>Installation:</b> Now CARTA can be simply installed with:<br>
+                       <code style="color:cyan">sudo yum -y install carta-beta</code></p>
+
+                    <p><b>Operation:</b> To run the newly installed CARTA, simply type <code>carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+
+
+                    <h4>macOS - Homebrew</h4>
+		    <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>. 
+		    <p><b>Preparation:</b>If you do not already have it, you may install Homebrew using the following command (root access is required):</p>
+		     <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
+                     <p><b>Installation:</b> Now CARTA can be installed with:<p>
+                     <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
+                     <p><b>Operation:</b> To run the newly installed CARTA, simply type <code>carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+
                     </div>
-                    <button class="collapsible">Stand-alone application (with built-in browser)</button>
+                    <button class="collapsible">Universal Linux AppImage</button>
                     <div class="content">
-                    <p>For Ubuntu Linux users, please download the AppImage here.</p>
-                    <p>For Red Hat Enterprise Linux users, please download the AppImage here.</p>
-                    <p>For macOS users, please download the dmg here.</p>
+		    <p>The Universal Linux AppImage does not require root access. You simply download, extract, and run it. It uses your default web browser to display the CARTA graphical interface. The AppImage has been tested and shown to run on Ubuntu 18.04 and 20.04, as well as RHEL/CentOS 7 and 8.</br>
+		    <p><b>Installation:</b><br>
+		     <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz
+		       <br/>tar -xzf /carta-beta-v2.0.tar.gz</code><br>
+		        <b>Operation:</b>
+		       <br/><code style="color:cyan">./carta-beta-v2.0.AppImage</code>
+
+                    <p>If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
+                      <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0.AppImage </code>
+
                     </div>
-                    <button class="collapsible">Manual installation</button>
+                    <button class="collapsible">macOS Electron Desktop version</button>
                     <div class="content">
-                    <p>For Ubuntu Linux users, please download the tarball here, then do xxx.</p>
-                    <p>For Red Hat Enterprise Linux users, please download the tarball here, then do yyy.</p>
-                    <p>For macOS users, please download the tarball here, then do zzz.</p>
+                    <p>The traditional macOS Electron Desktop version can be downloaded from <a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" target="_blank">here</a>.</p>
+                    <p><b>Installation:</b> After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<p>
+                    <p><b>Operation:</b> Click the CARTA-beta-v2.0 icon in the Launchpad. <br> 
+		    Alternatively, you may create an alias for starting CARTA in your terminal. Here is an example:<br>
+		      <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta' >> ~/.zshrc</code><br>
+		    
+
+
                     </div>
 
                     <script>
