@@ -527,6 +527,9 @@
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta-beta</code></p>
                     <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+
+                    <hr>
+
                     <h4>Red Hat Enterprise Linux - RPM</h4>
                     <p>For Red Hat Enterprise Linux based users, you first need to add the correct 'cartavis' repository depending on whether you use RHEL7 or 8. It is also necessary to add the EPEL and OpenStack repositories. Please note that root access is required, unless you install in a Docker container.<p>
 
@@ -558,8 +561,9 @@
                     <p><b>Installation:</b> Now CARTA can be simply installed with:<br>
                        <code style="color:cyan">sudo yum -y install carta-beta</code></p>
 
-                    <p><b>Operation:</b> To run the newly installed CARTA, simply type <code>carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                    <p><b>Operation:</b> To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
 
+                    <hr>
 
                     <h4>macOS - Homebrew</h4>
 		    <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>. 
@@ -570,7 +574,7 @@
                      <p><b>Operation:</b> To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
 
                     </div>
-                    <button class="collapsible">Stand-alone application (with built-in browser)</button>
+                    <button class="collapsible">Stand-alone application</button>
                     <div class="content">
 
                     <h4>Universal Linux AppImage</h4>
@@ -585,10 +589,8 @@
                     <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
                       <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0.AppImage </code>
 
-<!--                    </div>
-                    <button class="collapsible">macOS Electron Desktop version</button>
-                    <div class="content">
--->
+                    <hr>
+
                     <h4>macOS Electron Desktop version</h4>
 
                     <p>The traditional macOS Electron Desktop version can be downloaded from <a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" target="_blank">here</a>.</p>
