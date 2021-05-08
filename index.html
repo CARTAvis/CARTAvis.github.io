@@ -26,6 +26,9 @@
     <!-- Animate CSS-->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 
+    <!-- Horizontal tabs CSS-->
+    <link href="css/tabs.css" rel="stylesheet" type="text/css">
+
     <!-- For dark/light mode-->
     <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
@@ -521,57 +524,81 @@
                     </div>
                     <button class="collapsible">Packages</button>
                     <div class="content">
-                    <h4>Ubuntu</h4>
-                    <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
-                    <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
-                        <br/>sudo apt-get update
-                        <br/>sudo apt install carta-beta</code></p>
-                    <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
 
-                    <hr>
+<!-- Package details in simple horizontal tabs -->
+       <div id="containertab">
+	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+	    <label for="tab-1">Ubuntu</label>
+	    <input id="tab-2" type="radio" name="tab-group" />
+	    <label for="tab-2">RHEL7</label>
+            <input id="tab-3" type="radio" name="tab-group" />
+            <label for="tab-3">CentOS7</label>
+            <input id="tab-4" type="radio" name="tab-group" />
+            <label for="tab-4">RHEL8</label>
+            <input id="tab-5" type="radio" name="tab-group" />
+            <label for="tab-5">CentOS8</label>
+	    <input id="tab-6" type="radio" name="tab-group" />
+	    <label for="tab-6">MacOS</label>
 
-                    <h4>Red Hat Enterprise Linux - RPM</h4>
-                    <p>For Red Hat Enterprise Linux based users, you first need to add the correct 'cartavis' repository depending on whether you use RHEL7 or 8. It is also necessary to add the EPEL and OpenStack repositories. Please note that root access is required, unless you install in a Docker container.<p>
+           <div id="contenttab">
 
-                    <p><b>Preparation:</b> Here are suggested comands to quickly prepare your RHEL/CentOS system:</br>
-		    <p><u>RHEL7:</u><br>
-                        <code style="color:cyan">curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
-			<br/>sudo subscription-manager repos --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-rh-common-rpms --enable rhel-server-rhscl-7-rpms
-			<br/>sudo yum -y install https://rdoproject.org/repos/rdo-release.rpm
-			<br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</code></p>
+           <div id="content-1tab">
+ <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
+ <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
+ <br/>sudo apt-get update
+ <br/>sudo apt install carta-beta</code></p>
+ <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
 
-                    <p><u>CentOS7:</u><br>
-                        <code style="color:cyan">curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
-			 <br/>sudo yum -y install epel-release
-			 <br/>sudo yum -y install centos-release-openstack-train</code></p>
+	   </div>
 
-                    <p><u>RHEL8:</u><br>
-		       <code style="color:cyan">sudo curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
-		       <br/>sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms repos --enable=rhel-8-for-x86_64-appstream-rpms --enable=rhel-8-for-x86_64-supplementary-rpms --enable=codeready-builder-for-rhel-8-x86_64-rpms
-                       <br/>dnf install https://www.rdoproject.org/repos/rdo-release.el8.rpm
-		       <br/>dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm</code></p>
+           <div id="content-2tab">
+ <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+ <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+ <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+ <br/>sudo yum -y install carta-beta</code></p>
+ <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
 
-                    <p><u>CentOS8:</u><br>
-                       <code style="color:cyan">sudo curl http://carta.asiaa.sinica.edu.tw/repo/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
-		       <br/>sudo dnf -y install 'dnf-command(config-manager)'
-		       <br/>sudo dnf -y install epel-release
-		       <br/>sudo dnf -y config-manager --set enabled powertools
-		       <br/>sudo dnf -y install centos-release-openstack-victoria</code></p>
+          </div>
 
-                    <p><b>Installation:</b> Now CARTA can be simply installed with:<br>
-                       <code style="color:cyan">sudo yum -y install carta-beta</code></p>
+	  <div id="content-3tab">
+ <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+ <code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+ <p><br/>sudo yum -y install epel-release
+ <br/>sudo yum -y install carta-beta</code></p>
+ <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
 
-                    <p><b>Operation:</b> To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+	 </div>
 
-                    <hr>
+          <div id="content-4tab">
+ <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+ <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+ <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm</code></p>
+ <br/>sudo yum -y install carta-beta</code></p>
+ <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
 
-                    <h4>macOS - Homebrew</h4>
-		    <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>. 
-		    <p><b>Preparation:</b>If you do not already have it, you may install Homebrew using the following command (root access is required):</p>
-		     <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
-                     <p><b>Installation:</b> Now CARTA can be installed with:<p>
-                     <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
-                     <p><b>Operation:</b> To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
+         </div>
+
+          <div id="content-5tab">
+ <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+ <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+ <br/>sudo yum -y install epel-release
+ <br/>sudo yum -y install carta-beta</code></p>
+ <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+
+         </div>
+
+          <div id="content-6tab">
+ <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
+ <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
+ <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
+ <p>Now CARTA can be installed with:<br>
+ <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
+ <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
+
+         </div>
+  </div>
+</div>
+
 
                     </div>
                     <button class="collapsible">Stand-alone application</button>
@@ -619,6 +646,8 @@
                     });
                     }
                     </script>                    
+
+
 
                 </div> 
                 <p>In case of any issues encountered during the installation, please contact the <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw?subject=CARTA installation issues">CARTA helpdesk</a>.</p>   
