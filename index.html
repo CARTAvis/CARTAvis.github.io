@@ -601,7 +601,7 @@
                             <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
                             <label for="tab2-1">Universal Linux AppImage</label>
                             <input id="tab2-2" type="radio" name="tab2-group" />
-                            <label for="tab2-2">MacOS Electron Desktop</label>
+                            <label for="tab2-2">macOS Electron Desktop</label>
                       <div id="contenttab2">
 
                       <div id="content-1tab2">
@@ -631,13 +631,16 @@
                           Click the CARTA-beta-v2.0 icon in the Launchpad. 
                         <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
                            Here is an example:<br>
-		          <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta' >> ~/.zshrc</code>
+                           Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
+                           <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta'</code><br>
+                           Then enter <code style="color:cyan">source ~/.zshrc</code> (or <code style="color:cyan">source ~/.bashrc</code>) in the terminal.<br> 
+                           Now you will be able to start CARTA by simply typing <code style="color:cyan">carta</code> in the terminal.
                         <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" 
                             class="button">DOWNLOAD</a>
-                        <br>More detailed installation instructions can be found <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
                       </div>
                      </div>
                     </div>
+                   </div>
 
                     <script>
                     var coll = document.getElementsByClassName("collapsible");
