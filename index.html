@@ -28,6 +28,7 @@
 
     <!-- Horizontal tabs CSS-->
     <link href="css/tabs.css" rel="stylesheet" type="text/css">
+    <link href="css/tabs2.css" rel="stylesheet" type="text/css">
 
     <!-- For dark/light mode-->
     <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
@@ -596,30 +597,46 @@
                     <button class="collapsible">Stand-alone application</button>
                     <div class="content">
 
-                    <h4>Universal Linux AppImage</h4>
+                      <div id="containertab2">
+                            <input id="tab2-1" type="radio" name="tab-group" checked="checked" />
+                            <label for="tab2-1">Universal Linux AppImage</label>
+                            <input id="tab2-2" type="radio" name="tab-group" />
+                            <label for="tab2-2">MacOS Electron Desktop</label>
+                      <div id="contenttab2">
 
-		    <p>The Universal Linux AppImage does not require root access. You simply download, extract, and run it. It uses your default web browser to display the CARTA graphical interface. The AppImage has been tested and shown to run on Ubuntu 18.04 and 20.04, as well as RHEL/CentOS 7 and 8.</br>
-		    <p><b>Installation:</b><br>
-		     <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz
-		       <br/>tar -xzf /carta-beta-v2.0.tar.gz</code><br>
-		        <b>Operation:</b>
-		       <br/><code style="color:cyan">./carta-beta-v2.0.AppImage</code>
+                      <div id="content-1tab2">
+                        <p>The Universal Linux AppImage does not require root access. You simply download, extract, and run it.
+                           It uses your default web browser to display the CARTA graphical interface.
+                           The AppImage has been tested and runs on Ubuntu 18.04 and 20.04, as well as RHEL/CentOS 7 and 8.
+		        <p><b>Installation:</b><br>
+                           Either click the Download button below or run:<br>
+                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz</code><br>
+                           Extract the tarball:<br>
+                           <code style="color:cyan">tar -xzf /carta-beta-v2.0.tar.gz</code><br>
+		        <b>Operation:</b><br>
+                           Simply execute the AppImage<br>
+		           <code style="color:cyan">./carta-beta-v2.0.AppImage</code>
+                        <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
+                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0.AppImage </code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz" 
+                            class="button">DOWNLOAD</a>
+                      </div>
 
-                    <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                      <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0.AppImage </code>
-
-                    <hr>
-
-                    <h4>macOS Electron Desktop version</h4>
-
-                    <p>The traditional macOS Electron Desktop version can be downloaded from <a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" target="_blank">here</a>.</p>
-                    <p><b>Installation:</b> After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<p>
-                    <p><b>Operation:</b> Click the CARTA-beta-v2.0 icon in the Launchpad. <br> 
-		    Alternatively, you may create an alias for starting CARTA in your terminal. Here is an example:<br>
-		      <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta' >> ~/.zshrc</code><br>
-		    
-
-
+                      <div id="content-2tab2">
+                        <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.</p>
+                        <p><b>Installation:</b><br> 
+                          Click the download button below.<br>
+                          After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<br>
+                        <b>Operation:</b><br> 
+                          Click the CARTA-beta-v2.0 icon in the Launchpad. 
+                        <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
+                           Here is an example:<br>
+		          <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta' >> ~/.zshrc</code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" 
+                            class="button">DOWNLOAD</a>
+                        <br>More detailed installation instructions can be found <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
+                      </div>
+                     </div>
                     </div>
 
                     <script>
