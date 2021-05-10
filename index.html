@@ -522,85 +522,77 @@
                     <div class="content">
                     <p>To deploy CARTA at your institution as a web-based application for multiple users, please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/" target="_blank">CARTA controller documentation</a>.</p>
                     </div>
+                    
                     <button class="collapsible">Packages</button>
                     <div class="content">
 
-<!-- Package details in simple horizontal tabs -->
-       <div id="containertab">
-	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
-	    <label for="tab-1">Ubuntu</label>
-	    <input id="tab-2" type="radio" name="tab-group" />
-	    <label for="tab-2">RHEL7</label>
-        <input id="tab-3" type="radio" name="tab-group" />
-        <label for="tab-3">CentOS7</label>
-        <input id="tab-4" type="radio" name="tab-group" />
-        <label for="tab-4">RHEL8</label>
-        <input id="tab-5" type="radio" name="tab-group" />
-        <label for="tab-5">CentOS8</label>
-	    <input id="tab-6" type="radio" name="tab-group" />
-	    <label for="tab-6">macOS</label>
+                      <!-- Package details in simple horizontal tabs -->
+                      <div id="containertab">
+	                    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+	                    <label for="tab-1">Ubuntu</label>
+	                    <input id="tab-2" type="radio" name="tab-group" />
+	                    <label for="tab-2">RHEL7</label>
+                        <input id="tab-3" type="radio" name="tab-group" />
+                        <label for="tab-3">CentOS7</label>
+                        <input id="tab-4" type="radio" name="tab-group" />
+                        <label for="tab-4">RHEL8</label>
+                        <input id="tab-5" type="radio" name="tab-group" />
+                        <label for="tab-5">CentOS8</label>
+	                    <input id="tab-6" type="radio" name="tab-group" />
+	                    <label for="tab-6">macOS</label>
+                      <div id="contenttab">
+           
+                      <div id="content-1tab">
+                        <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
+                        <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
+                        <br/>sudo apt-get update
+                        <br/>sudo apt install carta-beta</code></p>
+                        <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+                      </div>
 
-           <div id="contenttab">
+                      <div id="content-2tab">
+                        <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
 
-           <div id="content-1tab">
- <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
- <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
- <br/>sudo apt-get update
- <br/>sudo apt install carta-beta</code></p>
- <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+	                  <div id="content-3tab">
+                        <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><br/>sudo yum -y install epel-release
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
 
-	   </div>
+                      <div id="content-4tab">
+                        <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm</code></p>
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
 
-           <div id="content-2tab">
- <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
- <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
- <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
- <br/>sudo yum -y install carta-beta</code></p>
- <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      <div id="content-5tab">
+                        <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo yum -y install epel-release
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
 
-          </div>
-
-	  <div id="content-3tab">
- <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
- <code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
- <p><br/>sudo yum -y install epel-release
- <br/>sudo yum -y install carta-beta</code></p>
- <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
-
-	 </div>
-
-          <div id="content-4tab">
- <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
- <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
- <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm</code></p>
- <br/>sudo yum -y install carta-beta</code></p>
- <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
-
-         </div>
-
-          <div id="content-5tab">
- <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
- <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
- <br/>sudo yum -y install epel-release
- <br/>sudo yum -y install carta-beta</code></p>
- <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
-
-         </div>
-
-          <div id="content-6tab">
- <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
- <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
- <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
- <p>Now CARTA can be installed with:<br>
- <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
- <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
-
-         </div>
-  </div>
-</div>
-
-
+                      <div id="content-6tab">
+                        <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
+                        <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
+                        <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
+                        <p>Now CARTA can be installed with:<br>
+                        <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
+                      </div>
                     </div>
+                </div>
+                </div>                    
                     <button class="collapsible">Stand-alone application</button>
                     <div class="content">
 
