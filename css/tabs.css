@@ -45,7 +45,7 @@
 #contenttab {
 	background: #7E7E7E;
 	border-radius: 0 .25em .25em .25em;
-	min-height: 17em;
+	min-height: 16em;
 	position: relative;
 	width: 100%;
 	z-index: 5;
@@ -53,7 +53,7 @@
 
 #contenttab div {
 	opacity: 0;
-	padding: 1.5em;
+	padding-left: 1.5em;
 	position: absolute;
 	z-index: -100;
 	/*
