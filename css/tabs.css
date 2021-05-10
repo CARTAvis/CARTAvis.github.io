@@ -119,7 +119,7 @@
 
 input#tab-1:checked ~ #contenttab #content-1tab,
 input#tab-2:checked ~ #contenttab #content-2tab,
-input#tab-3:checked ~ #contenttab #content-3tab 
+input#tab-3:checked ~ #contenttab #content-3tab,
 input#tab-4:checked ~ #contenttab #content-4tab,
 input#tab-5:checked ~ #contenttab #content-5tab,
 input#tab-6:checked ~ #contenttab #content-6tab {
