@@ -578,8 +578,10 @@
                       <div id="content-5tab">
                         <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
                         <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
-                        <br/>sudo yum -y install epel-release
-                        <br/>sudo yum -y install carta-beta</code></p>
+			<br/>sudo dnf -y install 'dnf-command(config-manager)'
+			<br/>sudo dnf -y install epel-release
+			<br/>sudo dnf -y config-manager --set-enabled powertools
+                        <br/>sudo dnf -y install carta-beta</code></p>
                         <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
                       </div>
 
