@@ -81,8 +81,17 @@
         margin-left: 2em;
 }
 
+#content-2tab3 p,
+#content-2tab3 ul {
+        margin-bottom: 1em;
+}
+#content-2tab3 ul {
+        margin-left: 2em;
+}
+
 input#tab2-1:checked ~ #contenttab2 #content-1tab2,
-input#tab2-2:checked ~ #contenttab2 #content-2tab2 {
+input#tab2-2:checked ~ #contenttab2 #content-2tab2, 
+input#tab2-3:checked ~ #contenttab2 #content-3tab2 {
     opacity: 1;
     z-index: 100;
 }

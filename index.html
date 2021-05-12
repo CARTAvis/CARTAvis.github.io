@@ -548,7 +548,7 @@
                         <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta-beta</code></p>
-                        <p>To start CARTA, type <code>carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+                        <p>To start CARTA, type <code style="color:cyan">carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
                       </div>
 
                       <div id="content-2tab">
@@ -601,43 +601,66 @@
 
                       <div id="containertab2">
                             <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
-                            <label for="tab2-1">Universal Linux AppImage</label>
+                            <label for="tab2-1">Ubuntu Linux AppImage</label>
                             <input id="tab2-2" type="radio" name="tab2-group" />
-                            <label for="tab2-2">macOS Electron Desktop</label>
+                            <label for="tab2-2">Red Hat Linux AppImage</label>
+                            <input id="tab2-3" type="radio" name="tab2-group" />
+                            <label for="tab2-3">macOS Electron Desktop</label>
+
+
                       <div id="contenttab2">
 
                       <div id="content-1tab2">
-                        <p>The Universal Linux AppImage does not require root access. You simply download, extract, and run it.
+                        <p>The Ubuntu Linux AppImage does not require root access. You simply download, extract, and run it.
                            It uses your default web browser to display the CARTA graphical interface.
-                           The AppImage has been tested and runs on Ubuntu 18.04 and 20.04, as well as RHEL/CentOS 7 and 8.
+                           The AppImage has been tested to run on Ubuntu 18.04 and 20.04.
 		        <p><b>Installation:</b><br>
                            Either click the Download button below or run:<br>
-                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz</code><br>
+                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz</code><br>
                            Extract the tarball:<br>
-                           <code style="color:cyan">tar -xzf /carta-beta-v2.0.tar.gz</code><br>
+                           <code style="color:cyan">tar -xzf carta-beta-v2.0-ubuntu.tar.gz</code><br>
 		        <b>Operation:</b><br>
                            Simply execute the AppImage<br>
-		           <code style="color:cyan">./carta-beta-v2.0.AppImage</code>
+		           <code style="color:cyan">./carta-beta-v2.0-ubuntu.AppImage</code>
                         <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0.AppImage </code>
-                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.tar.gz" 
+                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-ubuntu.AppImage </code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz" 
                             class="button">DOWNLOAD</a>
                       </div>
 
                       <div id="content-2tab2">
+                        <p>The Red Hat Linux AppImage does not require root access. You simply download, extract, and run it.
+                           It uses your default web browser to display the CARTA graphical interface.
+                           The AppImage has been tested to run on Red Hat Enterprise Linux (RHEL) 7 and 8, as well as CentOS 7 and 8.
+                        <p><b>Installation:</b><br>
+                           Either click the Download button below or run:<br>
+                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz</code><br>
+                           Extract the tarball:<br>
+                           <code style="color:cyan">tar -xzf carta-beta-v2.0-redhat.tar.gz</code><br>
+                        <b>Operation:</b><br>
+                           Simply execute the AppImage<br>
+                           <code style="color:cyan">./carta-beta-v2.0-redhat.AppImage</code>
+                        <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
+                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-redhat.AppImage </code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz" 
+                            class="button">DOWNLOAD</a>
+                      </div>
+
+
+                      <div id="content-3tab2">
                         <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.</p>
                         <p><b>Installation:</b><br> 
                           Click the download button below.<br>
                           After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<br>
                         <b>Operation:</b><br> 
-                          Click the CARTA-beta-v2.0 icon in the Launchpad. 
+                          Click the <b>CARTA-beta-v2.0</b> icon in the Launchpad. 
                         <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
                            Here is an example:<br>
                            Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
-                           <code style="color:cyan">echo "alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta'</code><br>
+                           <code style="color:cyan">alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta'</code><br>
                            Then enter <code style="color:cyan">source ~/.zshrc</code> (or <code style="color:cyan">source ~/.bashrc</code>) in the terminal.<br> 
                            Now you will be able to start CARTA by simply typing <code style="color:cyan">carta</code> in the terminal.
-                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0.dmg" 
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/CARTA-v2.0-beta.dmg" 
                             class="button">DOWNLOAD</a>
                       </div>
                      </div>
