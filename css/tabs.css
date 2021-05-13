@@ -1,0 +1,132 @@
+
+#containertab {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#containertab input {
+	height: 2.5em;
+	visibility: hidden;
+}
+
+#containertab label {
+	background: #396994;
+	border-radius: 0 0 0 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 1em;
+	height: 2.5em;
+	line-height: 2.5em;
+	margin-right: 0em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+#containertab input:hover + label {
+	background:  #1E5086;
+	color: #FFFFFF;
+}
+
+#containertab input:checked + label {
+	background: #1E5086;
+	color: #FFFFFF; /* text colour */
+	position: relative;
+	z-index: 6;
+	/*
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	-ms-transition: .1s;
+	*/
+}
+
+#contenttab {
+	background: #7E7E7E;
+	border-radius: 0 .25em .25em .25em;
+	min-height: 16em;
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+#contenttab div {
+	opacity: 0;
+	padding-left: 1.5em;
+	position: absolute;
+	z-index: -100;
+	/*
+	transition: all linear 0.1s;
+	*/
+}
+
+#content-1tab p {
+	clear: both;
+	margin-bottom: 1em;
+}
+#content-1tab p.left img {
+	float: left;
+	margin-right: 1em;
+}
+#content-1tab p.last {
+	margin-bottom: 0;
+}
+
+#content-2tab p,
+#content-2tab ul {
+        margin-bottom: 1em;
+}
+#content-2tab ul {
+        margin-left: 2em;
+}
+
+
+#content-3tab p,
+#content-3tab ul {
+        margin-bottom: 1em;
+}
+#content-3tab ul {
+        margin-left: 2em;
+}
+
+
+#content-4tab p,
+#content-4tab ul {
+        margin-bottom: 1em;
+}
+#content-4tab ul {
+        margin-left: 2em;
+}
+
+
+#content-5tab p,
+#content-5tab ul {
+        margin-bottom: 1em;
+}
+#content-5tab ul {
+        margin-left: 2em;
+}
+
+
+#content-6tab p,
+#content-6tab ul {
+	margin-bottom: 1em;
+}
+#content-6tab ul {
+	margin-left: 2em;
+}
+
+input#tab-1:checked ~ #contenttab #content-1tab,
+input#tab-2:checked ~ #contenttab #content-2tab,
+input#tab-3:checked ~ #contenttab #content-3tab,
+input#tab-4:checked ~ #contenttab #content-4tab,
+input#tab-5:checked ~ #contenttab #content-5tab,
+input#tab-6:checked ~ #contenttab #content-6tab {
+    opacity: 1;
+    z-index: 100;
+}
+
+input.visible {
+  visibility: visible !important;
+}

@@ -26,6 +26,10 @@
     <!-- Animate CSS-->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 
+    <!-- Horizontal tabs CSS-->
+    <link href="css/tabs.css" rel="stylesheet" type="text/css">
+    <link href="css/tabs2.css" rel="stylesheet" type="text/css">
+
     <!-- For dark/light mode-->
     <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
@@ -159,7 +163,7 @@
                                 <a href="#roadmap">Roadmap</a>
                             </li>
                             <li>
-                                <a href="#download">Download</a>
+                                <a href="#download">Installation</a>
                             </li>
                             <li>
                                 <a href="#team">Team</a>
@@ -202,8 +206,7 @@
                 </div>
 
                 <!--Call to Action-->
-                <a href="#download" class="button">DOWNLOAD</a>
-                <a href="https://forms.gle/TEH4453GypGpXV2VA" target="_blank" class="button" style="color:magenta;">FEATURE SURVEY</a>
+                <a href="#download" class="button">Installation</a>
                 <!--End Call to Action-->
 
             </div>
@@ -481,16 +484,222 @@
 
             <div class="col-1">
                 <div class="section-heading">
-                    <h3>DOWNLOAD</h3>
-                    <h2 class="section-title">Desktop version</h2>
-                </div>
+                    <h3>INSTALLATION</h3>
+                    <h2 class="section-title">Obtaining CARTA v2.0-beta</h2>
+                    <p>Supported operating systems:
+                        <ul>
+                            <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa)</li>
+                            <li>Red Hat Enterprise Linux: 7, 8</li>
+                            <li>macOS: 10.15 (Catalina), 11 (Big Sur)</li>
+                        </ul>
+                    </p>
+                    <style>
+                    .collapsible {
+                        background-color: rgb(57, 105, 148);
+                        color: white;
+                        cursor: pointer;
+                        padding: 18px;
+                        width: 100%;
+                        border: none;
+                        text-align: left;
+                        outline: none;
+                        font-size: 18px;
+                      }
+                    
+                      .collapsible:hover, .active-collapsible {
+                        background-color: rgb(30, 80, 134);
+                      }
+                      
+                      .content {
+                        padding: 0 18px;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        background-color: rgb(126, 126, 126);
+                      }                   
+                    </style>
 
-                    <h4>
-                        Suitable for single-user usage with a laptop, a desktop or a remote server in the "remote" mode.
-                        <br>
-                        Current release: v1.4 (2020/09/17)
-                    </h4>
+                    <button class="collapsible">Site deployment</button>
+                    <div class="content">
+                    <p>To deploy CARTA at your institution as a web-based application for multiple users, please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/" target="_blank">CARTA controller documentation</a>.</p>
+                    </div>
+                    
+                    <button class="collapsible">Packages</button>
+                    <div class="content">
+
+                      <!-- Package details in simple horizontal tabs -->
+                      <div id="containertab">
+	                    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+	                    <label for="tab-1">Ubuntu</label>
+	                    <input id="tab-2" type="radio" name="tab-group" />
+	                    <label for="tab-2">RHEL7</label>
+                        <input id="tab-3" type="radio" name="tab-group" />
+                        <label for="tab-3">CentOS7</label>
+                        <input id="tab-4" type="radio" name="tab-group" />
+                        <label for="tab-4">RHEL8</label>
+                        <input id="tab-5" type="radio" name="tab-group" />
+                        <label for="tab-5">CentOS8</label>
+	                    <input id="tab-6" type="radio" name="tab-group" />
+	                    <label for="tab-6">macOS</label>
+                      <div id="contenttab">
+           
+                      <div id="content-1tab">
+                        <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
+                        <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
+                        <br/>sudo apt-get update
+                        <br/>sudo apt install carta-beta</code></p>
+                        <p>To start CARTA, type <code style="color:cyan">carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+                      </div>
+
+                      <div id="content-2tab">
+                        <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
+
+	                  <div id="content-3tab">
+                        <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo yum -y install epel-release
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
+
+                      <div id="content-4tab">
+                        <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+                        <br/>sudo yum -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
+
+                      <div id="content-5tab">
+                        <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+			<br/>sudo dnf -y install 'dnf-command(config-manager)'
+			<br/>sudo dnf -y install epel-release
+			<br/>sudo dnf -y config-manager --set-enabled powertools
+                        <br/>sudo dnf -y install carta-beta</code></p>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                      </div>
+
+                      <div id="content-6tab">
+                        <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
+                        <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
+                        <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</code>
+                        <p>Now CARTA can be installed with:<br>
+                        <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
+                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
+                      </div>
+                    </div>
                 </div>
+                </div>                    
+                    <button class="collapsible">Stand-alone application</button>
+                    <div class="content">
+
+                      <div id="containertab2">
+                            <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
+                            <label for="tab2-1">Ubuntu Linux AppImage</label>
+                            <input id="tab2-2" type="radio" name="tab2-group" />
+                            <label for="tab2-2">Red Hat Linux AppImage</label>
+                            <input id="tab2-3" type="radio" name="tab2-group" />
+                            <label for="tab2-3">macOS Electron Desktop</label>
+
+
+                      <div id="contenttab2">
+
+                      <div id="content-1tab2">
+                        <p>The Ubuntu Linux AppImage does not require root access. You simply download, extract, and run it.
+                           It uses your default web browser to display the CARTA graphical interface.
+                           The AppImage has been tested to run on Ubuntu 18.04 and 20.04.
+		        <p><b>Installation:</b><br>
+                           Either click the Download button below or run:<br>
+                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz</code><br>
+                           Extract the tarball:<br>
+                           <code style="color:cyan">tar -xzf carta-beta-v2.0-ubuntu.tar.gz</code><br>
+		        <b>Operation:</b><br>
+                           Simply execute the AppImage<br>
+		           <code style="color:cyan">./carta-beta-v2.0-ubuntu.AppImage</code>
+                        <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
+                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-ubuntu.AppImage </code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz" 
+                            class="button">DOWNLOAD</a>
+                      </div>
+
+                      <div id="content-2tab2">
+                        <p>The Red Hat Linux AppImage does not require root access. You simply download, extract, and run it.
+                           It uses your default web browser to display the CARTA graphical interface.
+                           The AppImage has been tested to run on Red Hat Enterprise Linux (RHEL) 7 and 8, as well as CentOS 7 and 8.
+                        <p><b>Installation:</b><br>
+                           Either click the Download button below or run:<br>
+                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz</code><br>
+                           Extract the tarball:<br>
+                           <code style="color:cyan">tar -xzf carta-beta-v2.0-redhat.tar.gz</code><br>
+                        <b>Operation:</b><br>
+                           Simply execute the AppImage<br>
+                           <code style="color:cyan">./carta-beta-v2.0-redhat.AppImage</code>
+                        <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
+                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-redhat.AppImage </code>
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz" 
+                            class="button">DOWNLOAD</a>
+                      </div>
+
+
+                      <div id="content-3tab2">
+                        <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.</p>
+                        <p><b>Installation:</b><br> 
+                          Click the download button below.<br>
+                          After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<br>
+                        <b>Operation:</b><br> 
+                          Click the <b>CARTA-beta-v2.0</b> icon in the Launchpad. 
+                        <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
+                           Here is an example:<br>
+                           Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
+                           <code style="color:cyan">alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta'</code><br>
+                           Then enter <code style="color:cyan">source ~/.zshrc</code> (or <code style="color:cyan">source ~/.bashrc</code>) in the terminal.<br> 
+                           Now you will be able to start CARTA by simply typing <code style="color:cyan">carta</code> in the terminal.
+                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/CARTA-v2.0-beta.dmg" 
+                            class="button">DOWNLOAD</a>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+
+                    <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active-collapsible");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                        } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                    });
+                    }
+                    </script>                    
+
+
+
+                </div> 
+                <p>In case of any issues encountered during the installation, please contact the <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw?subject=CARTA installation issues">CARTA helpdesk</a>.</p>   
+                <br>
+
+                <div class="section-heading">
+                <h2 class="section-title">Obtaining CARTA v1.4</h2>
+                </div>
+                
+                <h4>
+                    <b>Desktop version</b><br>
+                    Suitable for single-user usage with a laptop, a desktop or a remote server in the "remote" mode.
+                    <br>
+                    Current release: v1.4 (2020/09/17)
+                </h4>
 
                 <!--Download Block-->
                 <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.4s">
@@ -534,30 +743,32 @@
                         <a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.4/CARTA-v1.4-remote.tgz" 
                             class="button">DOWNLOAD</a>
                     </div>
-            </div>
-            <!--End Download Block-->
+                </div>
+                <!--End Download Block-->
 
-            <div class="col-1">
-            <p>Installation instructions for macOS and Linux are <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
-            <p>The user manual is available <a href="https://carta.readthedocs.io/en/latest/" target="_blank">here</a>.</p>
-	    <p>Previous releases of CARTA can be found <a href="https://github.com/CARTAvis/carta/releases" target="_blank">here</a>.</p>
-            <p>Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>, or <a href="https://github.com/CARTAvis/carta/issues" target="_blank">submit an issue</a>.</p>
-            </div>
-
-            <div class="col-1">
-            <div class="section-heading">
-                <h2 class="section-title">Server version</h2>
+                <div class="col-1">
+                    <p>Installation instructions for macOS and Linux are <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
+                    <p>The user manual is available <a href="https://carta.readthedocs.io/en/latest/" target="_blank">here</a>.</p>
+                <p>Previous releases of CARTA can be found <a href="https://github.com/CARTAvis/carta/releases" target="_blank">here</a>.</p>
+                    <p>Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>, or <a href="https://github.com/CARTAvis/carta/issues" target="_blank">submit an issue</a>.</p>
+                    </div>
+        
+                    
                 <h4>
+                    <b>Server version</b><br>
                     Suitable for institution-wide deployment to support multiple users with user authentication and additional server-side features. 
                     <br>
                     Current release: v1.4 (2020/09/17)
                 </h4>
-            </div>
-        
-            <p>Please follow the instructions <a href="https://carta.readthedocs.io/en/1.4/installation_and_configuration.html#carta-server" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
-            <br>
+                
+            
+                <p>Please follow the instructions <a href="https://carta-controller.readthedocs.io" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
 
-        </div>
+
+
+
+
+            </div>
 
       </div>
         </section>

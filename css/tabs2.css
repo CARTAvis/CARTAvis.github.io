@@ -1,0 +1,101 @@
+
+#containertab2 {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#containertab2 input {
+	height: 2.5em;
+	visibility: hidden;
+}
+
+#containertab2 label {
+	background: #396994;
+	border-radius: 0 0 0 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 1em;
+	height: 2.5em;
+	line-height: 2.5em;
+	margin-right: 0em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+#containertab2 input:hover + label {
+	background:  #1E5086;
+	color: #FFFFFF;
+}
+
+#containertab2 input:checked + label {
+	background: #1E5086;
+	color: #FFFFFF; /* text colour */
+	position: relative;
+	z-index: 6;
+	/*
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	-ms-transition: .1s;
+	*/
+}
+
+#contenttab2 {
+	background: #7E7E7E;
+	border-radius: 0 .25em .25em .25em;
+	min-height: 30em;
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+#contenttab2 div {
+	opacity: 0;
+	padding-left: 1.5em;
+	position: absolute;
+	z-index: -100;
+	/*
+	transition: all linear 0.1s;
+	*/
+}
+
+#content-1tab2 p {
+	clear: both;
+	margin-bottom: 1em;
+}
+#content-1tab2 p.left img {
+	float: left;
+	margin-right: 1em;
+}
+#content-1tab2 p.last {
+	margin-bottom: 0;
+}
+
+#content-2tab2 p,
+#content-2tab2 ul {
+        margin-bottom: 1em;
+}
+#content-2tab2 ul {
+        margin-left: 2em;
+}
+
+#content-2tab3 p,
+#content-2tab3 ul {
+        margin-bottom: 1em;
+}
+#content-2tab3 ul {
+        margin-left: 2em;
+}
+
+input#tab2-1:checked ~ #contenttab2 #content-1tab2,
+input#tab2-2:checked ~ #contenttab2 #content-2tab2, 
+input#tab2-3:checked ~ #contenttab2 #content-3tab2 {
+    opacity: 1;
+    z-index: 100;
+}
+
+input.visible {
+  visibility: visible !important;
+}
