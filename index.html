@@ -553,7 +553,7 @@
 
                       <div id="content-2tab">
                         <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
                         <br/>sudo yum -y install carta-beta</code></p>
                         <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
@@ -561,7 +561,7 @@
 
 	                  <div id="content-3tab">
                         <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo yum -y install epel-release
                         <br/>sudo yum -y install carta-beta</code></p>
                         <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
@@ -569,7 +569,7 @@
 
                       <div id="content-4tab">
                         <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
                         <br/>sudo yum -y install carta-beta</code></p>
                         <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
@@ -577,7 +577,7 @@
 
                       <div id="content-5tab">
                         <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
 			<br/>sudo dnf -y install 'dnf-command(config-manager)'
 			<br/>sudo dnf -y install epel-release
 			<br/>sudo dnf -y config-manager --set-enabled powertools
