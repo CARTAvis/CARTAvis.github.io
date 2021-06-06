@@ -261,7 +261,7 @@
                         <div class="icon-block-description">
                             <h4>Parallelization and GPU-accelerated rendering</h4>
                             <p>Parallelization with CPUs is invoked in data processing. GPU-accelerated 
-                                rendering is adopted for raster images, contour images, and catalog overlays.</p>
+                                rendering is adopted for tiled raster images, contour images, and catalog overlays.</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -269,8 +269,8 @@
                     <!--Icon Block-->
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
                         <div class="icon-block-description">
-                            <h4>Progressive and responsive update of spectral profile</h4>
-                            <p>Region spectral profiles are updated progressively and may be cancelled at any time for a better user experience.</p>
+                            <h4>Spectral line cube analysis tools</h4>
+                            <p>Flexible multi-profile plotting capability is supported. Analysis tools such as profile fitting, profile smoothing, moment map generator, and spectral line query and labelling are out of box.</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -287,8 +287,8 @@
                     <!--Icon Block-->
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.9s">
                         <div class="icon-block-description">
-                            <h4>Efficient catalogue processing and rendering</h4>
-                            <p>Catalogues with a million sources can be loaded and rendered in seconds. Catalogue files are processed with 
+                            <h4>Efficient catalog processing and rendering</h4>
+                            <p>Catalogs with millions of sources can be loaded and rendered in seconds. Catalog files are processed with 
                                 parallelization techniques and are rendered with GPU acceleration.</p>
                         </div>
                     </div>
@@ -355,19 +355,22 @@
 		       <div class="section-heading">
                         <h4>Current release</h4>
 		       </div>
-                    <p>The current release is v1.4, released on 17th of September 2020, with the following features:</p>
+                    <p>The current release is v2.0, released on 7th of June 2021, with the following features:</p>
                         <ul>
-                            <li> Catalogue support </li>
-                            <li> Shared region analytics </li>
-                            <li> Animation playback improvement of raster and contour images </li>
-                            <li> Profile smoothing </li>
-                            <li> Moment map generator </li>
-                            <li> Spectral line query </li>
-                            <li> Server authentication and deployment improvements </li>
-                            <li> File browser improvements </li>
-                            <li> Bug fixes and performance improvements </li>
-                          </ul>
-                    </p> 
+                            <li>Multi-profile plot with the spectral profiler</li>
+                            <li>Progress report and cancellation when requesting a long file list</li>
+                            <li>Forming a Stokes hypercube at image loading stage</li>
+                            <li>Colorbar display in the image viewer and enhanced raster image config widget</li>
+                            <li>Support rectangular pixel rendering for PV image</li>
+                            <li>Filtering function in the spectral line query widget</li>
+                            <li>Enhanced FITS and CASA image support</li>
+                            <li>Saving subimage</li>
+                            <li>Searching a keyword from image header</li>
+                            <li>Profile fitting in the spectral profiler</li>
+                            <li>Marker-based catalog rendering and performance enhancement</li>
+                            <li>New deployment modes</li>
+                        </ul> 
+                        <br/>
                 </div>
                 <!--End Content Left Side-->
 
@@ -377,58 +380,10 @@
                         <h4>Next release</h4>
 
                     </div>
-                    <p> The next release will be v2.0 with the following new features: </p>
-                        <ul>
-                            <li>Publication quality image output</li>
-                                <ul>
-                                    <li>Support high resolution png</li>
-                                    <li>Support a color bar in the image viewer</li>
-                                </ul>
-                            <li>Preparations for the PV generator</li>
-                                <ul>
-                                    <li>Support rectangular pixel rendering</li>
-                                    <li>Support line region type</li>
-                                    <li>Display xy labels and ticks properly for a position-velocity image</li>
-                                </ul>
-                            <li>File browser improvements</li>
-                                <ul>
-                                    <li>Support CASA image types: concatenated, componentlist, LEL</li>
-                                    <li>Support integer, complex and boolean image types</li>
-                                    <li>Support pv images</li>
-                                    <li>Show correct beam for multi-beam images</li>
-                                    <li>Support for fz (compressed FITS) and fits.gz</li>
-                                    <li>Flexibility with non-standard FITS header</li>
-                                    <li>Open multiple files via file browser</li>
-                                </ul>
-                            <li>HDF5 enhancement</li>
-                                <ul>
-                                    <li>Support mip-mapped datasets including spatial and spectral profile requests</li>
-                                    <li>Accelerate moment map generation with swizzled dataset</li>
-                                </ul>
-                            <li>Catalog enhancements</li>
-                                <ul>
-                                    <li>Enhanced marker-based visualization</li>
-                                    <li>Support catalog overlay on spatially matched images</li>
-                                </ul>
-                            <li>Polarization enhancement</li>
-                                <ul>
-                                    <li>Support loading individual Stokes images for visualization with the Stokes analysis widget</li>
-                                    <li>Show polarization intensity and angle “images” on the fly (from Q, U, and I if fractional) and support Stokes V</li>
-                                    <li>Support flux density and other stats in Stokes analysis tool</li>
-                                </ul>
-                            <li>Spectral line query</li>
-                                <ul>
-                                    <li>Support filtering and sorting in the spectral line query table</li>
-                                </ul>
-                            <li>Spectral profiler</li>
-                                <ul>
-                                    <li>Profile fitting</li>
-                                    <li>Viewing multiple profiles in one widget</li>
-                                </ul>
-                            <li>Basic Python scripting interface</li>        
-                        </ul>
+                    <p> The next release will be v3.0. The new feature list will be available soon.</p>
+                     
                         
-                    <br><br>
+                    
                     
                 </div>
                 <!--End Content of the Middle-->
@@ -444,7 +399,6 @@
                         releases, but they are not 100% decided upon yet and depend on feedback from users, resourcing etc.:
                         <ul> 
                             <li> Polarization contour and images </li>
-                            <li> Interactive CLEAN with CASA (TBD)</li>
                             <li> Multi-panel view </li>
                             <li> Channel map view </li>
                             <li> Position-velocity map generator </li>
@@ -461,8 +415,7 @@
                           </ul> 
                     
                         <br>
-                    <p>Please VOTE your top-five features <a href="https://forms.gle/TEH4453GypGpXV2VA" target="_blank">here</a>.</p>
-                        <br>
+                    
                     </p>
                    
                     
@@ -485,7 +438,7 @@
             <div class="col-1">
                 <div class="section-heading">
                     <h3>INSTALLATION</h3>
-                    <h2 class="section-title">Obtaining CARTA v2.0-beta</h2>
+                    <h2 class="section-title">Obtaining CARTA v2.0</h2>
                     <p>Supported operating systems:
                         <ul>
                             <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa)</li>
@@ -494,7 +447,7 @@
                         </ul>
                     </p>
                     <style>
-                    .collapsible {
+                      .collapsible {
                         background-color: rgb(57, 105, 148);
                         color: white;
                         cursor: pointer;
@@ -515,13 +468,14 @@
                         max-height: 0;
                         overflow: hidden;
                         transition: max-height 0.2s ease-out;
-                        background-color: rgb(126, 126, 126);
+                        
                       }                   
                     </style>
 
                     <button class="collapsible">Site deployment</button>
                     <div class="content">
                     <p>To deploy CARTA at your institution as a web-based application for multiple users, please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/" target="_blank">CARTA controller documentation</a>.</p>
+                    <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                     </div>
                     
                     <button class="collapsible">Packages</button>
@@ -545,53 +499,53 @@
            
                       <div id="content-1tab">
                         <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
-                        <p><code style="color:cyan">sudo add-apt-repository ppa:cartavis-team/carta
+                        <p><code>sudo add-apt-repository ppa:cartavis-team/carta
                         <br/>sudo apt-get update
-                        <br/>sudo apt install carta-beta</code></p>
-                        <p>To start CARTA, type <code style="color:cyan">carta</code> on the commandline or use the CARTA launcher in your desktop environment. The CARTA graphical interface will open in your default web browser.</p>
+                        <br/>sudo apt install carta</code></p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
                       <div id="content-2tab">
                         <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-                        <br/>sudo yum -y install carta-beta</code></p>
-                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                        <br/>sudo yum -y install carta</code></p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
 	                  <div id="content-3tab">
                         <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo yum -y install epel-release
-                        <br/>sudo yum -y install carta-beta</code></p>
-                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                        <br/>sudo yum -y install carta</code></p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
                       <div id="content-4tab">
                         <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-                        <br/>sudo yum -y install carta-beta</code></p>
-                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                        <br/>sudo yum -y install carta</code></p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
                       <div id="content-5tab">
                         <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code style="color:cyan">sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
 			<br/>sudo dnf -y install 'dnf-command(config-manager)'
 			<br/>sudo dnf -y install epel-release
 			<br/>sudo dnf -y config-manager --set-enabled powertools
-                        <br/>sudo dnf -y install carta-beta</code></p>
-                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open uisng your default web browser.</p>
+                        <br/>sudo dnf -y install carta</code></p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
                       <div id="content-6tab">
                         <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
                         <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
-                        <code style="color:cyan">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+                        <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
                         <p>Now CARTA can be installed with:<br>
-                        <code style="color:cyan">brew install cartavis/tap/carta-beta</code>
-                        <p>To run the newly installed CARTA, simply type <code style="color:cyan">carta</code> on the commandline. The CARTA graphical interface will open using your default web browser.</p>
+                        <code>brew install cartavis/tap/carta</code>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
                     </div>
                 </div>
@@ -600,69 +554,68 @@
                     <div class="content">
 
                       <div id="containertab2">
-                            <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
-                            <label for="tab2-1">Ubuntu Linux AppImage</label>
-                            <input id="tab2-2" type="radio" name="tab2-group" />
-                            <label for="tab2-2">Red Hat Linux AppImage</label>
-                            <input id="tab2-3" type="radio" name="tab2-group" />
-                            <label for="tab2-3">macOS Electron Desktop</label>
+                        <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
+                        <label for="tab2-1">macOS Electron Desktop</label>
+                        <input id="tab2-2" type="radio" name="tab2-group" />
+                        <label for="tab2-2">Ubuntu Linux AppImage</label>
+                        <input id="tab2-3" type="radio" name="tab2-group" />
+                        <label for="tab2-3">Red Hat Linux AppImage</label>
+                            
 
 
                       <div id="contenttab2">
-
-                      <div id="content-1tab2">
+                        <div id="content-1tab2">
+                            <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.</p>
+                            <p><b>Installation:</b><br> 
+                              Click the download button below. After downloading, open the DMG installer and drag the CARTA icon to the Applications folder.<br>
+                            <b>Operation:</b><br> 
+                              Click the <b>CARTA</b> icon in the Launchpad. 
+                            <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
+                               Here is an example:<br>
+                               Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
+                               <code>alias carta='/Applications/CARTA.app/Contents/MacOS/CARTA'</code><br>
+                               Then enter <code>source ~/.zshrc</code> (or <code>source ~/.bashrc</code>) in the terminal.<br> 
+                               Now you will be able to start CARTA by simply typing <code>carta</code> in the terminal.
+                            <br><a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0.dmg" 
+                                class="button">DOWNLOAD</a>
+                          </div>
+                      <div id="content-2tab2">
                         <p>The Ubuntu Linux AppImage does not require root access. You simply download, extract, and run it.
                            It uses your default web browser to display the CARTA graphical interface.
                            The AppImage has been tested to run on Ubuntu 18.04 and 20.04.
 		        <p><b>Installation:</b><br>
                            Either click the Download button below or run:<br>
-                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz</code><br>
+                           <code>wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-v2.0-ubuntu.tar.gz</code><br>
                            Extract the tarball:<br>
-                           <code style="color:cyan">tar -xzf carta-beta-v2.0-ubuntu.tar.gz</code><br>
+                           <code>tar -xzf carta-v2.0-ubuntu.tar.gz</code><br>
 		        <b>Operation:</b><br>
-                           Simply execute the AppImage<br>
-		           <code style="color:cyan">./carta-beta-v2.0-ubuntu.AppImage</code>
+                To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
+		           
                         <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-ubuntu.AppImage </code>
-                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-ubuntu.tar.gz" 
+                            <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v2.0-ubuntu.AppImage </code>
+                        <br><a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0-ubuntu.tgz" 
                             class="button">DOWNLOAD</a>
                       </div>
 
-                      <div id="content-2tab2">
+                      <div id="content-3tab2">
                         <p>The Red Hat Linux AppImage does not require root access. You simply download, extract, and run it.
                            It uses your default web browser to display the CARTA graphical interface.
                            The AppImage has been tested to run on Red Hat Enterprise Linux (RHEL) 7 and 8, as well as CentOS 7 and 8.
                         <p><b>Installation:</b><br>
                            Either click the Download button below or run:<br>
-                           <code style="color:cyan">wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz</code><br>
+                           <code>wget http://alma.asiaa.sinica.edu.tw/_downloads/carta-v2.0-redhat.tar.gz</code><br>
                            Extract the tarball:<br>
-                           <code style="color:cyan">tar -xzf carta-beta-v2.0-redhat.tar.gz</code><br>
+                           <code>tar -xzf carta-v2.0-redhat.tar.gz</code><br>
                         <b>Operation:</b><br>
-                           Simply execute the AppImage<br>
-                           <code style="color:cyan">./carta-beta-v2.0-redhat.AppImage</code>
+                        To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
                         <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                            <code style="color:cyan">APPIMAGE_EXTRACT_AND_RUN=1 ./carta-beta-v2.0-redhat.AppImage </code>
-                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/carta-beta-v2.0-redhat.tar.gz" 
+                            <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v2.0-redhat.AppImage </code>
+                        <br><a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0-redhat.tgz" 
                             class="button">DOWNLOAD</a>
                       </div>
 
 
-                      <div id="content-3tab2">
-                        <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.</p>
-                        <p><b>Installation:</b><br> 
-                          Click the download button below.<br>
-                          After downloading, open the DMG installer and drag the CARTA-beta-v2.0 icon to the Applications folder.<br>
-                        <b>Operation:</b><br> 
-                          Click the <b>CARTA-beta-v2.0</b> icon in the Launchpad. 
-                        <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
-                           Here is an example:<br>
-                           Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
-                           <code style="color:cyan">alias carta='/Applications/CARTA-v2.0-beta.app/Contents/MacOS/CARTA-v2.0-beta'</code><br>
-                           Then enter <code style="color:cyan">source ~/.zshrc</code> (or <code style="color:cyan">source ~/.bashrc</code>) in the terminal.<br> 
-                           Now you will be able to start CARTA by simply typing <code style="color:cyan">carta</code> in the terminal.
-                        <br><a href="http://alma.asiaa.sinica.edu.tw/_downloads/CARTA-v2.0-beta.dmg" 
-                            class="button">DOWNLOAD</a>
-                      </div>
+                      
                      </div>
                     </div>
                    </div>
@@ -690,82 +643,7 @@
                 <p>In case of any issues encountered during the installation, please contact the <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw?subject=CARTA installation issues">CARTA helpdesk</a>.</p>   
                 <br>
 
-                <div class="section-heading">
-                <h2 class="section-title">Obtaining CARTA v1.4</h2>
-                </div>
                 
-                <h4>
-                    <b>Desktop version</b><br>
-                    Suitable for single-user usage with a laptop, a desktop or a remote server in the "remote" mode.
-                    <br>
-                    Current release: v1.4 (2020/09/17)
-                </h4>
-
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">macOS</h2>
-                        <p class="pricing-sub">10.15 Catalina<br>10.14 Mojave</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4.dmg" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <!--End Download Block-->
-
-                <!--Download Block-->
-                <div class="pricing-block featured col-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Ubuntu</h2>
-                        <p class="pricing-sub">20.04 LTS<br>18.04 LTS</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-ubuntu.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <!--End Download Block-->
-
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Red Hat</h2>
-                        <p class="pricing-sub">8<br>7</p>
-                        <a href="https://github.com/CARTAvis/carta/releases/download/v1.4/CARTA-v1.4-RedHat7.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>                   
-                </div>
-                <!--End Download Block-->
-
-            
-                <!--Download Block-->
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="pricing-block-content text-center">
-                        <h2 class="section-title">Red Hat</h2>
-                        <p class="pricing-sub">6<br>(remote mode only)</p>
-                        <a href="https://github.com/CARTAvis/carta-releases/releases/download/v1.4/CARTA-v1.4-remote.tgz" 
-                            class="button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <!--End Download Block-->
-
-                <div class="col-1">
-                    <p>Installation instructions for macOS and Linux are <a href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html" target="_blank">here</a>.</p>
-                    <p>The user manual is available <a href="https://carta.readthedocs.io/en/latest/" target="_blank">here</a>.</p>
-                <p>Previous releases of CARTA can be found <a href="https://github.com/CARTAvis/carta/releases" target="_blank">here</a>.</p>
-                    <p>Should there be any problem, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>, or <a href="https://github.com/CARTAvis/carta/issues" target="_blank">submit an issue</a>.</p>
-                    </div>
-        
-                    
-                <h4>
-                    <b>Server version</b><br>
-                    Suitable for institution-wide deployment to support multiple users with user authentication and additional server-side features. 
-                    <br>
-                    Current release: v1.4 (2020/09/17)
-                </h4>
-                
-            
-                <p>Please follow the instructions <a href="https://carta-controller.readthedocs.io" target="_blank">here</a> for the server deployment. In case of problems, please <a href="mailto:carta_helpdesk@asiaa.sinica.edu.tw">contact us</a>.</p>
-
-
-
 
 
             </div>
@@ -897,8 +775,12 @@
                             <li> node.js: <a href="https://nodejs.org" target="_blank">https://nodejs.org</a> </li>
                             <li> Plotly: <a href="https://plotly.com" target="_blank">https://plotly.com</a> </li>
                             <li> Protocol buffers: <a href="https://developers.google.com/protocol-buffers" target="_blank">https://developers.google.com/protocol-buffers</a> </li>
+                            <li> Pugixml: <a href="https://pugixml.org" target="_blank">https://pugixml.org</a> </li>
                             <li> React: <a href="https://reactjs.org" target="_blank">https://reactjs.org</a> </li>
+                            <li> spdlog: <a href="https://github.com/gabime/spdlog" target="_blank">https://github.com/gabime/spdlog</a> </li>
+                            <li> sse2neon: <a href="https://github.com/DLTcollab/sse2neon" target="_blank">https://github.com/DLTcollab/sse2neon</a> </li>
                             <li> TBB: <a href="https://www.threadingbuildingblocks.org" target="_blank">https://www.threadingbuildingblocks.org</a> </li>
+                            <li> uWebsockets: <a href="https://github.com/uNetworking/uWebSockets" target="_blank">https://github.com/uNetworking/uWebSockets</a> </li>
                             <li> WebAssembly: <a href="https://webassembly.org"target="_blank">https://webassembly.org</a> </li>
                         </ul>
                     </p>
