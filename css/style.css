@@ -2374,5 +2374,12 @@ blockquote {
 }
 
 
-
-
+.blinking{
+	animation:blinkingText 1.5s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: rgb(255, 0, 0);	}
+	49%{	color: transparent;	}
+	50%{	color: rgb(255, 0, 0);	}
+	100%{	color: rgb(255, 0, 0);	}
+}
