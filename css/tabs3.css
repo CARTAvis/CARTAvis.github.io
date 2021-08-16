@@ -1,15 +1,15 @@
 
-#containertab2 {
+#containertab3 {
     margin: 0 auto;
     width: 100%;
 }
 
-#containertab2 input {
+#containertab3 input {
 	height: 2.5em;
 	visibility: hidden;
 }
 
-#containertab2 label {
+#containertab3 label {
 	background: #396994;
 	border-radius: 0 0 0 0;
 	color: #FFFFFF;
@@ -24,12 +24,12 @@
 	text-align: center;
 }
 
-#containertab2 input:hover + label {
+#containertab3 input:hover + label {
 	background:  #1E5086;
 	color: #FFFFFF;
 }
 
-#containertab2 input:checked + label {
+#containertab3 input:checked + label {
 	background: #1E5086;
 	color: #FFFFFF; /* text colour */
 	position: relative;
@@ -42,16 +42,16 @@
 	*/
 }
 
-#contenttab2 {
+#contenttab3 {
 	
 	border-radius: 0 .25em .25em .25em;
-	min-height: 30em;
+	min-height: 18em;
 	position: relative;
 	width: 100%;
 	z-index: 5;
 }
 
-#contenttab2 div {
+#contenttab3 div {
 	opacity: 0;
 	padding-left: 1.5em;
 	position: absolute;
@@ -61,37 +61,68 @@
 	*/
 }
 
-#content-1tab2 p {
+#content-1tab3 p {
 	clear: both;
 	margin-bottom: 1em;
 }
-#content-1tab2 p.left img {
+#content-1tab3 p.left img {
 	float: left;
 	margin-right: 1em;
 }
-#content-1tab2 p.last {
+#content-1tab3 p.last {
 	margin-bottom: 0;
 }
 
-#content-2tab2 p,
-#content-2tab2 ul {
+#content-2tab3 p,
+#content-2tab3 ul {
         margin-bottom: 1em;
 }
-#content-2tab2 ul {
+#content-2tab3 ul {
         margin-left: 2em;
 }
 
-#content-3tab2 p,
-#content-3tab2 ul {
+
+#content-3tab3 p,
+#content-3tab3 ul {
         margin-bottom: 1em;
 }
-#content-3tab2 ul {
+#content-3tab3 ul {
         margin-left: 2em;
 }
 
-input#tab2-1:checked ~ #contenttab2 #content-1tab2,
-input#tab2-2:checked ~ #contenttab2 #content-2tab2, 
-input#tab2-3:checked ~ #contenttab2 #content-3tab2 {
+
+#content-4tab3 p,
+#content-4tab3 ul {
+        margin-bottom: 1em;
+}
+#content-4tab3 ul {
+        margin-left: 2em;
+}
+
+
+#content-5tab3 p,
+#content-5tab3 ul {
+        margin-bottom: 1em;
+}
+#content-5tab3 ul {
+        margin-left: 2em;
+}
+
+
+#content-6tab3 p,
+#content-6tab3 ul {
+	margin-bottom: 1em;
+}
+#content-6tab3 ul {
+	margin-left: 2em;
+}
+
+input#tab3-1:checked ~ #contenttab3 #content-1tab3,
+input#tab3-2:checked ~ #contenttab3 #content-2tab3,
+input#tab3-3:checked ~ #contenttab3 #content-3tab3,
+input#tab3-4:checked ~ #contenttab3 #content-4tab3,
+input#tab3-5:checked ~ #contenttab3 #content-5tab3,
+input#tab3-6:checked ~ #contenttab3 #content-6tab3 {
     opacity: 1;
     z-index: 100;
 }
