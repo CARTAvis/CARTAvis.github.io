@@ -212,7 +212,7 @@
                 <a href="https://carta.readthedocs.io/en/latest/" class="button" target="_blank">User Manual</a><br>
                 <span class='blinking' style='font-weight: bold;'>NEW</span>
                 &nbsp;
-                <span style="color:blue;font-weight: bold">v3.0-beta.2b release is out</span>
+                <span style="color:blue;font-weight: bold">v3.0-beta.3 is now available</span>
                 <!--End Call to Action-->
 
             </div>
@@ -652,7 +652,7 @@
                 <p>To obtain previous release versions, please refer to <a href="https://github.com/CARTAvis/carta/releases">https://github.com/CARTAvis/carta/releases</a>.</p>
                    <hr>
 
-                   <h4>v3.0-beta.2b</h4>
+                   <h4>v3.0-beta.3</h4>
                    <p>Supported operating systems:
                     <ul>
                         <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa)</li>
@@ -684,7 +684,7 @@
                          <input id="tab3-4" type="radio" name="tab3-group" />
                          <label for="tab3-4">RHEL8</label>
                          <input id="tab3-5" type="radio" name="tab3-group" />
-                         <label for="tab3-5">CentOS8</label>
+                         <label for="tab3-5">AlmaLinux</label>
                          <input id="tab3-6" type="radio" name="tab3-group" />
                          <label for="tab3-6">macOS</label>
                        
@@ -726,7 +726,7 @@
                        </div>
  
                        <div id="content-5tab3">
-                         <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                         <p>For AlmaLinux 8 / Rocky Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
                          <p><code>sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
                             <br/>sudo dnf -y install 'dnf-command(config-manager)'
                             <br/>sudo dnf -y install epel-release
@@ -737,7 +737,7 @@
                        </div>
  
                        <div id="content-6tab3">
-                         <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
+                         <p>We officially support macOS 10.15 Catalina, macOS 11.0 Big Sur, and macOS 12.0 Monterey through <a href="https://brew.sh" target="_blank">Homebrew</a>.
                          <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
                          <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
                          <p>Now CARTA can be installed with:<br>
@@ -764,21 +764,21 @@
 
                    <div id="contenttab4">
                      <div id="content-1tab4">
-                         <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below. In addition to the standard Intel version for Intel based Macs, we now supply a native Apple Silicon version for the new M1 based Macs.</p>
+                         <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below. In addition to the standard Intel version for Intel based Macs, we now supply a native Apple Silicon version for M1 based Macs.</p>
                          <p><b>Installation:</b><br> 
-                           Click the download button below. After downloading, open the DMG installer and drag the CARTA-v3.0.0-beta.2b icon to the Applications folder.<br>
+                           Click the download button below. After downloading, open the DMG installer and drag the CARTA-v3.0.0-beta.3 icon to the Applications folder.<br>
                          <b>Operation:</b><br> 
-                           Click the <b>CARTA-v3.0.0-beta.2b</b> icon in the Launchpad. 
+                           Click the <b>CARTA-v3.0.0-beta.3</b> icon in the Launchpad. 
                          <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
                             Here is an example:<br>
                             Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
-                            <code>alias carta='/Applications/CARTA-v3.0.0-beta.2b.app/Contents/MacOS/CARTA-v3.0.0-beta.2b'</code><br>
+                            <code>alias carta='/Applications/CARTA-v3.0.0-beta.3.app/Contents/MacOS/CARTA-v3.0.0-beta.3'</code><br>
                             Then enter <code>source ~/.zshrc</code> (or <code>source ~/.bashrc</code>) in the terminal.<br> 
                             Now you will be able to start CARTA by simply typing <code>carta</code> in the terminal.
                            
-                         <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b.dmg" 
+                         <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3.dmg" 
                              class="button">DOWNLOAD - Intel Mac</a>
-                             <a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-arm64.dmg" 
+                             <a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3-arm64.dmg" 
                              class="button">DOWNLOAD - Apple M1</a>
                        </div>
                    <div id="content-2tab4">
@@ -787,38 +787,33 @@
                         The AppImage has been tested to run on Ubuntu 18.04 and 20.04.
              <p><b>Installation:</b><br>
                         Either click the Download button below or run:<br>
-                        <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-ubuntu.tgz</code><br>
+                        <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3-ubuntu.tgz</code><br>
                         Extract the tarball:<br>
-                        <code>tar -xzf CARTA-v3.0.0-beta.2b-ubuntu.tgz</code><br>
+                        <code>tar -xzf CARTA-v3.0.0-beta.3-ubuntu.tgz</code><br>
              <b>Operation:</b><br>
              To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
-                
+
                      <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                         <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0.0-beta.2b-ubuntu.AppImage </code>
-                     <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-ubuntu.tgz" 
+                         <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0.0-beta.3-ubuntu.AppImage </code>
+                     <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3-ubuntu.tgz" 
                          class="button">DOWNLOAD</a>
                    </div>
 
                    <div id="content-3tab4">
                      <p>The Red Hat Linux AppImage does not require root access. You simply download, extract, and run it.
                         It uses your default web browser to display the CARTA graphical interface.
-                        The AppImage has been tested to run on Red Hat Enterprise Linux (RHEL) 7 and 8, as well as CentOS 7 and 8.
+                        The AppImage has been tested to run on Red Hat Enterprise Linux (RHEL) 7 and 8, as well as CentOS 7 and AlmaLinux 8.
                      <p><b>Installation:</b><br>
                         Either click the Download button below or run:<br>
-                        <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-redhat7.tgz</code><br>
-                        <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-redhat8.tgz</code><br>
+                        <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3-redhat.tgz</code><br>
                         Extract the tarball:<br>
-                        <code>tar -xzf CARTA-v3.0.0-beta.2b-redhat7.tgz</code><br>
-                        <code>tar -xzf CARTA-v3.0.0-beta.2b-redhat8.tgz</code><br>
+                        <code>tar -xzf CARTA-v3.0.0-beta.3-redhat.tgz</code><br>
                      <b>Operation:</b><br>
                      To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
                      <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                         <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0.0-beta.2b-redhat7.AppImage </code><br>
-                         <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0.0-beta.2b-redhat8.AppImage </code>
-                     <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-redhat7.tgz" 
-                         class="button">DOWNLOAD-RedHat7</a>
-                         <a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.2b/CARTA-v3.0.0-beta.2b-redhat8.tgz" 
-                         class="button">DOWNLOAD-RedHat8</a>
+                         <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0.0-beta.3-redhat.AppImage </code><br>
+                     <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0.0-beta.3/CARTA-v3.0.0-beta.3-redhat.tgz" 
+                         class="button">DOWNLOAD</a>
                    </div>
 
 
