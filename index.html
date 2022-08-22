@@ -461,12 +461,12 @@
                 <div class="section-heading">
                     <h3>INSTALLATION</h3>
                     <h2 class="section-title">Obtaining CARTA</h2>
-                    <h4>v2.0</h4>
+                    <h4>v3.0</h4>
                     <p>Supported operating systems:
                         <ul>
-                            <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa)</li>
-                            <li>Red Hat Enterprise Linux: 7, 8</li>
-                            <li>macOS: 10.15 (Catalina), 11 (Big Sur)</li>
+                            <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa), and 22.04 LTS (Jammy Jellyfish) for amd64 and aarch64 architectures.</li>
+                            <li>Red Hat Enterprise Linux: 7 and 8 for x86_64 and aarch64 architectures.</li>
+                            <li>macOS: 10.15 (Catalina), 11 (Big Sur), and 12 (Monterey) for Intel and M1 architectures.</li>
                         </ul>
                     </p>
                     <style>
@@ -498,7 +498,7 @@
                     <button class="collapsible">Site deployment</button>
                     <div class="content">
                     <p>To deploy CARTA at your institution as a web-based application for multiple users, please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/" target="_blank">CARTA controller documentation</a>.</p>
-                    <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                    <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                     </div>
                     
                     <button class="collapsible">Packages</button>
@@ -509,66 +509,48 @@
 	                    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
 	                    <label for="tab-1">Ubuntu</label>
 	                    <input id="tab-2" type="radio" name="tab-group" />
-	                    <label for="tab-2">RHEL7</label>
-                        <input id="tab-3" type="radio" name="tab-group" />
-                        <label for="tab-3">CentOS7</label>
-                        <input id="tab-4" type="radio" name="tab-group" />
-                        <label for="tab-4">RHEL8</label>
-                        <input id="tab-5" type="radio" name="tab-group" />
-                        <label for="tab-5">CentOS8</label>
-	                    <input id="tab-6" type="radio" name="tab-group" />
-	                    <label for="tab-6">macOS</label>
+	                    <label for="tab-2">RHEL7 / CentOS7</label>
+                            <input id="tab-3" type="radio" name="tab-group" />
+                            <label for="tab-3">RHEL8 / AlmaLinux 8</label>
+                            <input id="tab-4" type="radio" name="tab-group" />
+                            <label for="tab-4">macOS</label>
                       <div id="contenttab">
            
                       <div id="content-1tab">
-                        <p>Ubuntu 18.04 and 20.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
+                        <p>Ubuntu 18.04, 20.04, and 22.04 packages are available <a href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta" target="_blank">from our PPA</a>.</p>
                         <p><code>sudo add-apt-repository ppa:cartavis-team/carta
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <p>Users currently in the "carta-testing" channel may remain there and update their carta-beta version to the current release version:
+			<p><code>sudo apt-get update
+			<br/>sudo apt install carta-beta</code></p>
+
                       </div>
 
                       <div id="content-2tab">
-                        <p>For Red Hat Enterprise Linux 7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
+                        <p>For Red Hat Enterprise Linux 7 and CentOS7 users, you first need to add the 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis.repo --output /etc/yum.repos.d/cartavis.repo
                         <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
                         <br/>sudo yum -y install carta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
 	                  <div id="content-3tab">
-                        <p>For CentOS7 users, you first need to add the el7 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el7.repo --output /etc/yum.repos.d/cartavis.repo
-                        <br/>sudo yum -y install epel-release
+                        <p>For Red Hat Enterprise Linux 8 and AlmaLinux 8 users, you first need to add the 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
+                        <p><code>sudo curl https://packages.cartavis.org/cartavis.repo --output /etc/yum.repos.d/cartavis.repo
+                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
                         <br/>sudo yum -y install carta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
 
                       <div id="content-4tab">
-                        <p>For Red Hat Enterprise Linux 8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
-                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-                        <br/>sudo yum -y install carta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
-                      </div>
-
-                      <div id="content-5tab">
-                        <p>For CentOS8 users, you first need to add the el8 'cartavis' and EPEL repositories. Please note that root access is required, unless you install in a Docker container.</p>
-                        <p><code>sudo curl https://packages.cartavis.org/cartavis-el8.repo --output /etc/yum.repos.d/cartavis.repo
-			<br/>sudo dnf -y install 'dnf-command(config-manager)'
-			<br/>sudo dnf -y install epel-release
-			<br/>sudo dnf -y config-manager --set-enabled powertools
-                        <br/>sudo dnf -y install carta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
-                      </div>
-
-                      <div id="content-6tab">
-                        <p>We officially support macOS 10.15 Catalina and macOS 11.0 Big Sur through <a href="https://brew.sh" target="_blank">Homebrew</a>.
+                        <p>We officially support macOS 11 Big Sur and macOS 12 Monterey through <a href="https://brew.sh" target="_blank">Homebrew</a>.
                         <p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br>
                         <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
                         <p>Now CARTA can be installed with:<br>
                         <code>brew install cartavis/tap/carta</code>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
                     </div>
                 </div>
@@ -580,46 +562,46 @@
                         <input id="tab2-1" type="radio" name="tab2-group" checked="checked" />
                         <label for="tab2-1">macOS Electron Desktop</label>
                         <input id="tab2-2" type="radio" name="tab2-group" />
-                        <label for="tab2-2">Ubuntu Linux AppImage</label>
-                        <input id="tab2-3" type="radio" name="tab2-group" />
-                        <label for="tab2-3">Red Hat Linux AppImage</label>
-                            
-
+                        <label for="tab2-2">Linux AppImage</label>
 
                       <div id="contenttab2">
                         <div id="content-1tab2">
-                            <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below.<br/>If you use an M1 based Mac, you may see better performance with the native Apple Silicon version of CARTA available <a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0-arm64.dmg">here</a>.</p>
-                            <p><b>Installation:</b><br> 
-                              Click the download button below. After downloading, open the DMG installer and drag the CARTA icon to the Applications folder.<br>
-                            <b>Operation:</b><br> 
-                              Click the <b>CARTA</b> icon in the Launchpad. 
-                            <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
-                               Here is an example:<br>
-                               Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
-                               <code>alias carta='/Applications/CARTA.app/Contents/MacOS/CARTA'</code><br>
-                               Then enter <code>source ~/.zshrc</code> (or <code>source ~/.bashrc</code>) in the terminal.<br> 
-                               Now you will be able to start CARTA by simply typing <code>carta</code> in the terminal.
-                            
-                              
-                            <br><a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0.dmg" 
-                                class="button">DOWNLOAD</a>
+                         <p>The traditional macOS Electron Desktop version can be downloaded by clicking the download button below. In addition to the standard Intel version for Intel based Macs, we now supply a native Apple Silicon version for M1 based Macs.</p>
+                         <p><b>Installation:</b><br>
+			 Click the download button below. After downloading, open the DMG installer and drag the <b>CARTA</b> icon to the Applications folder.<br>
+                         <b>Operation:</b><br>
+                           Click the <b>CARTA</b> icon in the Launchpad.
+                         <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
+                            Here is an example:<br>
+                            Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
+                            <code>alias carta='/Applications/CARTA.app/Contents/MacOS/CARTA'</code><br>
+                            Then enter <code>source ~/.zshrc</code> (or <code>source ~/.bashrc</code>) in the terminal.<br>
+                            Now you will be able to start CARTA by simply typing <code>carta</code> in the terminal.
+
+                         <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0/CARTA-v3.0.0.dmg" 
+                             class="button">DOWNLOAD - Intel Mac</a>
+                             <a href="https://github.com/CARTAvis/carta/releases/download/v3.0/CARTA-v3.0.0-arm64.dmg"
+	                     class="button">DOWNLOAD - M1 Mac</a>
                           </div>
                       <div id="content-2tab2">
-                        <p>The Ubuntu Linux AppImage does not require root access. You simply download, extract, and run it.
-                           It uses your default web browser to display the CARTA graphical interface.
-                           The AppImage has been tested to run on Ubuntu 18.04 and 20.04.
+                        <p>The CARTA Linux AppImage does not require root access. You simply download, extract, and run it. 
+			   It uses your default web browser to display the CARTA graphical interface.
+			   The CARTA AppImage can now run universally between Ubuntu and RedHat platforms, but we have separate versions for x86_64 and aarch64 architectures.
+
 		        <p><b>Installation:</b><br>
                            Either click the Download button below or run:<br>
-                           <code>wget https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0-ubuntu.tgz</code><br>
+                           <code>wget https://github.com/CARTAvis/carta/releases/download/v3.0/CARTA-v3.0-x86_64.tgz</code><br>
                            Extract the tarball:<br>
-                           <code>tar -xzf carta-v2.0-ubuntu.tar.gz</code><br>
+                           <code>tar -xzf CARTA-v3.0-x86_64.tar.gz</code><br>
 		        <b>Operation:</b><br>
-                To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
+                           To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
 		           
                         <p>Note: If you wish to run the AppImage inside a Docker container, or you system has trouble with FUSE, please prefix with the following environment variable:<br>
-                            <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v2.0-ubuntu.AppImage </code>
-                        <br><a href="https://github.com/CARTAvis/carta/releases/download/v2.0/CARTA-v2.0-ubuntu.tgz" 
-                            class="button">DOWNLOAD</a>
+                            <code>APPIMAGE_EXTRACT_AND_RUN=1 ./CARTA-v3.0-x86_64.AppImage </code>
+                         <br><a href="https://github.com/CARTAvis/carta/releases/download/v3.0/CARTA-v3.0-x86_64.tgz" 
+                             class="button">DOWNLOAD - x86_64</a>
+                             <a href="https://github.com/CARTAvis/carta/releases/download/v3.0/CARTA-v3.0-aarch64.tgz"
+		             class="button">DOWNLOAD - aarch64</a>
                       </div>
 
                       <div id="content-3tab2">
@@ -644,14 +626,14 @@
                     </div>
                    </div>
 
-
-                   
-
-                   <p>For more information, please refer to the <a href="https://carta.readthedocs.io/en/2.0/installation_and_configuration.html">user manual</a>.</p> 
+                   <p>For more information, please refer to the <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html">user manual</a>.</p> 
                 <p>In case of any issues encountered during the installation, please contact the <a href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA helpdesk</a>.</p>   
                 <p>To obtain previous release versions, please refer to <a href="https://github.com/CARTAvis/carta/releases">https://github.com/CARTAvis/carta/releases</a>.</p>
-                   <hr>
 
+                <!-- Removing the beta release section for now
+
+		<hr>
+			
                    <h4>v3.0-beta.3</h4>
                    <p>Supported operating systems:
                     <ul>
@@ -673,7 +655,7 @@
                      <button class="collapsible">Packages</button>
                      <div class="content">
  
-                       <!-- Package details in simple horizontal tabs -->
+                       <!- - Package details in simple horizontal tabs - ->
                        <div id="containertab3">
                          <input id="tab3-1" type="radio" name="tab3-group" checked="checked" />
                          <label for="tab3-1">Ubuntu</label>
@@ -820,7 +802,7 @@
                   </div>
                  </div>
                 </div>
-
+                Removing the beta release section for now -->
 
                     <script>
                     var coll = document.getElementsByClassName("collapsible");
@@ -840,15 +822,12 @@
                     </script>                    
 
 
-
+                <!-- Removing the beta release section for now
                 </div>
                 <p>For more information, please refer to the <a href="https://docs.google.com/document/d/1OGBC42jV7wxByNW6XQzgGAx3y25OPd3T3ZpfhKCORpI/edit?usp=sharing" target="_blank">beta release quick guide</a>.</p> 
                 <p>In case of any issues encountered during the installation, please contact the <a href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA helpdesk</a>.</p>   
-                
-
-                
-
-
+		Removing the beta release section for now --> 
+	
             </div>
 
       </div>
@@ -981,7 +960,6 @@
                             <li> Chart.js: <a href="https://www.chartjs.org" target="_blank">https://www.chartjs.org</a> </li>
                             <li> Electron: <a href="https://electronjs.org" target="_blank">https://electronjs.org</a> </li>
                             <li> GoldenLayout: <a href="https://golden-layout.com" target="_blank">https://golden-layout.com</a> </li>
-                            <li> gRPC: <a href="https://grpc.io/" target="_blank">https://grpc.io/</a> </li>
                             <li> GSL: <a href="https://www.gnu.org/software/gsl/" target="_blank">https://www.gnu.org/software/gsl</a> </li>
                             <li> MobX: <a href="https://mobx.js.org" target="_blank">https://mobx.js.org</a> </li>
                             <li> MongoDB: <a href="https://www.mongodb.com" target="_blank">https://www.mongodb.com</a> </li>
@@ -992,7 +970,6 @@
                             <li> React: <a href="https://reactjs.org" target="_blank">https://reactjs.org</a> </li>
                             <li> spdlog: <a href="https://github.com/gabime/spdlog" target="_blank">https://github.com/gabime/spdlog</a> </li>
                             <li> sse2neon: <a href="https://github.com/DLTcollab/sse2neon" target="_blank">https://github.com/DLTcollab/sse2neon</a> </li>
-                            <li> TBB: <a href="https://www.threadingbuildingblocks.org" target="_blank">https://www.threadingbuildingblocks.org</a> </li>
                             <li> uWebsockets: <a href="https://github.com/uNetworking/uWebSockets" target="_blank">https://github.com/uNetworking/uWebSockets</a> </li>
                             <li> WebAssembly: <a href="https://webassembly.org"target="_blank">https://webassembly.org</a> </li>
                         </ul>
