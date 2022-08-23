@@ -209,7 +209,8 @@
 
                 <!--Call to Action-->
                 <a href="#download" class="button">Installation</a>
-                <a href="https://carta.readthedocs.io/en/latest/" class="button" target="_blank">User Manual</a><br>
+                <a href="https://carta.readthedocs.io/en/3.0/" class="button" target="_blank">User Manual</a>
+                <a href="mailto:support@carta.freshdesk.com" class="button" target="_blank">Helpdesk</a><br>
                 <span class='blinking' style='font-weight: bold;'>NEW</span>
                 &nbsp;
                 <span style="color:blue;font-weight: bold">The CARTA v3.0 release is now available</span>
@@ -370,20 +371,39 @@
 		       <div class="section-heading">
                         <h4>Current release</h4>
 		       </div>
-                    <p>The current release is v2.0, released on 7th of June 2021, with the following features:</p>
+                    <p>The current release is v3.0, released on 23rd of August 2022, with the following features:</p>
                         <ul>
-                            <li>Multi-profile plot with the spectral profiler</li>
-                            <li>Progress report and cancellation when requesting a long file list</li>
-                            <li>Forming a Stokes hypercube at image loading stage</li>
-                            <li>Colorbar display in the image viewer and enhanced raster image config widget</li>
-                            <li>Support rectangular pixel rendering for PV image</li>
-                            <li>Filtering function in the spectral line query widget</li>
-                            <li>Enhanced FITS and CASA image support</li>
-                            <li>Saving subimage</li>
-                            <li>Searching a keyword from image header</li>
-                            <li>Profile fitting in the spectral profiler</li>
-                            <li>Marker-based catalog rendering and performance enhancement</li>
-                            <li>New deployment modes</li>
+                            <li>Package support for x86_64 and aarch64 architectures</li>
+                            <li>Vector overlay rendering</li>
+                            <li>Loading images with the Lattice Expression Language (LEL)</li>
+                            <li>Loading CASA images with pixel values as complex numbers</li>
+                            <li>Initial implementation of image 2D Gaussian fitting</li>
+                            <li>Generating computed polarization quantities (eg. linear polarization intensity) of a Stokes cube on the fly</li>
+                            <li>Setting a new rest frequency when saving a subimage</li>
+                            <li>Logging moment map generation information in header history</li>
+                            <li>Line and polyline region spectral profiler</li>
+                            <li>Initial implementation of PV image generator</li>
+                            <li>Image file list filter</li>
+                            <li>High-resolution PNG export</li>
+                            <li>Enhanced spectral matching mode</li>
+                            <li>Custom rest frequency for velocity conversion</li>
+                            <li>Performance boost when loading a region file with massive amount of regions</li>
+                            <li>Telemetry</li>
+                            <li>Online catalog query from SIMBAD and VizieR</li>
+                            <li>Region export and import enhancement</li>
+                            <li>Initial implementation of intensity unit conversion</li>
+                            <li>Multiple panel view</li>
+                            <li>Pixel grid border rendering at high zoom levels</li>
+                            <li>Interactive raster rendering with a cutoff via the interactive colorbar</li>
+                            <li>Distance measuring tool</li>
+                            <li>Spatial profiler widget enhancement</li>
+                            <li>Histogram and statistics widget enhancement</li>
+                            <li>Cursor info widget</li>
+                            <li>Code snippets (experimental feature)</li>
+                            <li>Support gzipped FITS images (fits.gz and fz)</li>
+                            <li>HDF5 mip map support</li>
+                            <li>Remember last used directory</li>
+                            <li>>Performance enhancement and bug fixes</li>
                         </ul> 
                         <br/>
                 </div>
@@ -395,19 +415,20 @@
                         <h4>Next release</h4>
 
                     </div>
-                    <p> The next release will be v3.0 (Summer 2022). The planned main new features:</p>
+                    <p> The next release will be v4.0 (Summer 2023) with the planned main new features:</p>
                     <ul>
-                        <li>Multiple-panel view</li>
-                        <li>Enhancement of polarization visualization</li>
-                        <li>Position-Velocity map generator (continuous efforts)</li>
-                        <li>Publication quality export (continuous efforts)</li>
-                        <li>2D image fitting (continuous efforts)</li>
-                        <li>Python3 scripting interface (continuous efforts)</li>
-                        <li>Vector field (polarization) rendering </li>
-                        <li>Angular distance measuring tool </li>
-                        <li>Image arithmetic (LEL)</li>
-                        <li>Spatial profile extractor</li>
-                        <li>Complex-value image support</li>
+                        <li>Save and restore state</li>
+                        <li>Share state</li>
+                        <li>Interactive PV image preview</li>
+                        <li>New moment image generator</li>
+                        <li>Enhanced 2D image fitting</li>
+                        <li>RGB image blender</li>
+                        <li>Spatial profile fitting</li>
+                        <li>Enhanced histogram widget</li>
+                        <li>Image annotation</li>
+                        <li>Channel-map view</li>
+                        <li>Python scripting interface</li>
+                        <li>JavaScript scripting interface</li>
                     </ul>
                      
                         
@@ -426,14 +447,12 @@
                     <p>This is a non-exclusive list of features we would like to add in subsequent 
                         releases, but they are not 100% decided upon yet and depend on feedback from users, resourcing etc.:
                         <ul> 
-                            <li> Channel map view </li>
                             <li> Collaborative tools </li>
                             <li> Volume (pseudo 3D) rendering </li>
                             <li> Profile, histogram, and image fitting tools </li>
-                            <li> Three-color blender </li>
                             <li> Image source finder </li>
                             <li> VO service (image and catalog)</li>
-                            <li> Enhanced histogram widget</li>
+                            <li> Smart layout</li>
                           </ul> 
                     
                         <br>
@@ -1004,7 +1023,7 @@
         <div class="row clearfix">
 
             <p id="copyright" class="col-1">
-Copyright (C) 2018-2021 ASIAA, IDIA, NRAO, and Department of Physics, University of Alberta. This program is free software; you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as published by the Free Software Foundation.
+Copyright (C) 2018-2022 ASIAA, IDIA, NRAO, and Department of Physics, University of Alberta. This program is free software; you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as published by the Free Software Foundation.
 The banner image is rendered with CARTA using an <a href="https://archive.stsci.edu/prepds/m51/datalist.html" style="font-weight: bold;">HST image</a> as the raster and a CO 1-0 image from the <a href="https://www2.mpia-hd.mpg.de/PAWS/PAWS/Home.html" style="font-weight: bold";>PAWS project</a> as contours.<br>
 <!--          <dark-mode-toggle appearance="toggle" dark="Switch to light mode" light="Switch to dark mode"></dark-mode-toggle>-->
             This webpage is hosted on GitHub Pages — Theme by <a href="https://www.shapingrain.com" style="font-weight: bold;">ShapingRain</a> with customization.
