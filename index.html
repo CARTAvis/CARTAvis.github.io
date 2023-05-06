@@ -698,7 +698,7 @@
 		        <br/>sudo rm /etc/yum.repos.d/cartavis.repo</code>
                         <p>Follow these steps to add the Copr repository and install carta-beta (Root access is required, unless you install it in a Docker container):<br>
                         <code>sudo yum -y install yum-plugin-copr
-                        <br/>sudo yum -y install yum-plugin-copr
+                        <br/>sudo yum -y copr enable cartavis/carta
 			<br/>sudo yum -y install epel-release
                         <br/>sudo yum -y install carta-beta</code></p>
 			<p>Note: We are currently testing the ability to have the beta and mainline versions of the CARTA RPMs installable side-by-side. To start carta-beta, please run:<br> 
