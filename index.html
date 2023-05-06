@@ -211,9 +211,11 @@
                 <a href="#download" class="button">Installation</a>
                 <a href="https://carta.readthedocs.io/en/3.0/" class="button" target="_blank">User Manual</a>
                 <a href="mailto:support@carta.freshdesk.com" class="button" target="_blank">Helpdesk</a><br>
-                <span style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);">Current release: v3-stable</span>
+                <!--
+		<span style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);">Current release: v3-stable</span>
                 <br/>
-                <span style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">Next release: v4-beta, May 2023</span>
+		-->
+                <span style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">New preview release: v4-beta</span>
                 <!--End Call to Action-->
 
             </div>
@@ -630,7 +632,7 @@
 	                <p>CARTA is available in the form of a Docker container from <a href="https://hub.docker.com/r/cartavis/carta/" target="_blank">Docker Hub</a>. 
 			   This version could be useful to run CARTA on unsupported platforms such as macOS 10.14.</p>
 			With <a href="https://www.docker.com/" target="_blank"> Docker</a> installed and running on your system, simply enter the following command in your terminal:<br>
-			<code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta</code><br>
+			<code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta:latest</code><br>
                             It will download the latest version of CARTA from Docker Hub and run it using your current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will be displayed in the terminal.
 		            Copy &amp; Paste the unique URL into your local web browser in order to access the CARTA frontend interface.
                         <p>Please refer to the user manual for more information <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
@@ -690,32 +692,39 @@
                        </div>
 
                       <div id="content-2tab3">
-                       <p>Note: We are now hosting our RPMs on the <a href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/" target="_blank">Fedora Copr</a> service. If you have previously used our old packages.cartavis.org repository, 
-                       we recommend uninstalling any existing carta packages and removing the old cartavis.repo file first (e.g., <code>sudo dnf remove carta carta-beta</code> and <code>sudo rm /etc/yum.repos.d/cartavis.repo</code>).
-                       <p>Follow these steps to add our Copr repositoy and install carta-beta. Please note that root access is required, unless you install it in a Docker container.</p>
-                        <p><code>sudo yum -y install yum-plugin-copr
+                       <p>We now host the CARTA RPMs on the <a href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/" target="_blank">Fedora Copr</a> service. If you have previously used our old "packages.cartavis.org" RPM repository, 
+		       we recommend uninstalling any existing carta packages and removing the old cartavis.repo file first:<br>
+		        <code>sudo yum remove carta carta-beta
+		        <br/>sudo rm /etc/yum.repos.d/cartavis.repo</code>
+                        <p>Follow these steps to add the Copr repository and install carta-beta (Root access is required, unless you install it in a Docker container):<br>
+                        <code>sudo yum -y install yum-plugin-copr
                         <br/>sudo yum -y install yum-plugin-copr
 			<br/>sudo yum -y install epel-release
                         <br/>sudo yum -y install carta-beta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+			<p>Note: We are currently testing the ability to have the beta and mainline versions of the CARTA RPMs installable side-by-side. To start carta-beta, please run:<br> 
+			<code>carta-beta</code></p>
                       </div>
                         
                       <div id="content-3tab3">
-                       <p>Note: We are now hosting our RPMs on the <a href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/" target="_blank">Fedora Copr</a> service. If you have previously used our old packages.cartavis.org repository, 
-		       we recommend uninstalling any existing carta packages and removing the old cartavis.repo file first (e.g., <code>sudo dnf remove carta carta-beta</code> and <code>sudo rm /etc/yum.repos.d/cartavis.repo</code>).
-		       <p>Follow these steps to add our Copr repository and install carta-beta. Please note that root access is required, unless you install it in a Docker container.</p>
-                        <p><code>sudo dnf -y install 'dnf-command(copr)'
+                       <p>We now host the CARTA RPMs on the <a href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/" target="_blank">Fedora Copr</a> service. If you have previously used our old "packages.cartavis.org" RPM repository,
+                       we recommend uninstalling any existing carta packages and removing the old cartavis.repo file first:<br>
+                        <code>sudo dnf remove carta carta-beta
+                        <br/>sudo rm /etc/yum.repos.d/cartavis.repo</code>
+                        <p>Follow these steps to add the Copr repository and install carta-beta (Root access is required, unless you install it in a Docker container):<br>
+                        <code>sudo dnf -y install 'dnf-command(copr)'
                         <br/>sudo dnf -y copr enable cartavis/carta
-			<br/>sudo dnf -y install epel-release
-                        <br/>sudo yum -y install carta-beta</code></p>
-                        <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
+                        <br/>sudo dnf -y install epel-release
+                        <br/>sudo yum -y install carta-beta</code></p>			
+                        <p>Note: We are currently testing the ability to have the beta and mainline versions of the CARTA RPMs installable side-by-side. To start carta-beta, please run:<br> 
+                        <code>carta-beta</code></p>
                       </div>
                 
                       <div id="content-4tab3">
                         <p>We officially support macOS 11 Big Sur, macOS 12 Monterey, and macOS 13 Ventura through <a href="https://brew.sh" target="_blank">Homebrew</a>.
-			<p>If you do not already have it, you may install Homebrew using the following command (root access is required) 
-			(If you have installed a previous version of CARTA with Homebrew, we recommend uninstalling it first with <code>brew remove carta</code>)<br>
-                        <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+			<p>If you do not already have it, you may install Homebrew using the following command (root access is required):<br> 
+			<code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br>
+			If you have previously installed CARTA via Homebrew, we recommend unlinking it first with:<br> 
+			<code>brew unlink carta</code><br>
                         <p>Now CARTA can be installed with:<br> 
                         <code>brew install cartavis/tap/carta-beta</code> 
                         <p>To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
@@ -742,9 +751,9 @@
                          <p>Alternatively, you may create an alias for starting CARTA in your terminal.<br>
                             Here is an example:<br>
                             Open your <b>~/.zshrc</b> file (or <b>~/.bashrc</b> if you use bash) in a text editor and add the following line:<br>
-                            <code>alias carta='/Applications/CARTA.app/Contents/MacOS/CARTA'</code><br>
+                            <code>alias carta-beta='/Applications/CARTA-v4.0.0-beta.1.app/Contents/MacOS/CARTA-v4.0.0-beta.1'</code><br>
                             Then enter <code>source ~/.zshrc</code> (or <code>source ~/.bashrc</code>) in the terminal.<br>
-                            Now you will be able to start CARTA by simply typing <code>carta</code> in the terminal.
+                            Now you will be able to start CARTA by simply typing <code>carta-beta</code> in the terminal.
 
                          <br><a href="https://github.com/CARTAvis/carta/releases/xxxx/CARTA-v4.0-beta.1-x64.dmg" 
                              class="button">DOWNLOAD - Intel Mac</a>
@@ -758,9 +767,9 @@
 
                         <p><b>Installation:</b><br>
                            Either click the Download button below or run:<br>
-                           <code>wget https://github.com/CARTAvis/carta/releases/latest/download/carta.AppImage.$(arch).tgz</code><br>
+                           <code>wget https://github.com/CARTAvis/carta/releases/xxxx/carta-v4.0-beta.1.AppImage.$(arch).tgz</code><br>
                            Extract the tarball:<br>
-                           <code>tar -xzf carta.AppImage.$(arch).tgz</code><br>
+                           <code>tar -xzf carta-v4.0-beta.1.AppImage.$(arch).tgz</code><br>
                         <b>Operation:</b><br>
                            To start CARTA, please refer to the user manual <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.
 
@@ -780,8 +789,8 @@
                         <p>CARTA is available in the form of a Docker container from <a href="https://hub.docker.com/r/cartavis/carta/" target="_blank">Docker Hub</a>.
                            This version could be useful to run CARTA on unsupported platforms such as macOS 10.14.</p>
                         With <a href="https://www.docker.com/" target="_blank"> Docker</a> installed and running on your system, simply enter the following command in your terminal:<br>
-                        <code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta-beta</code><br>
-                            It will download the latest version of CARTA from Docker Hub and run it using your current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will be displayed in the terminal.
+                        <code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta:4.0.0-beta.1</code><br>
+                            It will download the v4.0.0-beta.1 version of CARTA from Docker Hub and run it using your current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will be displayed in the terminal.
                             Copy &amp; Paste the unique URL into your local web browser in order to access the CARTA frontend interface.
                         <p>Please refer to the user manual for more information <a href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta" target="_blank">How to Run CARTA</a>.</p>
                       </div>
