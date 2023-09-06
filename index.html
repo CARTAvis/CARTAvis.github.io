@@ -218,7 +218,7 @@
 
                     <!--Call to Action-->
                     <a href="#download" class="button">Installation</a>
-                    <a href="https://carta.readthedocs.io/en/3.0/" class="button" target="_blank">User Manual</a>
+                    <a href="https://carta.readthedocs.io/en/4.0/" class="button" target="_blank">User Manual</a>
                     <a href="mailto:support@carta.freshdesk.com" class="button" target="_blank">Helpdesk</a><br>
                     <!--
 		<span style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);">Current release: v3-stable</span>
@@ -226,11 +226,10 @@
 		-->
                     <span
                         style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">New
-                        preview release: v4-beta</span>
+                        release: v4</span>
                     <br>
                     <span
-                        style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">v4-stable
-                        scheduled early August 2023</span>
+                        style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">September 2023</span>
                     <!--End Call to Action-->
 
                 </div>
@@ -519,14 +518,14 @@
                         <div class="section-heading">
                             <h3>INSTALLATION</h3>
                             <h2 class="section-title">Obtaining CARTA</h2>
-                            <h4>v3.0</h4>
+                            <h4>v4.0</h4>
                             <p>Supported operating systems:
                             <ul>
-                                <li>Ubuntu Linux: 18.04 LTS (Bionic Beaver), 20.04 LTS (Focal Fossa), and 22.04 LTS
-                                    (Jammy Jellyfish) for amd64 and aarch64 architectures.</li>
-                                <li>Red Hat Enterprise Linux: 7 and 8 for x86_64 and aarch64 architectures.</li>
-                                <li>macOS: 10.15 (Catalina), 11 (Big Sur), and 12 (Monterey) for Intel and Apple Silicon
-                                    architectures.</li>
+                                <li>Ubuntu Linux: 20.04 LTS (Focal Fossa), and 22.04 LTS (Jammy Jellyfish) 
+				    for amd64 and aarch64 architectures.</li>
+                                <li>Red Hat Enterprise Linux: 7, 8 and 9 for x86_64 and aarch64 architectures.</li>
+                                <li>macOS: 11 (Big Sur), 12 (Monterey), and 13 (Ventura) 
+				    for Intel and Apple Silicon architectures.</li>
                             </ul>
                             </p>
                             <style>
@@ -562,7 +561,7 @@
                                     please refer to the <a href="https://carta-controller.readthedocs.io/en/dev/"
                                         target="_blank">CARTA controller documentation</a>.</p>
                                 <p>To start CARTA, please refer to the user manual <a
-                                        href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
+                                        href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
@@ -574,22 +573,22 @@
                                     <input id="tab-1" type="radio" name="tab-group" checked="checked" />
                                     <label for="tab-1">Ubuntu</label>
                                     <input id="tab-2" type="radio" name="tab-group" />
-                                    <label for="tab-2">RHEL7 / CentOS7</label>
+                                    <label for="tab-2">RHEL 7 & CentOS 7</label>
                                     <input id="tab-3" type="radio" name="tab-group" />
-                                    <label for="tab-3">RHEL8 / AlmaLinux 8</label>
+                                    <label for="tab-3">RHEL 8/9 & AlmaLinux 8/9</label>
                                     <input id="tab-4" type="radio" name="tab-group" />
                                     <label for="tab-4">macOS</label>
                                     <div id="contenttab">
 
                                         <div id="content-1tab">
-                                            <p>Ubuntu 18.04, 20.04, and 22.04 packages are available <a
+                                            <p>Ubuntu 20.04, and 22.04 packages are available <a
                                                     href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta"
                                                     target="_blank">from our PPA</a>.</p>
                                             <p><code>sudo add-apt-repository ppa:cartavis-team/carta
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta</code></p>
                                             <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.</p>
                                             <p>The 'carta-beta' package is updated with intermediate preview releases as
                                                 well as official releases. Users may install this package instead if
@@ -601,31 +600,49 @@
                                         </div>
 
                                         <div id="content-2tab">
-                                            <p>For Red Hat Enterprise Linux 7 and CentOS7 users, you first need to add
-                                                the 'cartavis' and EPEL repositories. Please note that root access is
-                                                required, unless you install in a Docker container.</p>
-                                            <p><code>sudo curl https://packages.cartavis.org/cartavis.repo --output /etc/yum.repos.d/cartavis.repo
-                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-                        <br/>sudo yum -y install carta</code></p>
-                                            <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
-                                                    target="_blank">How to Run CARTA</a>.</p>
-                                        </div>
+                                                    <p>We now host the CARTA RPMs on the <a
+                                                        href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/"
+							target="_blank">Fedora Copr</a> service.<br>
+						    If you have previously
+                                                    used our old "packages.cartavis.org" RPM repository,
+                                                    we recommend uninstalling any existing carta packages and removing
+                                                    the old cartavis.repo file first:<br>
+                                                    <code>sudo yum remove carta carta-beta
+                        <br/>sudo rm /etc/yum.repos.d/cartavis.repo</code>
+                                                <p>Follow these steps to add the Copr repository and install carta-beta
+                                                    (Root access is required, unless you install it in a Docker
+                                                    container):<br>
+                                                    <code>sudo yum -y install yum-plugin-copr
+                        <br/>sudo yum -y copr enable cartavis/carta
+                        <br/>sudo yum -y install epel-release
+                        <br/>sudo yum -y install carta</code>
+                                                </p>
+                                            </div>
+
 
                                         <div id="content-3tab">
-                                            <p>For Red Hat Enterprise Linux 8 and AlmaLinux 8 users, you first need to
-                                                add the 'cartavis' and EPEL repositories. Please note that root access
-                                                is required, unless you install in a Docker container.</p>
-                                            <p><code>sudo curl https://packages.cartavis.org/cartavis.repo --output /etc/yum.repos.d/cartavis.repo
-                        <br/>sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-                        <br/>sudo yum -y install carta</code></p>
-                                            <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
-                                                    target="_blank">How to Run CARTA</a>.</p>
-                                        </div>
+                                                    <p>We now host the CARTA RPMs on the <a
+                                                        href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/"
+							target="_blank">Fedora Copr</a> service.<br>
+						    If you have previously
+                                                    used our old "packages.cartavis.org" RPM repository,
+                                                    we recommend uninstalling any existing carta packages and removing
+                                                    the old cartavis.repo file first:<br>
+                                                    <code>sudo dnf remove carta carta-beta
+                        <br/>sudo rm /etc/yum.repos.d/cartavis.repo</code>
+                                                <p>Follow these steps to add the Copr repository and install carta-beta
+                                                    (Root access is required, unless you install it in a Docker
+                                                    container):<br>
+                                                    <code>sudo dnf -y install 'dnf-command(copr)'
+                        <br/>sudo dnf -y copr enable cartavis/carta
+                        <br/>sudo dnf -y install epel-release
+                        <br/>sudo yum -y install carta</code>
+                                                </p>
+                                            </div>
+
 
                                         <div id="content-4tab">
-                                            <p>We officially support macOS 11 Big Sur and macOS 12 Monterey through <a
+                                            <p>We officially support macOS 11 Big Sur, macOS 12 Monterey, and macOS Ventura through <a
                                                     href="https://brew.sh" target="_blank">Homebrew</a>.
                                             <p>If you do not already have it, you may install Homebrew using the
                                                 following command (root access is required):<br>
@@ -633,7 +650,7 @@
                                             <p>Now CARTA can be installed with:<br>
                                                 <code>brew install cartavis/tap/carta</code>
                                             <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.</p>
                                         </div>
                                     </div>
@@ -671,9 +688,9 @@
                                                 in the terminal.
 
                                                 <br><a
-                                                    href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v3.0-Intel.dmg"
+                                                    href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v4.0.0-x64.dmg"
                                                     class="button">DOWNLOAD - Intel Mac</a>
-                                                <a href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v3.0-M1.dmg"
+                                                <a href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v4.0.0-arm64.dmg"
                                                     class="button">DOWNLOAD - M1 Mac</a>
                                         </div>
                                         <div id="content-2tab2">
@@ -692,13 +709,13 @@
                                                 <code>tar -xzf carta.AppImage.$(arch).tgz</code><br>
                                                 <b>Operation:</b><br>
                                                 To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.
 
                                             <p>Note: If you wish to run the AppImage inside a Docker container, or you
                                                 system has trouble with FUSE, please prefix with the following
                                                 environment variable:<br>
-                                                <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v3.0-x86_64.AppImage </code>
+                                                <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v4.0-x86_64.AppImage </code>
                                                 <br><a
                                                     href="https://github.com/CARTAvis/carta/releases/latest/download/carta.AppImage.x86_64.tgz"
                                                     class="button">DOWNLOAD - x86_64</a>
@@ -716,14 +733,14 @@
                                     10.14.</p>
                                 With <a href="https://www.docker.com/" target="_blank"> Docker</a> installed and running
                                 on your system, simply enter the following command in your terminal:<br>
-                                <code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta:latest</code><br>
+                                <code>docker run -ti -p 3002:3002 -v $PWD:/images -v $HOME/.carta:/home/cartauser/.carta cartavis/carta:latest</code><br>
                                 It will download the latest version of CARTA from Docker Hub and run it using your
                                 current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will be
                                 displayed in the terminal.
                                 Copy &amp; Paste the unique URL into your local web browser in order to access the CARTA
                                 frontend interface.
                                 <p>Please refer to the user manual for more information <a
-                                        href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html#how-to-run-carta"
+                                        href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
@@ -743,7 +760,7 @@
                                     href="https://github.com/CARTAvis/carta-controller/issues?q=is%3Aopen+is%3Aissue+label%3A%22bug%22"
                                     target="_blank">controller</a></p>
                             <p>For more information, please refer to the <a
-                                    href="https://carta.readthedocs.io/en/3.0/installation_and_configuration.html"
+                                    href="https://carta.readthedocs.io/en/4.0/installation_and_configuration.html"
                                     target="_blank">user manual</a>.</p>
                             <p>In case of any issues encountered during the installation, please contact the <a
                                     href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA
@@ -752,7 +769,7 @@
                                     href="https://github.com/CARTAvis/carta/releases"
                                     target="_blank">https://github.com/CARTAvis/carta/releases</a>.</p>
 
-                            <!-- Adding the beta release section for now -->
+                            <!-- Hiding the beta release section for now
 
                             <hr>
 
@@ -964,6 +981,7 @@
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
+                              hiding the beta release section for now -->
 
                             <script>
                                 var coll = document.getElementsByClassName("collapsible");
@@ -982,8 +1000,6 @@
                                 }
                             </script>
 
-
-                            <!-- Adding the beta release section for now -->
                         </div>
                         <p>For more information, please refer to the <a
                                 href="https://docs.google.com/document/d/1TLFma7bP7yZ879N8tqmNmBZX9CbxaXktFv3GNOwQ9n4"
@@ -991,7 +1007,6 @@
                         <p>In case of any issues encountered during the installation, please contact the <a
                                 href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA
                                 helpdesk</a>.</p>
-                        <!-- Adding the beta release section for now -->
 
                     </div>
 
