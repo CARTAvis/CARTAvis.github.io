@@ -715,7 +715,7 @@
                                     10.14.</p>
                                 With <a href="https://www.docker.com/" target="_blank"> Docker</a> installed and running
                                 on your system, simply enter the following command in your terminal:<br>
-                                <code>docker run -ti -p 3002:3002 -v $PWD:/images -v $HOME/.carta:/home/cartauser/.carta cartavis/carta:latest</code><br>
+                                <code>docker run --rm -ti -p 3002:3002 -v $PWD:/images -v $HOME/.carta:/home/cartauser/.carta cartavis/carta:latest</code><br>
                                 It will download the latest version of CARTA from Docker Hub and run it using your
                                 current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will be
                                 displayed in the terminal.
@@ -761,7 +761,7 @@
                                 <li>Ubuntu Linux: 22.04 LTS (Jammy Jellyfish) and 24.04 LTS (Noble Numbat) for amd64 and
                                     aarch64 architectures</li>
                                 <li>Red Hat Enterprise Linux: 8 and 9 for x86_64 and aarch64 architectures</li>
-                                <li>macOS: 11 (Big Sur), 12 (Monterey), 13 (Ventura), 14 (Sonoma) and 15 (Sequoia) for Intel and Apple Silicon
+                                <li>macOS: 12 (Monterey), 13 (Ventura), 14 (Sonoma) and 15 (Sequoia) for Intel and Apple Silicon
                                     architectures</li>
                             </ul>
                             </p>
@@ -832,7 +832,7 @@
                                             </div>
 
                                             <div id="content-3tab3">
-                                                <p>We officially support macOS 11 (Big Sur), 12 (Monterey), 13 (Ventura), 14 (Sonoma) and 15 (Sequoia) through <a href="https://brew.sh"
+                                                <p>We officially support macOS 12 (Monterey), 13 (Ventura), 14 (Sonoma) and 15 (Sequoia) through <a href="https://brew.sh"
                                                         target="_blank">Homebrew</a>.
                                                 <p>If you do not already have it, you may install Homebrew using the
                                                     following command (root access is required):<br>
@@ -908,7 +908,7 @@
                                                 environment variable:<br>
                                                 <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-v5.0.0-beta.1-$(arch).AppImage </code>
                                                 <br><a
-                                                    href="https://github.com/CARTAvis/carta/releases/download/v5.0.0-beta.1/carta.AppImage.v5.0.0-beta.1.x86_64.tgz"
+                                                    href="https://github.com/CARTAvis/carta/releases/download/v5.0.0-beta.1/carta.AppImage.v5.0.0-beta.1.x86-64.tgz"
                                                     class="button">DOWNLOAD - x86_64</a>
                                                 <a href="https://github.com/CARTAvis/carta/releases/download/v5.0.0-beta.1/carta.AppImage.v5.0.0-beta.1.aarch64.tgz"
                                                     class="button">DOWNLOAD - aarch64</a>
@@ -925,9 +925,10 @@
                                     10.14.</p>
                                 With <a href="https://www.docker.com/" target="_blank"> Docker</a> installed and running
                                 on your system, simply enter the following command in your terminal:<br>
-                                <code>docker run -ti -p 3002:3002 -v $PWD:/images cartavis/carta:beta</code><br>
+                                <code>docker run --rm -ti -p 3002:3002 -v $PWD:/images -v $HOME/.carta-beta:/home/cartauser/.carta-beta cartavis/carta:beta</code><br>
                                 It will download the v5.0.0-beta.1 version of CARTA from Docker Hub and run it using
-                                your current directory (<code>$PWD</code>) in the CARTA file-browser. A unique URL will
+                                your current directory (<code>$PWD</code>) in the CARTA file-browser. You may replace 
+                                <code>$PWD</code> by the path where your images reside. A unique URL will
                                 be displayed in the terminal.
                                 Copy &amp; Paste the unique URL into your local web browser in order to access the CARTA
                                 frontend interface.
@@ -957,9 +958,9 @@
                         <p>For more information, please refer to the <a
                                 href="https://docs.google.com/document/d/1ZA23S0Y8hDRNCTJqFkLV23cUEF7H5RmlmeMmiQKQQeM/edit?usp=sharing"
                                 target="_blank">beta release note</a>.</p>
-                        <p>In case of any issues encountered during the installation, please contact the <a
-                                href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA
-                                helpdesk</a>.</p>
+                        <p>In case of any issues encountered during the installation, please use this <a
+                                href="https://forms.gle/AX4az7PP7qWDYSnq9" target="_blank">google
+                                form</a> to report. Thank you.</p>
                         
                         </div>
                 </div>
