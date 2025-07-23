@@ -226,10 +226,10 @@
 		-->
                     <span
                         style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">New
-                        release: v5.0-beta.1</span>
+                        release: v5.0-stable</span>
                     <br>
                     <span
-                        style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">February 2025</span>
+                        style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">July 2025</span>
                     <!--End Call to Action-->
 
                 </div>
@@ -401,29 +401,21 @@
                     <!--Content Left Side-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Current release v4.1</h4>
+                            <h4>Current release v5.0-stable</h4>
                         </div>
-                        <p>The current release is v4.1 (a maintenance release based on v4.0 to address core library update and critical bugs), released on 23rd of January 2024.
-                            v4.0 was released on 12th of September 2023, with the following features:
+                        <p>The current release is v5.0, released on 29th of July 2025, with the following features:
                         </p>
                         <ul>
-                            <li>Interactive PV preview</li>
-                            <li>Enhanced PV generator</li>
-                            <li>Initial support of workspace (save and restore)</li>
-                            <li>Initial support of workspace sharing (carta-controller only; experimental)</li>
-                            <li>Enhanced image fitting capabilities</li>
-                            <li>Image annotation</li>
-                            <li>Visualization of a rotated cube (no image analytics)</li>
-                            <li>Support beam info for AIPS-generated cubes</li>
-                            <li>Support animation playback with matched images in multi-panel view</li>
-                            <li>A new dialog for angular distance measurement</li>
-                            <li>Show/hide and lock all regions</li>
-                            <li>Auto-scrolling the selected region into the region list view</li>
-                            <li>Mirroring cursor markers on spatially matched images</li>
-                            <li>Cursor info with dual spectral convention in the spectral profiler</li>
-                            <li>Pan and zoom images with manual inputs</li>
-                            <li>Switch directory path with manual input</li>
-                            <li>Custom range and number of bins in the histogram calculation</li>
+                            <li>Channel map view (raster only)</li>
+                            <li>Multi-color image blending</li>
+                            <li>HiPS2FITS online image query</li>
+                            <li>Dynamic layout</li>
+                            <li>Image coordinate and flexible offset coordinate</li>
+                            <li>PV generator with a polyline region</li>
+                            <li>New design of the in-app help and user manual</li>
+                            <li>Bug fix</li>
+                            <li>Performance improvement</li>
+                            <li>Codebase maintenance library update</li>
                         </ul>
                         <br />
                     </div>
@@ -432,25 +424,20 @@
                     <!--Content of the Middle-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Next release v5-beta / v5-stable</h4>
+                            <h4>Next release v6-beta</h4>
 
                         </div>
-                        <p> The next stable release will be v5.0-stable (Q2 2025) with the following major new features</p>
+                        <p> The next beta release will be v6.0-beta with the following major features</p>
                         <ul>
-                            <li>Multi-color image blending</li>
-                            <li>Channel map view (raster only)</li>
-                            <li>HiPS2FITS image query</li>
-                            <li>Dynamic layout</li>
-                            <li>Image coordinate grid / flexiable offset coordinate grid</li>
-                            <li>Position-velocity map generation along a polyline</li>
-                            <li>New design of the in-app help</li>
+                            <li>Full support of channel map view</li>
+                            <li>Volumetric (pseudo 3D) rendering</li>
+                            <li>Full support of workspace</li>
+                            <li>Full support of workspace sharing (carta-controller only)</li>
+                            <li>Collaboration tools (carta-controller only)</li>
+                            <li>Initial support for time-domain astronomy tools</li>
+                            <li>Initial support of the Python scripting interface</li>
+                            <li>VO services</li>
                         </ul>
-                        <p>See the detailed <a
-                            href="https://github.com/CARTAvis/carta/releases/tag/v5.0.0-beta.1"
-                            target="_blank">changelogs</a> of v5-beta for the full list.</p>
-                        <br>
-
-
 
                     </div>
                     <!--End Content of the Middle-->
@@ -459,27 +446,14 @@
                     <!--Content of the Right Side-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Future releases v6+</h4>
+                            <h4>Future releases v7+</h4>
 
                         </div>
                         <p>This is a non-exclusive list of features we would like to add in subsequent
                             releases, but they are not 100% decided upon yet and depend on feedback from users,
                             resourcing etc.:
                         <ul>
-                            <li> Time-domain astronomy tools</li>
-                            <li> Full support of workspace </li>
-                            <li> Full support of workspace sharing (carta-controller only) </li>
-                            <li> Collaboration tools (carta-controller only) </li>
-                            <li> Full support of channel map view</li>
-                            <li> Volumetric (pseudo 3D) rendering </li>
-                            <li> Profile, histogram, and image fitting tools </li>
-                            <li> VO service (image and catalog) </li>
-                            <li> New moment image generator </li>
-                            <li> Region spectral profiler performance boost </li>
-                            <li> Image source finder </li>
-                            <li> Spectral line query enhancement </li>
-                            <li> Catalog visualization enhancement</li>
-                            <li> Python scripting interface (long-term effort) </li>
+                            <li>TBD</li>
                         </ul>
                     
 
@@ -506,14 +480,12 @@
                         <div class="section-heading">
                             <h3>INSTALLATION</h3>
                             <h2 class="section-title">Obtaining CARTA</h2>
-                            <h4>v4.1</h4>
+                            <h4>v5.0</h4>
                             <p>Supported operating systems:
                             <ul>
-                                <li>Ubuntu Linux: 20.04 LTS (Focal Fossa), and 22.04 LTS (Jammy Jellyfish) 
-				    for amd64 and aarch64 architectures.</li>
-                                <li>Red Hat Enterprise Linux: 7, 8 and 9 for x86_64 and aarch64 architectures.</li>
-                                <li>macOS: 11 (Big Sur), 12 (Monterey), and 13 (Ventura) 
-				    for Intel and Apple Silicon architectures.</li>
+                                <li>Ubuntu Linux: 22.04 LTS (Jammy Jellyfish), 24.04 LTS (Noble Numbat) for amd64 and aarch64 architectures.</li>
+                                <li>Red Hat Enterprise Linux: 8 and 9 for x86_64 and aarch64 architectures.</li>
+                                <li>macOS: 14 (Sonoma), and 15 (Sequoia) for Intel and Apple Silicon architectures. Earlier versions may work but not tested.</li>
                             </ul>
                             </p>
                             <style>
@@ -546,10 +518,10 @@
                             <button class="collapsible">Site deployment</button>
                             <div class="content">
                                 <p>To deploy CARTA at your institution as a web-based application for multiple users,
-                                    please refer to the <a href="https://carta-controller.readthedocs.io/en/v4.1.1/"
+                                    please refer to the <a href="https://carta-controller.readthedocs.io/en/v5.0.0/"
                                         target="_blank">CARTA controller documentation</a>.</p>
                                 <p>To start CARTA, please refer to the user manual <a
-                                        href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html#how-to-run-carta"
+                                        href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
@@ -560,25 +532,23 @@
                                 <div id="containertab">
                                     <input id="tab-1" type="radio" name="tab-group" checked="checked" />
                                     <label for="tab-1">Ubuntu</label>
-                                    <input id="tab-2" type="radio" name="tab-group" />
-                                    <label for="tab-2">RHEL 7 & CentOS 7</label>
                                     <input id="tab-3" type="radio" name="tab-group" />
-                                    <label for="tab-3">RHEL 8/9 & AlmaLinux 8/9</label>
+                                    <label for="tab-3">RHEL 8/9</label>
                                     <input id="tab-4" type="radio" name="tab-group" />
                                     <label for="tab-4">macOS</label>
                                     <div id="contenttab">
 
                                         <div id="content-1tab">
-                                            <p>Ubuntu 20.04, and 22.04 packages are available <a
+                                            <p>Ubuntu 22.04 and 24.04 packages are available <a
                                                     href="https://launchpad.net/~cartavis-team/+archive/ubuntu/carta"
                                                     target="_blank">from our PPA</a>.</p>
                                             <p><code>sudo add-apt-repository ppa:cartavis-team/carta
                         <br/>sudo apt-get update
                         <br/>sudo apt install carta</code></p>
                                             <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.</p>
-                                            <p>The 'carta-beta' package is updated with intermediate preview releases as
+                                            <p>NOTE: The 'carta-beta' package is updated with intermediate preview releases as
                                                 well as official releases. Users may install this package instead if
                                                 they wish to receive these updates,
                                                 and users who already have 'carta-beta' installed may update their
@@ -587,7 +557,7 @@
 			<br/>sudo apt install carta-beta</code></p>
                                         </div>
 
-                                        <div id="content-2tab">
+                                    <div id="content-2tab">
                                                     <p>We host the CARTA RPMs on the <a
                                                         href="https://copr.fedorainfracloud.org/coprs/cartavis/carta/"
 							target="_blank">Fedora Copr</a> service.<br>
@@ -606,7 +576,6 @@
                         <br/>sudo yum -y install carta</code>
                                                 </p>
                                             </div>
-
 
                                         <div id="content-3tab">
                                                     <p>We host the CARTA RPMs on the <a
@@ -630,7 +599,7 @@
 
 
                                         <div id="content-4tab">
-                                            <p>We officially support macOS 11 Big Sur, macOS 12 Monterey, and macOS 13 Ventura through <a
+                                            <p>We officially support macOS 14 Sonoma and macOS 15 Sequoia (earlier macOS versions may work but not tested) through <a
                                                     href="https://brew.sh" target="_blank">Homebrew</a>.
                                             <p>If you do not already have it, you may install Homebrew using the
                                                 following command (root access is required):<br>
@@ -640,7 +609,7 @@
                                                     <br/> brew install --cask cartavis/tap/carta
                                                 </code>
                                             <p>To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.</p>
                                         </div>
                                     </div>
@@ -657,10 +626,9 @@
 
                                     <div id="contenttab2">
                                         <div id="content-1tab2">
-                                            <p>The traditional macOS Electron Desktop version can be downloaded by
-                                                clicking the appropriate download button below. In addition to the
-                                                standard x86_64 version for Intel based Macs, we now supply a native
-                                                arm64 version for Apple Silicon based Macs.</p>
+                                            <p>The macOS Electron Desktop version can be downloaded by
+                                                clicking the appropriate download button below. Both the
+                                                x86_64 version for Intel based Macs and the arm64 version for Apple Silicon based Macs are supported.</p>
                                             <p><b>Installation:</b><br>
                                                 Click the download button below. After downloading, open the DMG
                                                 installer and drag the <b>CARTA</b> icon to the Applications folder.<br>
@@ -678,9 +646,9 @@
                                                 in the terminal.
 
                                                 <br><a
-                                                    href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v4.1.0-x64.dmg"
+                                                    href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v5.0.0-x64.dmg"
                                                     class="button">DOWNLOAD - Intel Mac</a>
-                                                <a href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v4.1.0-arm64.dmg"
+                                                <a href="https://github.com/CARTAvis/carta/releases/latest/download/CARTA-v5.0.0-arm64.dmg"
                                                     class="button">DOWNLOAD - Apple Silicon Mac</a>
                                         </div>
                                         <div id="content-2tab2">
@@ -688,7 +656,7 @@
                                                 download, extract, and run it.
                                                 It uses your default web browser to display the CARTA graphical
                                                 interface.
-                                                The CARTA AppImage can now run universally between Ubuntu and RedHat
+                                                The CARTA AppImage can run universally between Ubuntu and RedHat
                                                 platforms, but we have separate versions for x86_64 and aarch64
                                                 architectures.
 
@@ -699,13 +667,13 @@
                                                 <code>tar -xzf carta.AppImage.$(arch).tgz</code><br>
                                                 <b>Operation:</b><br>
                                                 To start CARTA, please refer to the user manual <a
-                                                    href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html#how-to-run-carta"
+                                                    href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.
 
                                             <p>Note: If you wish to run the AppImage inside a Docker container, or you
                                                 system has trouble with FUSE, please prefix with the following
                                                 environment variable:<br>
-                                                <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-4.1-x86_64.AppImage </code>
+                                                <code>APPIMAGE_EXTRACT_AND_RUN=1 ./carta-5.0-x86_64.AppImage </code>
                                                 <br><a
                                                     href="https://github.com/CARTAvis/carta/releases/latest/download/carta.AppImage.x86_64.tgz"
                                                     class="button">DOWNLOAD - x86_64</a>
@@ -730,7 +698,7 @@
                                 Copy &amp; Paste the unique URL into your local web browser in order to access the CARTA
                                 frontend interface.
                                 <p>Please refer to the user manual for more information <a
-                                        href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html#how-to-run-carta"
+                                        href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
@@ -750,7 +718,7 @@
                                     href="https://github.com/CARTAvis/carta-controller/issues?q=is%3Aopen+is%3Aissue+label%3A%22bug%22"
                                     target="_blank">controller</a></p>
                             <p>For more information, please refer to the <a
-                                    href="https://carta.readthedocs.io/en/4.1/installation_and_configuration.html"
+                                    href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html"
                                     target="_blank">user manual</a>.</p>
                             <p>In case of any issues encountered during the installation, please contact the <a
                                     href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA
@@ -761,8 +729,11 @@
 
                             
 
-                            <hr>
+                            
 
+                            <!--
+
+                            <hr>
                             <h4>v5.0-beta.1</h4>
                             <p>Supported operating systems:
                             <ul>
@@ -947,7 +918,8 @@
                                         href="https://carta.readthedocs.io/en/5.0/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
-
+                        -->
+                            
                             <script>
                                 var coll = document.getElementsByClassName("collapsible");
                                 var i;
@@ -964,16 +936,19 @@
                                     });
                                 }
                             </script>
+                        
                         </div>
                         
+                        <!--
                         <p>For more information, please refer to the <a
                                 href="https://docs.google.com/document/d/1ZA23S0Y8hDRNCTJqFkLV23cUEF7H5RmlmeMmiQKQQeM/edit?usp=sharing"
                                 target="_blank">beta release note</a>.</p>
                         <p>In case of any issues encountered during the installation, please use this <a
                                 href="https://forms.gle/AX4az7PP7qWDYSnq9" target="_blank">google
                                 form</a> to report. Thank you.</p>
-                        
+                        -->
                         </div>
+                        
                 </div>
             </section>
             <!--End of Download Tables-->
