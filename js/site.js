@@ -1,6 +1,37 @@
 "use strict";
 
 $(document).ready(function () {
+	/* Random Banner Image Selection */
+	const darkBanners = [
+		'banner_dark.png',
+		'banner_dark_old.png',
+		'banner_dark_old2.png',
+		'banner_dark_bad.png'
+	];
+	
+	const lightBanners = [
+		'banner_light.png',
+		'banner_light_old.png',
+		'banner_light_old2.png',
+		'banner_light_bad.png'
+	];
+	
+	// Detect if user prefers dark mode
+	const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	
+	// Select random banner from appropriate array
+	const banners = prefersDark ? darkBanners : lightBanners;
+	const randomBanner = banners[Math.floor(Math.random() * banners.length)];
+	
+	// Apply the random banner image
+	const bannerElement = document.getElementById('banner');
+	if (bannerElement) {
+		bannerElement.style.backgroundImage = `url('images/banner-images/${randomBanner}')`;
+		bannerElement.style.backgroundRepeat = 'no-repeat';
+		bannerElement.style.backgroundPosition = 'center top';
+		bannerElement.style.backgroundSize = 'cover';
+	}
+
 	/* Video Lightbox */
 	if (!!$.prototype.simpleLightboxVideo) {
 		$('.video').simpleLightboxVideo();
