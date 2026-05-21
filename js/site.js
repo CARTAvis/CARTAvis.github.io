@@ -4,16 +4,14 @@ $(document).ready(function () {
 	/* Random Banner Image Selection */
 	const darkBanners = [
 		'banner_dark.png',
-		'banner_dark_old.png',
-		'banner_dark_old2.png',
-		'banner_dark_bad.png'
+		'banner_dark_tim.png',
+		'banner_dark_kyra.png'
 	];
 	
 	const lightBanners = [
 		'banner_light.png',
-		'banner_light_old.png',
-		'banner_light_old2.png',
-		'banner_light_bad.png'
+		'banner_light_tim.png',
+		'banner_light_kyra.png'
 	];
 	
 	// Detect if user prefers dark mode
