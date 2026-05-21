@@ -5,7 +5,9 @@ $(document).ready(function () {
 	const darkBanners = [
 		'banner_dark.png',
 		'banner_dark_tim.png',
-		'banner_dark_kyra.png'
+		'banner_dark_kyra.png',
+		'banner_dark_tim2.png',
+		'banner_dark_kyra2.png',
 	];
 	
 	const lightBanners = [
