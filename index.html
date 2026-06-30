@@ -235,11 +235,8 @@
 		-->
                     <span
                         style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">Latest stable 
-                        release: v5.1 (February 2026)</span>
+                        release: v6.0 (June 2026)</span>
                     <br>
-                    <span
-                        style="color:rgb(10, 68, 140);font-weight: bold;font-size:18px; background-color: rgba(255, 255, 255, 0.5);;">Latest beta 
-                        release: v6.0-beta.1 (March 2026)</span>
                         
 					<!--End Call to Action-->
 
@@ -412,30 +409,19 @@
                     <!--Content Left Side-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Current release v5.1-stable</h4>
+                            <h4>Current release v6.0-stable</h4>
                         </div>
-                        <p>The current release is v5.1, as a maintenance release based on v5.0, released on 3rd of February 2026, with the following feature highlights:
+                        <p>The current stable release is v6.0, as a maintenance release based on v5.0, released on 18th of June 2026. Apart from bug fixes, codebase refactoring, and library updates, v6.0 also includes the following new features:
                         </p>
                         <ul>
-                            <li>Channel map view (raster only)</li>
-                            <li>Multi-color image blending</li>
-                            <li>HiPS2FITS online image query</li>
-                            <li>Dynamic layout</li>
-                            <li>Image coordinate and flexible offset coordinate</li>
-                            <li>PV generator with a polyline region</li>
-                            <li>New design of the in-app help and user manual</li>
-                            <li>Enable the copy function in the cursor info widget</li>
-                            <li>Support flux density calculations with various pixel units in the statistics widget</li>
-                            <li>Support automatic generation of initial values for multiple Gaussian image fitting</li>
-                            <li>Support sorting the spectral line table</li>
-                            <li>support changing the depth order of floating widget and dialog on select</li>
-                            <li>A button for deleting all regions</li>
-                            <li>Support setting a custom rest frequency for the moment maps</li>
-                            <li>Support wavelength^2 as a new spectral convention</li>
-                            <li>Support plotting catalog sources with a size in image pixel and in angular units</li>
-                            <li>Bug fix</li>
-                            <li>Performance improvement</li>
-                            <li>Codebase maintenance library update</li>
+                            <li>Copy and paste region</li>
+                            <li>Move regions / control points with arrow keys</li>
+                            <li>Quick XY/Z/R matching</li>
+                            <li>Add pole mode to the offset coordinate system</li>
+                            <li>Image viewer as a popout browser window</li>
+                            <li>Auto-select catalog image overlay coordinate columns</li>
+                            <li>macOS electron app auto-updater</li>
+                            <li>FITS file association on macOS with the electron app</li> 
                         </ul>
                         <br />
                     </div>
@@ -444,31 +430,18 @@
                     <!--Content of the Middle-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Next releases v6-beta</h4>
+                            <h4>Next release v6.1</h4>
 
                         </div>
-                        <p>v6-beta1 will be a maintenance release focusing on bug fixes and codebase refactoring.</p>
-
-
-
-                        <p> v6-beta2 will include the following major features</p>
+                        <p> v6.1 will include the following major features</p>
                         <ul>
                             <li>Full support of channel map view</li>
                             <li>Full support of workspace</li>
                             <li>Full support of workspace sharing (carta-controller only)</li>
                             <li>Initial support for time-domain astronomy tools</li>
                             <li>Initial support of the Python scripting interface</li>
+                            <li>Initial support of the XRADIO-image schema in Zarr</li>
                         </ul>
-
-                        <p> v6-beta3 will include the following major features</p>
-                        <ul>
-                            <li>Volumetric (pseudo 3D) rendering</li>
-                            <li>Collaboration tools (carta-controller only)</li>
-                            <li>More time-domain astronomy tools</li>
-                            <li>VO services</li>
-                        </ul>
-
-                        <p> v6-beta4 will be a maintenance release focusing on bug fixes and become a v6-stable release candidate.</p>
 
                     </div>
                     <!--End Content of the Middle-->
@@ -477,14 +450,18 @@
                     <!--Content of the Right Side-->
                     <div class="col-3">
                         <div class="section-heading">
-                            <h4>Future releases v7+</h4>
+                            <h4>Future releases v6.2+</h4>
 
                         </div>
                         <p>This is a non-exclusive list of features we would like to add in subsequent
                             releases, but they are not 100% decided upon yet and depend on feedback from users,
                             resourcing etc.:
                         <ul>
-                            <li>TBD</li>
+                            <li>Volumetric (pseudo 3D) rendering</li>
+                            <li>Collaboration tools (carta-controller only)</li>
+                            <li>More time-domain astronomy tools</li>
+                            <li>VO services</li>
+                            <li>Full support of the XRADIO-image schema in Zarr</li>
                         </ul>
                     
 
@@ -511,15 +488,38 @@
                         <div class="section-heading">
                             <h3>INSTALLATION</h3>
                             <h2 class="section-title">Obtaining CARTA</h2>
-                            <h4>v5.1</h4>
+                            <h4>v6.0</h4>
                             <p>Supported operating systems:
                             <ul>
                                 <li>Ubuntu Linux: 22.04 LTS (Jammy Jellyfish), 24.04 LTS (Noble Numbat) for amd64 and aarch64 architectures.</li>
+                                <li>Note for Ubuntu Linux users: 26.04 LTS (Resolute Raccoon) will be supported in v6.1 and beyond. 22.04 support will be deprecated in v6.1.</li>
                                 <li>Red Hat Enterprise Linux (or equivalent community distributions): 8 and 9 for x86_64 and aarch64 architectures.</li>
-                                <li>macOS: 14 (Sonoma), and 15 (Sequoia) for Intel and Apple Silicon architectures. Earlier versions may work but are not tested.</li>
+                                <li>macOS: 14 (Sonoma), 15 (Sequoia), 26 (Tahoe) for Intel and Apple Silicon architectures. Earlier versions may work but are not tested.</li>
                             </ul>
                             </p>
+
+                            <p>Note:
+                                <ul>
+                                    <li>Ubuntu Linux 26.04 LTS (Resolute Raccoon) will be supported in v6.1 and beyond. 22.04 support will be deprecated in v6.1.</li>
+                                    <li>The homebrew installation support for macOS is deprecated starting v6.0. Please visit the "Stand-alone application" section below to download the electron app.</li>
+                                </ul>
+                            </p>
+
                             <style>
+                                #team blockquote img {
+                                    height: 120px;
+                                    width: auto;
+                                    object-fit: contain;
+                                }
+
+                                #team blockquote p {
+                                    height: 5em;
+                                    overflow: hidden;
+                                    display: flex;
+                                    align-items: top;
+                                    justify-content: center;
+                                }
+
                                 .collapsible {
                                     background-color: rgb(57, 105, 148);
                                     color: white;
@@ -597,8 +597,13 @@
                                                     target="_blank">How to Run CARTA</a>.</p>
                                         </div>
 
+                                        
                                         <div id="content-3tab">
-                                            <p>We officially support macOS 14 (Sonoma) and macOS 15 (Sequoia) through <a
+                                            <p>Given that the new macOS electron app supports a built-in updater for future new releases, the homebrew installation support (which actually downloads the electron app following the homebrew installation workflow) is deprecated starting v6.0. Please visit the "Stand-alone application" section below to download the electron app.</p>
+
+
+                                            <!--
+                                            <p>We officially support macOS 14 (Sonoma), 15 (Sequoia) and 26 (Tahoe) through <a
                                                     href="https://brew.sh" target="_blank">Homebrew</a>. Earlier macOS versions may work, but are not tested.</p>
                                             <p>If you do not already have it, you may install Homebrew using the
                                                 following command (root access is required):</p>
@@ -609,7 +614,9 @@
                                             <p>To start CARTA, please refer to the user manual: <a
                                                     href="https://carta.readthedocs.io/en/latest/installation_and_configuration.html#how-to-run-carta"
                                                     target="_blank">How to Run CARTA</a>.</p>
+                                            -->
                                         </div>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -691,9 +698,11 @@
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
 
-                            <p>Please refer to <a
-                                    href="https://docs.google.com/document/d/1kBtYjclOn5bxlvkV5a588DtUKy3UEqPXL78IiTVAMUk/edit?usp=sharing"
-                                    target="_blank">the release note</a> for feature highlights.</p>
+                            <p>Please refer to the<a
+                                    href="https://docs.google.com/document/d/1CjE_9taaS-Uh-Qq4LKWYhlTNzb8U9HkiZrKE7T37SeA/edit?usp=sharing"
+                                    target="_blank"> release note</a> and <a
+                                    href="https://carta.readthedocs.io/en/latest/appendix_a_version_history.html#what-s-new"
+                                    target="_blank"> feature highlights.</a></p>
                             <p>Known critical bugs: <a
                                     href="https://github.com/CARTAvis/carta-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22critical+bug%22"
                                     target="_blank">frontend</a>, <a
@@ -723,7 +732,7 @@
                             
 
                             
-
+                            <!--
                             <hr>
                             <h4>v6.0-beta.1</h4>
                             <p>Supported operating systems:
@@ -902,7 +911,7 @@
                                         href="https://carta.readthedocs.io/en/dev/installation_and_configuration.html#how-to-run-carta"
                                         target="_blank">How to Run CARTA</a>.</p>
                             </div>
-                        
+                        -->
                             
                             <script>
                                 var coll = document.getElementsByClassName("collapsible");
@@ -923,14 +932,14 @@
                         
                         </div>
                         
-                        
+                        <!--
                         <p>For more information, please refer to the <a
                                 href="https://docs.google.com/document/d/1UodUUKPJZ1oRvFXOddpxwLh66SpXCrrKL69LsrNKcqQ/edit?usp=sharing"
                                 target="_blank">beta release note</a>.</p>
                         <p>In case of any issues encountered during the installation, please contact the <a
                                     href="mailto:support@carta.freshdesk.com?subject=CARTA installation issues">CARTA
                                     helpdesk</a>.</p>
-                        
+                        -->
                         </div>
                         
                 </div>
@@ -1104,7 +1113,9 @@
                             <li> Electron: <a href="https://electronjs.org" target="_blank">https://electronjs.org</a>
                             </li>
                             <li> GoldenLayout: <a href="https://golden-layout.com"
-                                    target="_blank">https://golden-layout.com</a> </li>
+                                    target="_blank">https://golden-layout.com</a> (<= v5.1) </li>
+                            <li>FlexLayout: <a href="https://github.com/caplin/FlexLayout"
+                                    target="_blank">https://github.com/caplin/FlexLayout</a> (>= v6.0)</li>
                             <li> GSL: <a href="https://www.gnu.org/software/gsl/"
                                     target="_blank">https://www.gnu.org/software/gsl</a> </li>
                             <li> MobX: <a href="https://mobx.js.org" target="_blank">https://mobx.js.org</a> </li>
@@ -1163,11 +1174,11 @@
                     program is free software; you can redistribute it and/or modify it under the terms of the <a
                         href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3</a> as
                     published by the Free Software Foundation.
-                    The banner image is rendered with CARTA using an <a
+                    The banner image of M51 is rendered with CARTA using an <a
                         href="https://archive.stsci.edu/prepds/m51/datalist.html" style="font-weight: bold;">HST
                         image</a> as the raster and a CO 1-0 image from the <a
                         href="https://www2.mpia-hd.mpg.de/PAWS/PAWS/Home.html" style="font-weight: bold" ;>PAWS
-                        project</a> as contours.<br>
+                        project</a> as contours. The award images from the CARTA image competition are contributed by Kyra Kummer and Tim Galvin.<br>
                     <!--          <dark-mode-toggle appearance="toggle" dark="Switch to light mode" light="Switch to dark mode"></dark-mode-toggle>-->
                     This webpage is hosted on GitHub Pages — Theme by <a href="https://www.shapingrain.com"
                         style="font-weight: bold;">ShapingRain</a> with customization.
