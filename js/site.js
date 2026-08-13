@@ -8,12 +8,14 @@ $(document).ready(function () {
 		'banner_dark_kyra.png',
 		'banner_dark_tim2.png',
 		'banner_dark_kyra2.png',
+		'nstf-south32-awards_dark.png'
 	];
 	
 	const lightBanners = [
 		'banner_light.png',
 		'banner_light_tim.png',
-		'banner_light_kyra.png'
+		'banner_light_kyra.png',
+		'nstf-south32-awards_light.png'
 	];
 	
 	// Detect if user prefers dark mode
