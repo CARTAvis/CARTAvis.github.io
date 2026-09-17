@@ -50,6 +50,13 @@ body {
     overflow-x: hidden;
 }
 
+.release-notice {
+    color: var(--notice-text-color);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--notice-background-color);
+}
+
 p {
     line-height: 25px;
 }

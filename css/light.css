@@ -12,6 +12,8 @@
     --carta-color: #0a448c;
     --preloader-color: #fff;
     --button-border-color: #111;
+    --notice-text-color: #0a448c;
+    --notice-background-color: rgba(255, 255, 255, 0.75);
 }
 
 #banner {
